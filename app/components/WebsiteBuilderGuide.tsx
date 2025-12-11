@@ -92,12 +92,12 @@ export default function WebsiteBuilderGuide() {
     bestFor: true,
     seo: true,
     support: true,
-    migration: false,
-    security: false,
-    accessibility: false,
-    handoff: false,
+    migration: true,
+    security: true,
+    accessibility: true,
+    handoff: true,
     ecommerce: true,
-    appStore: false,
+    appStore: true,
     examples: true,
   });
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -229,23 +229,26 @@ export default function WebsiteBuilderGuide() {
       <div className="flex h-screen">
         {/* Sidebar */}
         <div
+          style={{
+            backgroundImage: `url('/images/dotsBackground.png')`,
+          }}
           className={`${
             sidebarOpen ? "w-80" : "w-0"
-          } transition-all duration-300 bg-white border-r border-gray-200 overflow-hidden`}
+          } transition-all duration-300 bg-blue-900 border-r border-gray-200 overflow-hidden`}
         >
-          <div className="h-full flex flex-col">
+          <div className="h-full flex flex-col text-white">
             <div className="p-6 border-b border-gray-200">
               <div className="flex justify-between items-center mb-4">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 bg-blue-900 p-2 border-blue-600 border-2 rounded-2xl">
                   <Filter
                     size={20}
-                    className="text-blue-600"
+                    className="text-white"
                   />
-                  <h3 className="text-xl font-bold text-gray-900">Filters</h3>
+                  <h3 className="text-xl font-bold ">Filters</h3>
                 </div>
                 <button
                   onClick={() => setSidebarOpen(false)}
-                  className="text-gray-400 hover:text-gray-600 lg:hidden transition-colors"
+                  className=" hover:text-gray-600 lg:hidden transition-colors"
                 >
                   <ChevronLeft size={20} />
                 </button>
@@ -262,13 +265,13 @@ export default function WebsiteBuilderGuide() {
               )}
             </div>
 
-            <div className="flex-1 overflow-y-auto p-6">
+            <div className="flex-1 overflow-y-auto m-5  bg-blue-900">
               {Object.entries(tagCategories).map(([category, tags]) => (
                 <div
                   key={category}
-                  className="mb-8 last:mb-0"
+                  className="mb-8 last:mb-0 "
                 >
-                  <h4 className="font-semibold text-gray-900 mb-3 capitalize text-sm uppercase tracking-wider">
+                  <h4 className="font-semibold 0 mb-3 capitalize text-sm  tracking-wider">
                     {category}
                   </h4>
                   <div className="space-y-2">
@@ -287,14 +290,14 @@ export default function WebsiteBuilderGuide() {
                               onChange={() =>
                                 toggleTag(category as TagCategory, tag)
                               }
-                              className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 cursor-pointer"
+                              className="w-5 h-5  border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 cursor-pointer"
                             />
                           </div>
                           <span
                             className={`ml-3 text-sm transition-colors ${
                               isSelected
-                                ? "text-blue-700 font-medium"
-                                : "text-gray-700 group-hover:text-gray-900"
+                                ? "text-white font-medium"
+                                : "text-white group-hover:text-gray-900"
                             }`}
                           >
                             {tag}
@@ -372,8 +375,8 @@ export default function WebsiteBuilderGuide() {
                       onClick={() => toggleField(field as FieldType)}
                       className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-medium transition-all text-sm ${
                         visible
-                          ? "bg-blue-100 text-blue-700 hover:bg-blue-200"
-                          : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                          ? "bg-blue-100 text-blue-800 hover:bg-blue-200"
+                          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                       }`}
                     >
                       {fieldLabels[field as FieldType]}
@@ -411,7 +414,7 @@ export default function WebsiteBuilderGuide() {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  {filteredBuilders.map((builder) => (
+                  {filteredBuilders.slice(0, 3).map((builder) => (
                     <div
                       key={builder.id}
                       className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
@@ -597,9 +600,22 @@ export default function WebsiteBuilderGuide() {
                                   Customer Support
                                 </span>
                               </div>
-                              <p className="text-sm text-gray-900 whitespace-pre-line">
-                                {builder.support}
-                              </p>
+                              <details>
+                                <summary className="cursor-pointer text-sm text-gray-900">
+                                  {builder.support[0]}
+                                </summary>
+
+                                <ul className="space-y-1 list-disc mt-2 ml-4">
+                                  {builder.support.slice(1).map((item, idx) => (
+                                    <li
+                                      key={idx}
+                                      className="text-sm my-1 text-gray-900 break-all"
+                                    >
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </details>
                             </div>
                           )}
 
@@ -614,16 +630,24 @@ export default function WebsiteBuilderGuide() {
                                   E-commerce
                                 </span>
                               </div>
-                              <ul className="space-y-1 list-disc">
-                                {builder.ecommerce.map((item, idx) => (
-                                  <li
-                                    key={idx}
-                                    className="text-sm my-1 text-gray-900 break-all"
-                                  >
-                                    {item}
-                                  </li>
-                                ))}
-                              </ul>
+                              <details>
+                                <summary className="cursor-pointer text-sm text-gray-900">
+                                  {builder.ecommerce[0]}
+                                </summary>
+
+                                <ul className="space-y-1 list-disc mt-2 ml-4">
+                                  {builder.ecommerce
+                                    .slice(1)
+                                    .map((item, idx) => (
+                                      <li
+                                        key={idx}
+                                        className="text-sm my-1 text-gray-900 break-all"
+                                      >
+                                        {item}
+                                      </li>
+                                    ))}
+                                </ul>
+                              </details>
                             </div>
                           )}
 
@@ -672,9 +696,24 @@ export default function WebsiteBuilderGuide() {
                                   Accessibility
                                 </span>
                               </div>
-                              <p className="text-sm text-gray-900 whitespace-pre-line">
-                                {builder.accessibility}
-                              </p>
+                              <details>
+                                <summary className="cursor-pointer text-sm text-gray-900">
+                                  {builder.accessibility[0]}
+                                </summary>
+
+                                <ul className="space-y-1 list-disc mt-2 ml-4">
+                                  {builder.accessibility
+                                    .slice(1)
+                                    .map((item, idx) => (
+                                      <li
+                                        key={idx}
+                                        className="text-sm my-1 text-gray-900 break-all"
+                                      >
+                                        {item}
+                                      </li>
+                                    ))}
+                                </ul>
+                              </details>
                             </div>
                           )}
 
@@ -719,9 +758,24 @@ export default function WebsiteBuilderGuide() {
                                   App Store
                                 </span>
                               </div>
-                              <p className="text-sm text-gray-900 whitespace-pre-line">
-                                {builder.appStore}
-                              </p>
+                              <details>
+                                <summary className="cursor-pointer text-sm text-gray-900">
+                                  {builder.appStore[0]}
+                                </summary>
+
+                                <ul className="space-y-1 list-disc mt-2 ml-4">
+                                  {builder.appStore
+                                    .slice(1)
+                                    .map((item, idx) => (
+                                      <li
+                                        key={idx}
+                                        className="text-sm my-1 text-gray-900 break-all"
+                                      >
+                                        {item}
+                                      </li>
+                                    ))}
+                                </ul>
+                              </details>
                             </div>
                           )}
 
