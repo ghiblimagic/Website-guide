@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Website Builder Selection Guide",
+  title: "Website Builder Finder",
   description:
     "A guide to help you choose the right website builder for your business, created by Janet Spellman",
 };
