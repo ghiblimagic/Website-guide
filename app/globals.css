@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-dancing: "Dancing Script", Arial, Helvetica, Verdana, Trebuchet MS;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +20,38 @@
   }
 }
 
+@font-face {
+  font-family: "Dancing Script";
+  src: url("/fonts/DancingScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Prevents invisible text while loading */
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Prevents invisible text while loading */
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; /* Prevents invisible text while loading */
+}
+
 body {
-  background: var(--background);
+  background-image: url("/images/background.jpg");
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Dancing Script", Arial, Helvetica, Verdana, Trebuchet MS;
 }

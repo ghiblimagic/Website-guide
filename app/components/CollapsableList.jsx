@@ -1,8 +1,8 @@
 const CollapsibleList = ({
   items,
-  singleItemClassName = "text-sm text-gray-900",
-  summaryClassName = "cursor-pointer text-sm text-gray-900",
-  listItemClassName = "text-sm my-1 text-gray-900 break-all",
+  singleItemClassName = "text-sm text-gray-700",
+  summaryClassName = "cursor-pointer text-sm text-gray-700",
+  listItemClassName = "text-sm my-1 text-gray-700 break-all",
 }) => {
   const itemsArray = Array.isArray(items) ? items : [items];
 

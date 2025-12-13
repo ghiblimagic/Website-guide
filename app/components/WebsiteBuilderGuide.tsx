@@ -1,29 +1,14 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
-  ChevronRight,
   ChevronLeft,
   X,
-  Menu,
   Filter,
   RotateCcw,
   CheckCircle2,
   XCircle,
-  Star,
-  DollarSign,
-  TrendingUp,
-  HeadphonesIcon,
-  Layout,
-  ShoppingCart,
-  Calendar,
-  Target,
-  Shield,
-  Lock,
-  Users,
-  Package,
-  Code,
-  ExternalLink,
+  Check,
 } from "lucide-react";
 
 import {
@@ -35,7 +20,12 @@ import {
 import StyledButton from "../components/StyledButton";
 // Type definitions
 import CollapsableList from "../components/CollapsableList";
-type TagCategory = "pages" | "shop" | "customization" | "pos";
+type TagCategory =
+  | "pages"
+  | "shop"
+  | "creative freedom"
+  | "learning curve"
+  | "POS";
 type FieldType =
   | "summary"
   | "difficulty"
@@ -56,8 +46,9 @@ type FieldType =
 interface SelectedTags {
   pages: string[];
   shop: string[];
-  customization: string[];
-  pos: string[];
+  "creative freedom": string[];
+  "learning curve": string[];
+  POS: string[];
 }
 
 interface VisibleFields {
@@ -84,12 +75,13 @@ interface GuidingAction {
 }
 
 export default function WebsiteBuilderGuide() {
-  const [showGuidingQuestions, setShowGuidingQuestions] = useState(true);
+  const [showGuidingQuestions, setShowGuidingQuestions] = useState(false);
   const [selectedTags, setSelectedTags] = useState<SelectedTags>({
     pages: [],
     shop: [],
-    customization: [],
-    pos: [],
+    "creative freedom": [],
+    "learning curve": [],
+    POS: [],
   });
   const [visibleFields, setVisibleFields] = useState<VisibleFields>({
     summary: true,
@@ -114,14 +106,31 @@ export default function WebsiteBuilderGuide() {
 
   const [totalResults, setTotalResults] = useState(15);
 
-  const handleGuidingAnswer = (answer: "yes" | "no", action: GuidingAction) => {
-    if (answer === "yes" || answer === "no") {
-      const actionData = answer === "yes" ? action.yesAction : action.noAction;
-      setSelectedTags((prev) => ({
-        ...prev,
-        [actionData.category]: [actionData.tag],
-      }));
+  useEffect(() => {
+    const hidden = localStorage.getItem("hideGuidingQuestions");
+    setShowGuidingQuestions(hidden !== "true");
+  }, []);
+
+  // Sync checkbox → localStorage
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const checked = e.target.checked;
+
+    if (checked) {
+      localStorage.setItem("hideGuidingQuestions", "true");
+    } else {
+      localStorage.removeItem("hideGuidingQuestions");
+      // or: localStorage.setItem('hideGuidingQuestions', 'false')
     }
+  };
+
+  const handleGuidingAnswer = (action: {
+    category: TagCategory;
+    tag: string;
+  }) => {
+    setSelectedTags((prev) => ({
+      ...prev,
+      [action.category]: [action.tag],
+    }));
   };
 
   const toggleTag = (category: TagCategory, tag: string) => {
@@ -139,8 +148,9 @@ export default function WebsiteBuilderGuide() {
     setSelectedTags({
       pages: [],
       shop: [],
-      customization: [],
-      pos: [],
+      "creative freedom": [],
+      "learning curve": [],
+      POS: [],
     });
   };
 
@@ -172,16 +182,16 @@ export default function WebsiteBuilderGuide() {
   const activeTagCount = Object.values(selectedTags).flat().length;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       {/* Guiding Questions Modal */}
       {showGuidingQuestions && (
         <div className="fixed inset-0  backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-6 rounded-t-2xl">
+          <div className="rounded-2xl bg-white shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0  border-b border-blue-200 px-8 py-6 rounded-t-2xl">
               <div className="flex justify-between items-start">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                    Find Your Perfect Website Builder
+                  <h2 className="text-3xl font-bold text-blue-950 mb-4">
+                    Find Your Website Builder
                   </h2>
                   <p className="text-gray-600">
                     Answer a few quick questions to narrow down your options
@@ -196,41 +206,41 @@ export default function WebsiteBuilderGuide() {
               </div>
             </div>
 
-            <div className="p-8 space-y-8">
-              {guidingQuestions.map((q, idx) => (
+            <div className="p-8 space-y-8 text-gray-700">
+              {guidingQuestions.map((q) => (
                 <div
                   key={q.id}
-                  className="pb-8 border-b border-gray-200 last:border-0"
+                  className="pb-8 border-b border-blue-200 last:border-0"
                 >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-700 font-semibold">
-                        {idx + 1}
-                      </span>
-                    </div>
-                    <p className="text-lg font-medium text-gray-900 pt-1">
-                      {q.question}
-                    </p>
-                  </div>
-                  <div className="flex gap-3 ml-12">
-                    <button
-                      onClick={() => handleGuidingAnswer("yes", q)}
-                      className="flex-1 bg-white border-2 border-green-500 hover:bg-green-50 text-green-700 py-3 px-6 rounded-xl font-medium transition-all hover:shadow-md"
-                    >
-                      Yes
-                    </button>
-                    <button
-                      onClick={() => handleGuidingAnswer("no", q)}
-                      className="flex-1 bg-white border-2 border-blue-500 hover:bg-blue-50 text-blue-700 py-3 px-6 rounded-xl font-medium transition-all hover:shadow-md"
-                    >
-                      No
-                    </button>
+                  <p className="text-lg font-medium text-gray-900 pt-1 mb-2">
+                    {q.question}
+                  </p>
+
+                  <div className="flex gap-2 flex-wrap">
+                    {q.options.map((opt, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleGuidingAnswer(opt.action)}
+                        className="flex-1 bg-white border-2 border-blue-500 hover:bg-blue-50 text-blue-700 py-3 px-6 rounded-xl font-medium transition-all hover:shadow-md"
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 px-8 py-6 rounded-b-2xl">
+            <div className="sticky bottom-0 bg-gray-50 border-t border-blue-200 px-8 py-6 rounded-b-2xl">
+              <label className="flex items-center text-center gap-2  text-gray-700 mb-4">
+                <input
+                  type="checkbox"
+                  onChange={onChange}
+                  className="accent-blue-700"
+                />
+                Do not show this again
+              </label>
+
               <button
                 onClick={() => setShowGuidingQuestions(false)}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-xl font-semibold transition-all hover:shadow-lg"
@@ -243,7 +253,7 @@ export default function WebsiteBuilderGuide() {
       )}
 
       {/* Main Layout */}
-      <div className="flex h-screen">
+      <div className="flex ">
         {/* Sidebar */}
         <div
           style={{
@@ -251,46 +261,49 @@ export default function WebsiteBuilderGuide() {
           }}
           className={`${
             sidebarOpen ? "w-80" : "w-0"
-          } transition-all duration-300 bg-blue-900 border-r border-gray-200 overflow-hidden`}
+          } transition-all duration-300 bg-blue-900 border-r border-blue-200 overflow-hidden`}
         >
-          <div className="h-full flex flex-col text-white">
-            <div className="p-6 border-b border-gray-200">
-              <div className="flex justify-between items-center mb-4">
-                <div className="flex items-center gap-2 bg-blue-900 p-2 ">
+          <div className="flex flex-col text-white ">
+            <div className="px-5 pt-6 ">
+              <div className="flex justify-between items-center   bg-blue-900 pb-4  border border-white rounded-t-2xl">
+                <div className="flex items-center gap-2  0 py-4 px-8 mx-auto rounded-2xl">
                   <Filter
                     size={20}
                     className="text-white"
                   />
                   <h3 className="text-2xl font-bold ">Filters</h3>
                 </div>
-                <button
+                <StyledButton
                   onClick={() => setSidebarOpen(false)}
-                  className=" hover:text-gray-600  transition-colors"
+                  title="hide filters"
+                  primary
                 >
                   <ChevronLeft size={20} />
-                </button>
+                </StyledButton>
               </div>
-
-              {activeTagCount > 0 && (
-                <button
-                  onClick={clearAllTags}
-                  className="w-full flex items-center justify-center gap-2 bg-red-50 hover:bg-red-100 text-red-700 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors"
-                >
-                  <RotateCcw size={16} />
-                  Clear All ({activeTagCount})
-                </button>
-              )}
             </div>
 
-            <div className="flex-1 overflow-y-auto m-5  bg-blue-900">
+            <div className="flex-1 overflow-y-auto mx-5 pt-5 bg-blue-900 pb-4 border-x border-b rounded-b-2xl border-white pl-3">
+              {activeTagCount > 0 && (
+                <div className="text-center mb-2">
+                  <StyledButton
+                    onClick={clearAllTags}
+                    text={`Clear Filters (${activeTagCount})`}
+                    primary
+                  >
+                    <RotateCcw size={16} />
+                  </StyledButton>
+                </div>
+              )}
+
               {Object.entries(tagCategories).map(([category, tags]) => (
                 <div
                   key={category}
                   className="mb-8 last:mb-0 "
                 >
-                  <h4 className="font-semibold 0 mb-3 capitalize text-sm  tracking-wider">
+                  <h3 className="font-semibold 0 mb-3 capitalize text-xl  tracking-wider">
                     {category}
-                  </h4>
+                  </h3>
                   <div className="space-y-2">
                     {tags.map((tag) => {
                       const isSelected =
@@ -314,7 +327,7 @@ export default function WebsiteBuilderGuide() {
                             className={`ml-3 text-sm transition-colors ${
                               isSelected
                                 ? "text-white font-medium"
-                                : "text-white group-hover:text-gray-900"
+                                : "text-white group-hover:text-blue-100 group-hover:underline"
                             }`}
                           >
                             {tag}
@@ -332,42 +345,42 @@ export default function WebsiteBuilderGuide() {
         {/* Main Content */}
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Header Toolbar */}
-          <div className="bg-white border-b border-gray-200 shadow-sm">
-            <div className="px-6 py-4">
-              <div className="flex items-center gap-4 mb-4">
+          <div className="border-b border-blue-200 shadow-sm bg-blue-50">
+            <div className="px-6 py-4 ">
+              <div className="flex items-center gap-4 mb-4  ">
                 {!sidebarOpen && (
-                  <button
+                  <StyledButton
                     onClick={() => setSidebarOpen(true)}
-                    className="p-2.5 hover:bg-gray-100 rounded-lg transition-colors"
+                    // className="p-2.5 bg-blue-600 rounded-xl border-b-2 border-white  hover:bg-blue-700 shadow-md shadow-blue-950 transition-colors"
                     title="Show filters"
+                    primary
                   >
-                    <Menu
+                    <Filter
                       size={20}
-                      className="text-gray-700"
+                      className="text-white"
                     />
-                  </button>
+                  </StyledButton>
                 )}
 
                 <div className="flex-1">
-                  <h1 className="text-2xl font-bold text-gray-900">
-                    Website Builder Guide
+                  <h1 className="text-4xl font-bold text-blue-950 mb-6 text-center">
+                    Website Builder Selection
                   </h1>
-                  <p className="text-sm text-gray-600 mt-0.5">
+                  <p className="text-sm text-blue-950 mt-0.5">
                     {totalResults} {totalResults === 1 ? "result" : "results"}{" "}
                     found
                   </p>
                 </div>
 
-                <button
+                <StyledButton
                   onClick={() => setShowGuidingQuestions(true)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-5 rounded-lg font-medium transition-all hover:shadow-md text-sm"
-                >
-                  Restart Quiz
-                </button>
+                  text="Restart Quiz"
+                  secondary
+                />
               </div>
 
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-sm font-medium text-gray-700 mr-2">
+                <span className="text-sm font-semibold text-blue-950 mr-2">
                   Show fields:
                 </span>
                 {Object.entries(visibleFields).map(([field, visible]) => {
@@ -392,12 +405,24 @@ export default function WebsiteBuilderGuide() {
                     <button
                       key={field}
                       onClick={() => toggleField(field as FieldType)}
-                      className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-medium transition-all text-sm ${
+                      aria-pressed={visible}
+                      className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-semibold transition-all text-sm ${
                         visible
-                          ? "bg-blue-100 text-blue-800 hover:bg-blue-200"
-                          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                          ? "bg-blue-100 text-blue-900  hover:bg-blue-200 ring-2 ring-blue-500"
+                          : "bg-slate-900 text-gray-200 hover:bg-gray-200 hover:text-gray-800 "
                       }`}
                     >
+                      <span className="sr-only">
+                        {visible ? "Hide" : "Show"}
+                      </span>
+                      {visible && (
+                        <Check
+                          size={16}
+                          className="text-blue-900"
+                          aria-hidden="true"
+                        />
+                      )}
+
                       {fieldLabels[field as FieldType]}
                     </button>
                   );
@@ -407,10 +432,10 @@ export default function WebsiteBuilderGuide() {
           </div>
 
           {/* Content Area */}
-          <div className="flex-1 overflow-y-auto bg-gray-50">
+          <div className="flex-1 overflow-y-auto">
             <div className="max-w-6xl mx-auto p-6">
               {totalResults === 0 ? (
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-16 text-center">
+                <div className="rounded-xl shadow-sm border bg-blue-50 border-blue-200 p-16 text-center">
                   <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Filter
                       size={32}
@@ -436,142 +461,138 @@ export default function WebsiteBuilderGuide() {
                   {filteredBuilders.slice(0, itemCount).map((builder) => (
                     <div
                       key={builder.id}
-                      className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                      className="bg-blue-50 rounded-xl shadow-sm border border-blue-200 overflow-hidden hover:shadow-md transition-shadow"
                     >
-                      <div className="bg-gradient-to-r from-blue-600 to-blue-500 px-8 py-6">
+                      <div className="bg-gradient-to-r from-blue-900 to-blue-700 px-8 py-6">
                         <h2 className="text-3xl font-bold text-white">
                           {builder.name}
                         </h2>
                       </div>
 
-                      {/* Perfect If / Skip If */}
-                      {visibleFields.summary && (
-                        <div className="grid md:grid-cols-2 gap-6 mb-8">
-                          <div className="bg-green-50 rounded-lg p-6 border border-green-200">
-                            <div className="flex items-center gap-2 mb-4">
-                              <CheckCircle2
-                                size={20}
-                                className="text-green-600"
-                              />
-                              <h3 className="font-semibold text-green-900 text-lg">
-                                Perfect if:
-                              </h3>
-                            </div>
-                            <ul className="space-y-2">
-                              {builder.perfectIf.map((item, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start gap-2 my-1 text-sm text-green-900"
-                                >
-                                  <span className="text-green-600 mt-0.5">
-                                    •
-                                  </span>
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          <div className="bg-red-50 rounded-lg p-6 border border-red-200">
-                            <div className="flex items-center gap-2 mb-4">
-                              <XCircle
-                                size={20}
-                                className="text-red-600"
-                              />
-                              <h3 className="font-semibold text-red-900 text-lg">
-                                Skip it if:
-                              </h3>
-                            </div>
-                            <ul className="space-y-2">
-                              {builder.skipIf.map((item, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start my-1 gap-2 text-sm text-red-900"
-                                >
-                                  <span className="text-red-600 mt-0.5">•</span>
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      )}
-
-                      {visibleFields.bestFor && (
-                        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2">
-                          <div className="flex items-center gap-2 mb-2">
-                            <Target
-                              size={16}
-                              className="text-blue-600"
-                            />
-                            <span className="text-sm font-semibold text-gray-700">
-                              Best For
-                            </span>
-                          </div>
-                          <ul className="space-y-1 ">
-                            {builder.bestFor.map((item, idx) => (
-                              <li
-                                key={idx}
-                                className="text-sm  text-gray-900"
-                              >
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-
                       <div className="p-8">
-                        {/* Quick Stats Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                          {visibleFields.difficulty && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                              <div className="flex items-center gap-2 mb-2">
-                                <Star
-                                  size={16}
-                                  className="text-blue-600"
+                        {/* Perfect If / Skip If */}
+                        {visibleFields.summary && (
+                          <div className="grid md:grid-cols-2 gap-6 mb-4">
+                            <div className="bg-green-50 rounded-lg p-6 border border-green-200">
+                              <div className="flex items-center gap-2 mb-4">
+                                <CheckCircle2
+                                  size={20}
+                                  className="text-green-600"
                                 />
-                                <span className="text-sm font-semibold text-gray-700">
-                                  Difficulty
-                                </span>
+                                <h3 className="font-semibold text-green-900 text-lg">
+                                  Perfect if:
+                                </h3>
                               </div>
-                              <p className="text-2xl font-bold text-gray-900">
+                              <ul className="space-y-2">
+                                {builder.perfectIf.map((item, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="flex items-start gap-2 my-3 text-sm text-green-900"
+                                  >
+                                    <span className="text-green-600 mt-0.5">
+                                      •
+                                    </span>
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+                              <div className="flex items-center gap-2 mb-4">
+                                <XCircle
+                                  size={20}
+                                  className="text-red-600"
+                                />
+                                <h3 className="font-semibold text-red-900 text-lg">
+                                  Skip if:
+                                </h3>
+                              </div>
+                              <ul className="space-y-2">
+                                {builder.skipIf.map((item, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="flex items-start my-3  gap-2 text-sm text-red-900"
+                                  >
+                                    <span className="text-red-600 mt-0.5">
+                                      •
+                                    </span>
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        )}
+
+                        {visibleFields.bestFor && (
+                          <div className="bg-gray-50 rounded-lg p-4  border border-blue-200 col-span-1 md:col-span-2">
+                            <div className="flex items-center gap-2 mb-2">
+                              <h3 className="text-xl font-semibold text-gray-700">
+                                Best For
+                              </h3>
+                            </div>
+                            <ul className="space-y-1 ">
+                              {builder.bestFor.map((item, idx) => (
+                                <li
+                                  key={idx}
+                                  className="text-sm  text-gray-700"
+                                >
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Quick Stats Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 mt-4">
+                          {visibleFields.difficulty && (
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
+                              <div className="flex items-center gap-2 mb-2">
+                                <h3 className="text-xl font-semibold text-gray-700">
+                                  Difficulty
+                                </h3>
+                              </div>
+                              <p
+                                className="text-2xl font-bold"
+                                aria-hidden="true"
+                              >
                                 {builder.difficulty}
                               </p>
+                              <span className="text-sm text-gray-700">
+                                ({builder.difficulty.length}/5)
+                              </span>
+                              <span className="sr-only">
+                                Difficulty level: {builder.difficulty.length}
+                                out of 5 stars
+                              </span>
                             </div>
                           )}
 
                           {visibleFields.trial && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
                               <div className="flex items-center gap-2 mb-2">
-                                <Calendar
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   Trial
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.trial} />
                             </div>
                           )}
 
                           {visibleFields.cost && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <DollarSign
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   Cost
-                                </span>
+                                </h3>
                               </div>
-                              <ul className="space-y-1 list-disc">
+                              <ul className="space-y-1 list-disc list-inside">
                                 {builder.cost.map((item, idx) => (
                                   <li
                                     key={idx}
-                                    className="text-sm my-1 text-gray-900"
+                                    className="text-sm my-3  text-gray-700"
                                   >
                                     {item}
                                   </li>
@@ -581,120 +602,95 @@ export default function WebsiteBuilderGuide() {
                           )}
 
                           {visibleFields.seo && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <TrendingUp
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   SEO
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.seo} />
                             </div>
                           )}
 
                           {visibleFields.support && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <HeadphonesIcon
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   Customer Support
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.support} />
                             </div>
                           )}
 
                           {visibleFields.ecommerce && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <ShoppingCart
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   E-commerce
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.ecommerce} />
                             </div>
                           )}
 
                           {visibleFields.migration && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <Package
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   Migration
-                                </span>
+                                </h3>
+                                <p className="text-gray-700 text-sm">
+                                  (Can you move your site somewhere else)
+                                </p>
                               </div>
                               <CollapsableList items={builder.migration} />
                             </div>
                           )}
 
                           {visibleFields.security && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <Shield
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   Security
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.security} />
                             </div>
                           )}
 
                           {visibleFields.accessibility && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <Users
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   Accessibility
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.accessibility} />
                             </div>
                           )}
 
                           {visibleFields.handoff && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <Users
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
-                                  How Easy to Hand-off
-                                </span>
+                                <h3 className="text-xl font-semibold text-gray-700">
+                                  Collaboration
+                                </h3>
+                                <p className="text-gray-700 text-sm">
+                                  (How Easy is it to Collaborate or Hand-off to
+                                  an Employee)
+                                </p>
                               </div>
                               <CollapsableList items={builder.handoff} />
                             </div>
                           )}
 
                           {visibleFields.appStore && (
-                            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                               <div className="flex items-center gap-2 mb-2">
-                                <Code
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                                <span className="text-sm font-semibold text-gray-700">
+                                <h3 className="text-xl font-semibold text-gray-700">
                                   App Store
-                                </span>
+                                </h3>
                               </div>
                               <CollapsableList items={builder.appStore} />
                             </div>
@@ -702,21 +698,17 @@ export default function WebsiteBuilderGuide() {
 
                           {visibleFields.examples &&
                             builder.examples.length > 0 && (
-                              <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 col-span-1 md:col-span-2 lg:col-span-3">
+                              <div className="bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3">
                                 <div className="flex items-center gap-2 mb-2">
-                                  <ExternalLink
-                                    size={16}
-                                    className="text-blue-600"
-                                  />
-                                  <span className="text-sm font-semibold text-gray-700">
+                                  <h3 className="text-xl font-semibold text-gray-700">
                                     Examples
-                                  </span>
+                                  </h3>
                                 </div>
-                                <ul className="space-y-1 list-disc">
+                                <ul className="space-y-1 list-disc list-inside">
                                   {builder.examples.map((item, idx) => (
                                     <li
                                       key={idx}
-                                      className="text-sm my-1 text-gray-900 break-all"
+                                      className="text-sm my-3  text-gray-700 break-all"
                                     >
                                       {item}
                                     </li>
@@ -728,15 +720,15 @@ export default function WebsiteBuilderGuide() {
 
                         {/* More Info Section */}
                         {builder.moreInfo && builder.moreInfo.length > 0 && (
-                          <div className="bg-blue-50 rounded-lg p-6 border border-blue-200 mb-8">
-                            <h3 className="font-semibold text-blue-900 text-lg mb-3">
-                              More Information & Tutorials
+                          <div className="bg-gray-50 rounded-lg p-6 border border-blue-200 mb-8">
+                            <h3 className="font-semibold text-gray-700 text-xl mb-3">
+                              More Informatiion
                             </h3>
                             <ul className="space-y-1 list-disc">
                               {builder.moreInfo.map((item, idx) => (
                                 <li
                                   key={idx}
-                                  className="text-sm my-1 text-blue-900 break-all"
+                                  className="text-sm my-3  text-gray-700 break-all"
                                 >
                                   {item}
                                 </li>
@@ -747,36 +739,38 @@ export default function WebsiteBuilderGuide() {
 
                         {/* Pros / Cons */}
                         {visibleFields.proCons && (
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                              <h3 className="font-semibold text-gray-900 mb-3 text-lg">
+                          <div className="grid md:grid-cols-2 gap-6 ">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
+                              <h3 className="font-semibold text-gray-700 mb-3 text-xl">
                                 Pros
                               </h3>
                               <ul className="space-y-2 ">
                                 {builder.pros.map((item, idx) => (
                                   <li
                                     key={idx}
-                                    className="flex items-start gap-2 my-1 text-sm text-gray-700"
+                                    className="flex items-start gap-2 my-3 text-sm text-gray-700"
                                   >
                                     <CheckCircle2
                                       size={16}
                                       className="text-green-600 mt-0.5 flex-shrink-0"
                                     />
-                                    <span>{item}</span>
+                                    <p className="break-words overflow-hidden">
+                                      {item}
+                                    </p>
                                   </li>
                                 ))}
                               </ul>
                             </div>
 
-                            <div>
-                              <h3 className="font-semibold text-gray-900 mb-3 text-lg">
+                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
+                              <h3 className="font-semibold text-gray-700 mb-3 text-xl">
                                 Cons
                               </h3>
                               <ul className="space-y-2">
                                 {builder.cons.map((item, idx) => (
                                   <li
                                     key={idx}
-                                    className="flex items-start gap-2 my-1 text-sm text-gray-700"
+                                    className="flex items-start gap-2 my-3  text-sm text-gray-700"
                                   >
                                     <XCircle
                                       size={16}
@@ -794,14 +788,14 @@ export default function WebsiteBuilderGuide() {
                   ))}
                 </div>
               )}
-              <p className=" text-center text-sm text-gray-600 mt-0.5">
+              <p className=" text-center text-sm font-semibold text-blue-950 my-4">
                 {" "}
                 Showing {itemCount <= totalResults
                   ? itemCount
                   : totalResults}{" "}
                 of {totalResults} results{" "}
               </p>
-              {itemCount !== totalResults && (
+              {totalResults >= itemCount && (
                 <div className="w-full text-center mt-2">
                   <StyledButton
                     onClick={() =>

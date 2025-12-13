@@ -1,16 +1,32 @@
-// data/websiteBuilders.ts
+export type TagCategory =
+  | "pages"
+  | "shop"
+  | "creative freedom"
+  | "learning curve"
+  | "POS";
 
-// Type definitions
-export type TagCategory = "pages" | "shop" | "customization" | "pos";
+export type GuidingOption = {
+  label: string;
+  action: {
+    category: TagCategory;
+    tag: string;
+  };
+};
 
+export type GuidingQuestion = {
+  id: number;
+  question: string;
+  options: GuidingOption[];
+};
 export interface WebsiteBuilder {
   id: number;
   name: string;
   tags: {
     pages: string[];
     shop: string[];
-    customization: string[];
-    pos: string[];
+    "creative freedom": string[];
+    POS: string[];
+    "learning curve": string[];
   };
   difficulty: string;
   cost: string[];
@@ -37,17 +53,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 1,
     name: "Google Business Profile",
     tags: {
-      pages: ["1 page"],
+      pages: [],
       shop: ["no shop"],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐",
     cost: ["Free"],
     trial: "N/A",
     bestFor: [
       'Local visibility, great for "I need something NOW."',
-      "Most businesses should claim/create a google business profile, it's free, relatively easy to setup and it's often the first thing that potential clients see about your business.",
+      "Most businesses should create a google business profile, it's free, relatively easy to setup and it's often the first thing that potential clients see about your business.",
     ],
     support: [
       "Difficult to get a hold of if you are unlucky enough to run into issues but it's free, so worth trying to get your google business profile setup anyway. Usually takes a few weeks for the business to be verified.",
@@ -56,9 +73,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
     migration: "N/A, this is a google listing not a website.",
     security: "N/A, this is a google listing not a website.",
     accessibility: ["N/A, this is a google listing not a website."],
-    handoff: [] as string[],
-    ecommerce: [] as string[],
-    appStore: [] as string[],
+    handoff: [
+      "You can add users to help manage your Google Business Listing Profile.",
+      "Here's a video guide for adding users and admins: https://www.youtube.com/watch?v=SqqqOF3AJo8",
+    ],
+    ecommerce: ["N/A"],
+    appStore: ["N/A"],
     seo: [
       "If you have this and link your website, it will help improve your SEO. Because google likes to see your website linked on other sites, to boost its trustworthiness.",
     ],
@@ -81,10 +101,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 2,
     name: "Google Sites",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["1 page"],
       shop: ["small shop"],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐",
     cost: [
@@ -172,8 +193,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     tags: {
       pages: ["1 page"],
       shop: [],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐",
     cost: [
@@ -251,10 +273,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 4,
     name: "Pixpa",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["small shop"],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐",
     cost: [
@@ -327,10 +350,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 5,
     name: "Squarespace",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["small shop"],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐⭐",
     cost: [
@@ -431,10 +455,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 6,
     name: "Hostinger",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["1 page"],
       shop: ["small shop"],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐⭐",
     cost: [
@@ -530,10 +555,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 7,
     name: "Square",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["small shop"],
-      customization: ["low customization"],
-      pos: ["built in POS"],
+      "creative freedom": ["low customization"],
+      POS: ["built in POS"],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐⭐",
     cost: [
@@ -635,10 +661,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 8,
     name: "Wix",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["small shop"],
-      customization: ["medium to heavy customization"],
-      pos: ["built in POS"],
+      "creative freedom": ["medium customization"],
+      POS: ["built in POS"],
+      "learning curve": ["medium difficulty"],
     },
     difficulty: "⭐⭐–⭐⭐⭐",
     cost: [
@@ -758,8 +785,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     tags: {
       pages: ["1 page"],
       shop: [],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐",
     cost: [
@@ -852,10 +880,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 10,
     name: "Shopify",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["small shop", "big shop"],
-      customization: ["low customization", "medium to heavy customization"],
-      pos: ["built in POS"],
+      "creative freedom": ["medium customization"],
+      POS: ["built in POS"],
+      "learning curve": ["medium difficulty"],
     },
     difficulty: "⭐⭐–⭐⭐⭐",
     cost: [
@@ -985,10 +1014,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 11,
     name: "Ecwid",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["small shop"],
-      customization: ["low customization"],
-      pos: ["built in POS"],
+      "creative freedom": ["low customization"],
+      POS: ["built in POS"],
+      "learning curve": ["medium difficulty"],
     },
     difficulty: "⭐⭐–⭐⭐⭐",
     cost: [
@@ -1103,10 +1133,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 12,
     name: "WordPress.org",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["no shop", "small shop", "big shop"],
-      customization: ["medium to heavy customization"],
-      pos: [] as string[],
+      "creative freedom": ["heavy customization"],
+      POS: [] as string[],
+      "learning curve": ["high difficulty"],
     },
     difficulty: "⭐⭐⭐-⭐⭐⭐⭐",
     cost: [
@@ -1214,10 +1245,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 13,
     name: "WordPress.com",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["no shop", "small shop"],
-      customization: ["medium to heavy customization"],
-      pos: [] as string[],
+      "creative freedom": ["heavy customization"],
+      POS: [] as string[],
+      "learning curve": ["medium difficulty"],
     },
     difficulty: "⭐⭐⭐",
     cost: [
@@ -1327,10 +1359,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 14,
     name: "Webflow",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["multi-page"],
       shop: ["no shop"],
-      customization: ["medium to heavy customization"],
-      pos: [] as string[],
+      "creative freedom": ["heavy customization"],
+      POS: [] as string[],
+      "learning curve": ["high difficulty"],
     },
     difficulty: "⭐⭐⭐⭐⭐",
     cost: [
@@ -1448,10 +1481,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 15,
     name: "GoDaddy",
     tags: {
-      pages: ["1 page", "multi-page"],
+      pages: ["1 page"],
       shop: ["no shop", "small shop"],
-      customization: ["low customization"],
-      pos: [] as string[],
+      "creative freedom": ["low customization"],
+      POS: [] as string[],
+      "learning curve": ["low difficulty"],
     },
     difficulty: "⭐",
     cost: [
@@ -1533,35 +1567,101 @@ export const websiteBuilders: WebsiteBuilder[] = [
 export const tagCategories: Record<TagCategory, string[]> = {
   pages: ["1 page", "multi-page"],
   shop: ["small shop", "big shop"],
-  customization: ["low customization", "medium to heavy customization"],
-  pos: ["built in POS"],
+  "creative freedom": [
+    "low customization",
+    "medium customization",
+    "heavy customization",
+  ],
+  "learning curve": ["low difficulty", "medium difficulty", "high difficulty"],
+  POS: ["built in POS"],
 };
 
-export const guidingQuestions: Array<{
-  id: number;
-  question: string;
-  yesAction: { category: TagCategory; tag: string };
-  noAction: { category: TagCategory; tag: string };
-}> = [
+export const guidingQuestions: GuidingQuestion[] = [
   {
     id: 1,
-    question: "Do you just need a single page site?",
-    yesAction: { category: "pages", tag: "1 page" },
-    noAction: { category: "pages", tag: "multi-page" },
+    question:
+      "Do you just need your website to show your basic information and have a contact form?",
+    options: [
+      {
+        label: "Yes",
+        action: { category: "pages", tag: "1 page" },
+      },
+      {
+        label: "No",
+        action: { category: "pages", tag: "multi-page" },
+      },
+    ],
   },
   {
     id: 2,
     question: "Do you need an online shop?",
-    yesAction: { category: "shop", tag: "small shop" },
-    noAction: { category: "shop", tag: "" },
+    options: [
+      {
+        label: "No",
+        action: { category: "shop", tag: "" },
+      },
+      {
+        label: "Yes, a small shop",
+        action: { category: "shop", tag: "small shop" },
+      },
+      {
+        label: "Yes, a big shop",
+        action: { category: "shop", tag: "big shop" },
+      },
+    ],
   },
   {
     id: 3,
-    question: "Do you need heavy customization options?",
-    yesAction: {
-      category: "customization",
-      tag: "medium to heavy customization",
-    },
-    noAction: { category: "customization", tag: "low customization" },
+    question: "How much control do you need over the design?",
+    options: [
+      {
+        label: "Very little",
+        action: {
+          category: "creative freedom",
+          tag: "low customization",
+        },
+      },
+      {
+        label: "Some",
+        action: {
+          category: "creative freedom",
+          tag: "medium customization",
+        },
+      },
+      {
+        label: "A lot",
+        action: {
+          category: "creative freedom",
+          tag: "heavy customization",
+        },
+      },
+    ],
+  },
+  {
+    id: 4,
+    question: "How much time do you have to learn the web builder? ",
+    options: [
+      {
+        label: "Very little",
+        action: {
+          category: "learning curve",
+          tag: "low difficulty",
+        },
+      },
+      {
+        label: "Some",
+        action: {
+          category: "learning curve",
+          tag: "medium difficulty",
+        },
+      },
+      {
+        label: "A lot",
+        action: {
+          category: "learning curve",
+          tag: "high difficulty",
+        },
+      },
+    ],
   },
 ];
