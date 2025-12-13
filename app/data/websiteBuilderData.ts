@@ -1580,7 +1580,7 @@ export const guidingQuestions: GuidingQuestion[] = [
   {
     id: 1,
     question:
-      "Do you just need your website to show your basic information and have a contact form?",
+      "Just need your website to show your basic information and have a contact form?",
     options: [
       {
         label: "Yes",
@@ -1594,7 +1594,7 @@ export const guidingQuestions: GuidingQuestion[] = [
   },
   {
     id: 2,
-    question: "Do you need an online shop?",
+    question: "Need an online shop?",
     options: [
       {
         label: "No",

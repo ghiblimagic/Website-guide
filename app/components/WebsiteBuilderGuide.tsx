@@ -191,7 +191,7 @@ export default function WebsiteBuilderGuide() {
               <div className="flex justify-between items-start">
                 <div>
                   <h2 className="text-3xl font-bold text-blue-950 mb-4">
-                    Find Your Website Builder
+                    Which Website Builder Fits You?
                   </h2>
                   <p className="text-gray-600">
                     Answer a few quick questions to narrow down your options
@@ -364,7 +364,7 @@ export default function WebsiteBuilderGuide() {
 
                 <div className="flex-1">
                   <h1 className="text-4xl font-bold text-blue-950 mb-6 text-center">
-                    Website Builder Selection
+                    Website Builder Finder
                   </h1>
                   <p className="text-sm text-blue-950 mt-0.5">
                     {totalResults} {totalResults === 1 ? "result" : "results"}{" "}
