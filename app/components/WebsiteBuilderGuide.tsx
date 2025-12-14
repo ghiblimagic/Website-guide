@@ -107,6 +107,11 @@ export default function WebsiteBuilderGuide() {
   const [totalResults, setTotalResults] = useState(15);
 
   useEffect(() => {
+    const media = window.matchMedia("(min-width: 768px)");
+    setSidebarOpen(media.matches);
+  }, []);
+
+  useEffect(() => {
     const hidden = localStorage.getItem("hideGuidingQuestions");
     setShowGuidingQuestions(hidden !== "true");
   }, []);
@@ -204,7 +209,7 @@ export default function WebsiteBuilderGuide() {
       {showGuidingQuestions && (
         <div className="fixed inset-0  backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="rounded-2xl bg-white shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="sticky top-0  border-b border-blue-200 px-8 py-6 rounded-t-2xl">
+            <div className=" border-b border-blue-200 px-8 py-6 rounded-t-2xl">
               <div className="flex justify-between">
                 <div className="w-full text-center">
                   <h2 className="text-3xl font-bold text-blue-950 mb-4">
@@ -262,7 +267,7 @@ export default function WebsiteBuilderGuide() {
               ))}
             </div>
 
-            <div className="sticky bottom-0 bg-gray-50 border-t border-blue-200 px-8 py-6 rounded-b-2xl">
+            <div className="bg-gray-50 border-t border-blue-200 px-8 py-6 rounded-b-2xl">
               <label className="flex items-center text-center gap-2  text-gray-700 mb-4">
                 <input
                   type="checkbox"
@@ -378,6 +383,9 @@ export default function WebsiteBuilderGuide() {
           {/* Header Toolbar */}
           <div className="border-b border-blue-200 shadow-sm bg-blue-50">
             <div className="px-6 py-4 ">
+              <h1 className="text-4xl font-bold text-blue-950 mb-6 text-center">
+                Website Builder Finder
+              </h1>
               <div className="flex items-center gap-4 mb-4  ">
                 {!sidebarOpen && (
                   <StyledButton
@@ -394,9 +402,6 @@ export default function WebsiteBuilderGuide() {
                 )}
 
                 <div className="flex-1">
-                  <h1 className="text-4xl font-bold text-blue-950 mb-6 text-center">
-                    Website Builder Finder
-                  </h1>
                   <p className="text-sm text-blue-950 mt-0.5">
                     {totalResults} {totalResults === 1 ? "result" : "results"}{" "}
                     found
