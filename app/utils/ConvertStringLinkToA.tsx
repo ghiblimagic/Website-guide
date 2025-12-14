@@ -8,6 +8,9 @@ export default function ConvertStringLinkToA({ item }: { item: string }) {
 
       if (youtubeMatch) {
         const videoId = youtubeMatch[1];
+
+        const videoTitle = `Embedded YouTube video (${videoId})`;
+
         return (
           <div
             key={i}
@@ -15,8 +18,8 @@ export default function ConvertStringLinkToA({ item }: { item: string }) {
           >
             <iframe
               src={`https://www.youtube.com/embed/${videoId}`}
-              title="YouTube video player"
-              frameBorder="0"
+              loading="lazy"
+              title={videoTitle}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full rounded-lg"
