@@ -18,6 +18,7 @@ import {
 } from "../data/websiteBuilderData";
 
 import StyledButton from "../components/StyledButton";
+import ConvertStringLinkToA from "../utils/ConvertStringLinkToA";
 // Type definitions
 import CollapsableList from "../components/CollapsableList";
 type TagCategory =
@@ -386,7 +387,7 @@ export default function WebsiteBuilderGuide() {
               <h1 className="text-4xl font-bold text-blue-950 mb-6 text-center">
                 Website Builder Finder
               </h1>
-              <div className="flex items-center gap-4 mb-4  ">
+              <div className="flex items-center gap-4 mb-10  ">
                 {!sidebarOpen && (
                   <StyledButton
                     onClick={() => setSidebarOpen(true)}
@@ -402,7 +403,7 @@ export default function WebsiteBuilderGuide() {
                 )}
 
                 <div className="flex-1">
-                  <p className="text-sm text-blue-950 mt-0.5">
+                  <p className="text-sm text-blue-950 mt-0.5 font-semibold">
                     {totalResults} {totalResults === 1 ? "result" : "results"}{" "}
                     found
                   </p>
@@ -415,7 +416,7 @@ export default function WebsiteBuilderGuide() {
                 />
               </div>
 
-              <div className="flex items-center gap-2 flex-wrap">
+              <div className="flex items-center gap-2 flex-wrap mb-6">
                 <span className="text-sm font-semibold text-blue-950 mr-2">
                   Show fields:
                 </span>
@@ -445,7 +446,7 @@ export default function WebsiteBuilderGuide() {
                       className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-semibold transition-all text-sm ${
                         visible
                           ? "bg-blue-100 text-blue-900  hover:bg-blue-200 ring-2 ring-blue-500"
-                          : "bg-slate-900 text-gray-200 hover:bg-gray-200 hover:text-gray-800 "
+                          : "bg-slate-700 text-gray-200 hover:bg-gray-200 hover:text-gray-800 "
                       }`}
                     >
                       <span className="sr-only">
@@ -469,7 +470,7 @@ export default function WebsiteBuilderGuide() {
 
           {/* Content Area */}
           <div className="flex-1 overflow-y-auto">
-            <div className="max-w-6xl mx-auto p-6">
+            <div className="max-w-6xl mx-auto p-2 sm:p-6 ">
               {totalResults === 0 ? (
                 <div className="rounded-xl shadow-sm border bg-blue-50 border-blue-200 p-16 text-center">
                   <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -505,7 +506,7 @@ export default function WebsiteBuilderGuide() {
                         </h2>
                       </div>
 
-                      <div className="p-8">
+                      <div className="p-2 sm:p-8 ">
                         {/* Perfect If / Skip If */}
                         {visibleFields.summary && (
                           <div className="grid md:grid-cols-2 gap-6 mb-4">
@@ -528,7 +529,10 @@ export default function WebsiteBuilderGuide() {
                                     <span className="text-green-600 mt-0.5">
                                       •
                                     </span>
-                                    <span>{item}</span>
+                                    <p>
+                                      {" "}
+                                      <ConvertStringLinkToA item={item} />
+                                    </p>
                                   </li>
                                 ))}
                               </ul>
@@ -553,7 +557,10 @@ export default function WebsiteBuilderGuide() {
                                     <span className="text-red-600 mt-0.5">
                                       •
                                     </span>
-                                    <span>{item}</span>
+                                    <p>
+                                      {" "}
+                                      <ConvertStringLinkToA item={item} />
+                                    </p>
                                   </li>
                                 ))}
                               </ul>
@@ -574,7 +581,7 @@ export default function WebsiteBuilderGuide() {
                                   key={idx}
                                   className="text-sm  text-gray-700"
                                 >
-                                  {item}
+                                  <ConvertStringLinkToA item={item} />
                                 </li>
                               ))}
                             </ul>
@@ -630,7 +637,7 @@ export default function WebsiteBuilderGuide() {
                                     key={idx}
                                     className="text-sm my-3  text-gray-700"
                                   >
-                                    {item}
+                                    <ConvertStringLinkToA item={item} />
                                   </li>
                                 ))}
                               </ul>
@@ -746,7 +753,7 @@ export default function WebsiteBuilderGuide() {
                                       key={idx}
                                       className="text-sm my-3  text-gray-700 break-words overflow-hidden"
                                     >
-                                      {item}
+                                      <ConvertStringLinkToA item={item} />
                                     </li>
                                   ))}
                                 </ul>
@@ -766,7 +773,7 @@ export default function WebsiteBuilderGuide() {
                                   key={idx}
                                   className="text-sm my-3  text-gray-700 break-words overflow-hidden"
                                 >
-                                  {item}
+                                  • <ConvertStringLinkToA item={item} />
                                 </li>
                               ))}
                             </ul>
@@ -775,8 +782,8 @@ export default function WebsiteBuilderGuide() {
 
                         {/* Pros / Cons */}
                         {visibleFields.proCons && (
-                          <div className="grid md:grid-cols-2 gap-6 ">
-                            <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <div className="w-full max-w-full overflow-hidden bg-gray-50 rounded-lg p-4 border border-blue-200">
                               <h3 className="font-semibold text-gray-700 mb-3 text-xl">
                                 Pros
                               </h3>
@@ -784,14 +791,14 @@ export default function WebsiteBuilderGuide() {
                                 {builder.pros.map((item, idx) => (
                                   <li
                                     key={idx}
-                                    className="flex items-start gap-2 my-3 text-sm text-gray-700"
+                                    className="flex items-start gap-2 my-3 text-sm text-gray-700 min-w-0"
                                   >
                                     <CheckCircle2
                                       size={16}
                                       className="text-green-600 mt-0.5 flex-shrink-0"
                                     />
-                                    <p className="break-words overflow-hidden">
-                                      {item}
+                                    <p className="max-w-full break-words">
+                                      <ConvertStringLinkToA item={item} />
                                     </p>
                                   </li>
                                 ))}
@@ -812,7 +819,9 @@ export default function WebsiteBuilderGuide() {
                                       size={16}
                                       className="text-red-600 mt-0.5 flex-shrink-0"
                                     />
-                                    <span>{item}</span>
+                                    <p className="max-w-full break-words">
+                                      <ConvertStringLinkToA item={item} />
+                                    </p>
                                   </li>
                                 ))}
                               </ul>

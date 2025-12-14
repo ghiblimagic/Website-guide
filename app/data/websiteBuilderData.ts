@@ -259,12 +259,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "Since Carrd sites are lightweight by design, they're often pretty fast. Just avoid huge images or videos and you'll be in good shape.",
 
-      "Helpful SEO guides for Carrd: 7-minute YouTube walkthrough: https://www.youtube.com/watch?v=F7_1BWxxYoQ More in-depth tips: https://www.nocode.mba/articles/10-essential-card-seo-tips-to-boost-your-website#",
+      "Helpful SEO guides for Carrd: 7-minute YouTube walkthrough: https://www.youtube.com/watch?v=F7_1BWxxYoQ",
+      "More in-depth tips: https://www.nocode.mba/articles/10-essential-card-seo-tips-to-boost-your-website#",
     ],
     pros: ["Very affordable!", "Easy to use"],
     cons: [
       'For single page websites. Though if you want it to "look" like a multi page website you can use their sections feature. However it won\'t have the SEO benefits of a true multi page website.',
-      '"A "multi page" Carrd is also slightly more complicated to set up. 3 minute guide: https://www.youtube.com/watch?v=RVcovcKaeq4',
+      '"A "multi page" Carrd is also slightly more complicated to set up.',
+      "3 minute guide: https://www.youtube.com/watch?v=RVcovcKaeq4",
     ],
     moreInfo: [
       "8 minute overview: https://www.youtube.com/watch?v=oAtkeesUW68",
@@ -757,8 +759,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://squareup.com/us/en/the-bottom-line/starting-your-business/seo-guide-for-business",
       ],
 
-      "17-minute tutorial on setting up SEO:",
-      ["https://www.youtube.com/watch?v=QVJ4dQ2P-xk"],
+      "17-minute tutorial on setting up SEO: https://www.youtube.com/watch?v=QVJ4dQ2P-xk",
     ],
     pros: [
       "You can learn in a day, clean user interface",
@@ -1208,8 +1209,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
           "https://www.shopify.com/blog/shopify-seo#",
         ],
 
-        "And this is a solid no-fluff walkthrough:",
-        ["https://www.youtube.com/watch?v=LMGj7N2iW2A"],
+        "And this is a solid no-fluff walkthrough: https://www.youtube.com/watch?v=LMGj7N2iW2A",
       ],
     ],
     pros: [
@@ -1412,8 +1412,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     moreInfo: [
       "Article comparing Ecwid to Shopify:",
       "https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/",
-      "22 minute tutorial for setting up an Ecwid site:",
-      "https://www.youtube.com/watch?v=UWT2vDUOUFc",
+      "22 minute tutorial for setting up an Ecwid site: https://www.youtube.com/watch?v=UWT2vDUOUFc",
     ],
     examples: [] as string[],
     perfectIf: [
@@ -1949,8 +1948,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
           '"GoDaddy offers AI-powered SEO guidance, something Wix and Hostinger also offer, but Squarespace doesn\'t. That said, the advice given by GoDaddy\'s AI assistant is quite basic, and some of it might even lead to SEO errors. When testing, we noticed GoDaddy\'s SEO AI-bot tended to use "keyword stuffing", a practice of overusing key terms, which Google now penalises."',
         ],
 
-        '"The SEO part of the site builder looks like a good idea, but in reality is an uncustomisable nightmare and is tougher to get results with than a WordPress site."',
-        ["https://www.youtube.com/watch?v=WjYfceBSpDo"],
+        '"The SEO part of the site builder looks like a good idea, but in reality is an uncustomisable nightmare and is tougher to get results with than a WordPress site."https://www.youtube.com/watch?v=WjYfceBSpDo',
       ],
     ],
     pros: [

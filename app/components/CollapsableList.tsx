@@ -1,3 +1,5 @@
+import ConvertStringLinkToA from "../utils/ConvertStringLinkToA";
+
 interface CollapsibleListProps {
   items: (string | string[] | (string | string[])[])[];
   singleItemClassName?: string;
@@ -31,7 +33,7 @@ const CollapsibleList = ({
           key={idx}
           className={listItemClassName}
         >
-          {item}
+          • <ConvertStringLinkToA item={item} />
         </li>
       );
     }
@@ -52,7 +54,7 @@ const CollapsibleList = ({
                     key={subIdx}
                     className={listItemClassName}
                   >
-                    ◦ {subItem}
+                    ◦ <ConvertStringLinkToA item={subItem} />
                   </li>
                 );
               }
@@ -70,7 +72,7 @@ const CollapsibleList = ({
                           key={`${subIdx}-${deepIdx}`}
                           className={listItemClassName}
                         >
-                          ⁃ {deepItem}
+                          ⁃ <ConvertStringLinkToA item={deepItem} />
                         </li>
                       ))}
                     </ul>
