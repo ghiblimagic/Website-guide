@@ -33,7 +33,7 @@ export interface WebsiteBuilder {
   trial: string;
   bestFor: string[];
   support: string[];
-  migration: string;
+  migration: string[];
   security: string;
   accessibility: string[];
   handoff: string[];
@@ -67,14 +67,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Most businesses should create a google business profile, it's free, relatively easy to setup and it's often the first thing that potential clients see about your business.",
     ],
     support: [
-      "Difficult to get a hold of if you are unlucky enough to run into issues but it's free, so worth trying to get your google business profile setup anyway. Usually takes a few weeks for the business to be verified.",
+      "Difficult to get a hold of support",
       "https://support.google.com/business/gethelp/?sjid=14556443374957707723-NC&visit_id=638994772013234530-3113233149&rd=1",
     ],
-    migration: "N/A, this is a google listing not a website.",
+    migration: ["N/A, this is a google listing not a website."],
     security: "N/A, this is a google listing not a website.",
     accessibility: ["N/A, this is a google listing not a website."],
     handoff: [
-      "You can add users to help manage your Google Business Listing Profile.",
+      "You can easily add users to help manage your Google Business Listing Profile.",
       "Here's a video guide for adding users and admins: https://www.youtube.com/watch?v=SqqqOF3AJo8",
     ],
     ecommerce: ["N/A"],
@@ -91,6 +91,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Although you can post your menu as images to get around setting up a website, it requires more work for customers to click through images to find the menu images.",
     ],
     moreInfo: [
+      "It's free, so it's worth getting your google business profile setup. it usually takes a few weeks for the business to be verified.",
       "13 minute set up guide: https://www.youtube.com/watch?v=KPfjzL9oPiE",
     ],
     examples: [] as string[],
@@ -118,14 +119,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Simple blogs, bio sites, portfolios, simple websites, internal team sites, disposable sites for one time events or reports",
     ],
     support: [
+      `Basically no support if just have a free Gmail account instead of a workspace subscription, however there is a help community.`,
       '"Google Sites support for a free Gmail account is basically none existent from Google Inc. themselves. There isn\'t a way to submit a ticket or talk to a Google representative. With a Google Workspace subscription the situation improves, but it comes at a cost there. However, there is an active Help Community of product experts, which is a forum type system." https://www.kirksvillewebdesign.com/google-sites-developer/google-sites-news/free-website-builder-plans',
     ],
-    migration:
+    migration: [
+      "You'd have to build from scratch",
       "You can only migrate it to sharepoint (used for corporate intranets) otherwise you'd have to rebuild from scratch https://cloudiway.com/solutions/google-sites-migration/",
+    ],
     security:
       "Your website data is stored on Google's servers, which could raise concerns about data privacy and security for some people.",
     accessibility: [
-      "Not great for accessibility but there are guides to make use of the accessibility features it does have: such as this 7 minute video: https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
+      "Not great for accessibility but there are guides to make use of the accessibility features it does have",
+      "such as this 7 minute video: https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
     ],
     handoff: [
       `Very Easy to add someone, and its a very simple website builder https://support.google.com/sites/answer/97934?hl=en`,
@@ -135,11 +140,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
       `"I onboarded many nonprofits onto Google Sites because they used Docs and Sheets, but also because your average person can easily make updates". https://www.reddit.com/r/GoogleSites/comments/1jih1vj/would_anyone_actually_recommend_google_sites/`,
     ],
     ecommerce: [
+      "Only simple stores",
       "The lack of a proper CMS makes the prospect of managing a large ecommerce site on Google Sites impractical. However, templates have been made which utilize Pay Now buttons and simple storefronts. https://www.kirksvillewebdesign.com/google-sites/google-sites-templates/business-ecommerce",
       "Most seem to use jotform to create a simple store",
     ],
     appStore: [
-      `No App store but you can embed code (widgets into your site to extend its functionality slightly) https://sites.google.com/site/horstwebdesign/integrations-widgets-apps-and-add-ons`,
+      `No App store but you can embed code (widgets into your site to extend its functionality slightly).`,
+      `https://sites.google.com/site/horstwebdesign/integrations-widgets-apps-and-add-ons`,
 
       `Examples of premium "apps", in this case its just code you\'ll copy and paste into Google Sites: https://www.commoninja.com/widgets?via=googlesites`,
     ],
@@ -192,7 +199,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     name: "Carrd",
     tags: {
       pages: ["1 page"],
-      shop: [],
+      shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
       "learning curve": ["low difficulty"],
@@ -209,28 +216,36 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Simple one-page sites for: Freelancers, Entrepreneurs, Portfolios, Personal Brands, Event Organizers, Small Biz Landing Pages",
     ],
     support: [
-      "Offers email support, no phone support. Usually replies within 24 hours. https://carrd.co/contact",
+      "Offers email support, no phone support. Usually replies within 24 hours.",
+      "https://carrd.co/contact",
     ],
-    migration:
-      "Can only export the website on a pro plus plan or higher, though even then the form elements will not be functional in the download. https://carrd.co/docs/sites/downloading",
+    migration: [
+      "Very limited, you'll basically be rebuilding the website",
+      "You Can only export the website on a pro plus plan or higher, though even then the form elements will not be functional in the download.",
+      "https://carrd.co/docs/sites/downloading",
+    ],
     security: "Handled by Carrd, you don't have to do anything.",
     accessibility: [
-      "Since Carrd sites are simpler they're more likely to be accessible. However there's nothing about \"we meet WCAG 2.1 Level AA\" for the templates, so if you legally need to meet this requirements or want to care for all your potential customers, you'd likely have to manually check for accessibility compliance.",
+      "Since Carrd sites are simpler they're more likely to be accessible but you'll have to manually check for accessibility compliance.",
+      "There's nothing about \"we meet WCAG 2.1 Level AA\" for the templates, so if you legally need to meet this requirements or want to care for all your potential customers, you'd likely have to manually check for accessibility compliance.",
       "Simple accessibility tips for Carrd: https://accessibility.carrd.co",
       "Web accessibility Resources: https://weba11y.carrd.co/",
     ],
     handoff: [
-      "Very simple to share access: https://carrd.co/docs/sites/sharing-access-to-a-site",
+      "Very simple to share access",
+      "https://carrd.co/docs/sites/sharing-access-to-a-site",
     ],
     ecommerce: [
-      "No built in E-commerce features. But you could use Ecwid to embed an online store to your Carrd website: https://support.ecwid.com/hc/en-us/articles/360002848039-Selling-on-Carrd-with-Ecwid",
+      "No built in E-commerce features. But you could have a small shop with an Ecommerce template Ecwid to embed an online store to your Carrd website",
+      "https://support.ecwid.com/hc/en-us/articles/360002848039-Selling-on-Carrd-with-Ecwid",
       "However with Ecwid you are limited to 5 products on a starter plan, 100 to venture, ect. No free plans. Heres a through article which compares shopify to Ecwid: https://www.stylefactoryproductions.com/blog/shopify-vs-ecwid",
       "Embeding options are only available for pro standard and up plans.",
       "More e-commerce options such as stripe, gumload: https://zite.design/carrd/carrd-e-commerce/",
       "You could also use e-commerce templates made by users, prices vary. Heres one example: https://kostas-templates.carrd.co/",
     ],
     appStore: [
-      "Limited to just 5 widgets: Stripe, PayPal, Gumroad, Typeform, facebook https://carrd.co/docs/building/adding-widgets But you can also embed services like Ecwid with a pro standard plan.",
+      "Limited to just 5 widgets: Stripe, PayPal, Gumroad, Typeform, facebook. But you can also embed services like Ecwid with a pro standard plan.",
+      "https://carrd.co/docs/building/adding-widgets ",
     ],
     seo: [
       "Carrd doesn't offer as much SEO customization as bigger builders, but if you follow the main best-practice tips, you can still get solid rankings.",
@@ -296,12 +311,19 @@ export const websiteBuilders: WebsiteBuilder[] = [
       'Chat and Email: "24/7 via live chat and email. Get a fast response, any time."',
       "Can also hire a Pixpa expert for $199",
     ],
-    migration: "can't migrate out of Pixpa.",
-    security: "handled for you",
+    migration: ["Can't migrate out of Pixpa."],
+    security: "Handled for you",
     accessibility: [
-      "From this article, it seems like it might be decent but of course, you would have to follow the guide: https://help.pixpa.com/kb/improving-web-accessibility-of-your-website-on-pixpa/",
+      "Decent accessibility",
+      "From this article, it seems like its decent with accessibility but of course, you would have to follow the guide.",
+      "https://help.pixpa.com/kb/improving-web-accessibility-of-your-website-on-pixpa/",
     ],
-    handoff: [] as string[],
+    handoff: [
+      "Easy to collaborate.",
+      "The Contributors feature enables you to allow any person to edit any section of your Pixpa account. You can specify and give any permissions you prefer.",
+      "The (contributors) feature is available starting from the Creator plan (up to 2 contributors). Professional and Advanced plans include unlimited contributors.",
+      "https://help.pixpa.com/kb/contributors/",
+    ],
     ecommerce: [
       "Great for selling prints, digital downloads, small-batch goods, limited inventory with low traffic",
       '"sell anything, no limits" https://www.pixpa.com/stores. However what this actually means if the first plan you can sell 3 products, the next you can sell 10 products, and the tiers after that allow for unlimited products.',
@@ -314,9 +336,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Example of stores build on Pixpa: https://www.pixpa.com/examples/stores",
     ],
     appStore: [
-      "Has 100+ apps to extend your site's functionality https://www.pixpa.com/apps some require a premium plan but that's the same for every app store.",
+      "Has 100+ apps to extend your site's functionality",
+      "https://www.pixpa.com/apps",
+      "Some require a premium plan but that's the same for every app store.",
     ],
     seo: [
+      "Strong SEO tools",
       "Pixpa has clearly invested a lot into making SEO easier compared to many site builders. You still need to do the usual work (titles, descriptions, alt text, etc.) but the platform is structured in a way that gives you a stronger chance of ranking well.",
       "Some standout SEO-friendly features:",
       "- Their sites follow solid SEO best practices by default.",
@@ -326,7 +351,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "- Pixpa uses server-side rendering, meaning Google can fully read your content instead of struggling with client-side scripts.",
       "- Built-in support for 301 redirects if you ever restructure content or move from another platform.",
       "Handy SEO success checklist: https://help.pixpa.com/kb/managing-website-seo/",
-      "Link where Pixpa talks about their SEO strategy: https://www.pixpa.com/seo-tools",
+      "A link where Pixpa talks about their SEO strategy: https://www.pixpa.com/seo-tools",
     ],
     pros: [
       "focused on creatives",
@@ -376,34 +401,58 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://support.squarespace.com/hc/en-us/p/contact",
       "https://www.launchthedamnthing.com/blog/how-to-contact-squarespace-support",
     ],
-    migration:
-      "Very limited and painful to deal with. Some things can be exported to WordPress, but its hit or miss. https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+    migration: [
+      "Very limited and painful to deal with; you'll basically be rebuilding your site",
+      "Some things can be exported to WordPress, but its hit or miss.",
+      "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+    ],
     security: "Handles security, you don't have to do anything.",
     accessibility: [
       "Squarespace has built in tools to fine-tune your site to be more accessible.",
+
       "https://support.squarespace.com/hc/en-us/articles/215129127-Accessibility-resources-at-Squarespace",
+
       "https://accessibe.com/blog/knowledgebase/squarespace-website-accessibility",
     ],
     handoff: [
       "Easy to add them as a contributor and easy for them to edit.",
+
       "https://support.squarespace.com/hc/en-us/articles/206537287-Inviting-a-contributor",
     ],
     ecommerce: [
-      'Available for all plans, but at different levels for different services, scroll down to "Accept payments and sell products and services" to see how it varies by plan. Free plans currently have a 2% online store transaction fee and 7% digital content and memberships transaction fee https://www.squarespace.com/pricing',
-      'Its weak when trying to sell physical products "it lacks the full range of shipping and fulfillment options provided by Shopify, and also offers fewer payment options (for example, manual payments are not an option)." https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/',
-      '"It\'s possible to connect the store with fulfilment providers like ShipStation, ShipBob and Spocket, but not with marketplaces like AliExpress or Amazon Fulfillment." https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/',
-      "Sell unlimited products and services, send invoices for free, sell content and memberships",
-      "Not as easy to use as other tools \"it can be tricky to find certain settings (e.g. changing currency), and displaying product collections on select pages isn't very intuitive. The editor's behaviour was a bit clunky at times.\" & advanced ecommerce features require one of the higher tier plans https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/",
-      "\" can include over 40 different types of content (e.g. videos, Instagram feeds, calendars, forms for product customization). There's also the ability to add Amazon product listings and Opentable reservation forms. To increase your customers' spend you are also able to show 'related items'.\" https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/",
-      '"One of the few e-commerce platforms that offer an integrated way for customers to leave product reviews, without needing to install an app. You can send an automated email to customers to request a review, or import them from Etsy." https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/',
-      '"Each item can have up to 6 options and 250 variants (SKUs)." https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/',
-      "You can change all relevant SEO settings like the product page's URL, page title and meta description. https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/",
-      'Click on "view full feature list" to see all the pros and cons of each plan https://www.squarespace.com/pricing',
-      'Not great for international markets, because "While it supports 31 currencies, your store will only be able to display one at any time, meaning that when international customers visit, they won\'t see their local currency until checkout." https://www.websitebuilderexpert.com/ecommerce-website-builders/squarespace-e-commerce-business-review/',
+      'Available for all plans, but at different levels, scroll down to "Accept payments and sell products and services" to see how it varies by plan. https://www.squarespace.com/pricing',
+
+      "Sell unlimited products and services, send invoices for free, sell content and memberships - pricing page",
+
+      'Free plans currently have a 2% online store transaction fee and 7% digital content and memberships transaction fee" - pricing page',
+
+      'Click on "view full feature list" to see all the pros and cons of each plan - pricing page',
+
+      'Its weak when trying to sell physical products "it lacks the full range of shipping and fulfillment options provided by Shopify, and also offers fewer payment options (for example, manual payments are not an option)." - Tooltester',
+
+      "https://www.tooltester.com/en/reviews/squarespace-review/ecommerce/",
+
+      '"It\'s possible to connect the store with fulfilment providers like ShipStation, ShipBob and Spocket, but not with marketplaces like AliExpress or Amazon Fulfillment." - Tooltester',
+
+      "Not as easy to use as other tools \"it can be tricky to find certain settings (e.g. changing currency), and displaying product collections on select pages isn't very intuitive. The editor's behaviour was a bit clunky at times.\" & advanced ecommerce features require one of the higher tier plans  - Tooltester",
+
+      '"Can include over 40 different types of content (e.g. videos, Instagram feeds, calendars, forms for product customization). There is also the ability to add Amazon product listings and Opentable reservation forms. To increase your customers spend you are also able to show "related items"". - Tooltester',
+
+      '"One of the few e-commerce platforms that offer an integrated way for customers to leave product reviews, without needing to install an app. You can send an automated email to customers to request a review, or import them from Etsy." -  Tooltester',
+
+      '"Each item can have up to 6 options and 250 variants (SKUs)." -  Tooltester',
+
+      "You can change all relevant SEO settings like the product page's URL, page title and meta description:. - Tooltester",
+
+      "Not great for international markets, because \"While it supports 31 currencies, your store will only be able to display one at any time, meaning that when international customers visit, they won't see their local currency until checkout. - websitebuilderexpert",
+
+      "https://www.websitebuilderexpert.com/ecommerce-website-builders/squarespace-e-commerce-business-review/",
+
       "https://www.squarespace.com/ecommerce-website",
     ],
     appStore: [
       "Less extensions/plugins than other options",
+
       "https://www.squarespace.com/extensions/home",
     ],
     seo: [
@@ -476,14 +525,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "eCommerce is technically there for extra $$ but it has very minimal customization currently",
     ],
     support: [
-      "Live chat (24/7)",
+      "Live chat (24/7), email, no phone support",
       "Email (reply within 24 hours)",
-      "No phone support",
       "https://www.hostinger.com/legal/customer-service-policy",
       "https://www.hostinger.com/contacts",
     ],
-    migration:
+    migration: [
       "Not everything can be exported to WordPress, it's hit or miss. https://www.hostinger.com/support/6572573-hostinger-website-builder-how-to-export-content-to-wordpress/",
+    ],
     security: "Handles security, you don't have to do anything.",
     accessibility: [
       "Couldn't find information about how accessible the templates are.",
@@ -495,39 +544,58 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://www.hostinger.com/support/1583777-how-to-share-access-to-your-account-at-hostinger/",
     ],
     ecommerce: [
-      "You would need the business plan.",
-      '"Sell up to 1000 products and services, schedule appointments", so this is just for small to medium businesses.',
-      '"Sell custom merch with built-in Printful integration"',
-      '"Custom discount codes and gift cards"',
-      '"Keep 100% of your profits with zero transaction fees" (but any payment providers you select might still have fees)',
-      '"Its e-commerce features work best for smaller sellers. (The) inability to sell subscriptions and product bundles, and lack of advanced sales and marketing features can quickly limit businesses with larger inventories." https://www.websitebuilderexpert.com/website-builders/hostinger-website-builder-review/',
-      "Abandoned cart recovery",
-      "100+ payment methods, such as Stripe and Apple Pay",
-      "Customizable checkout options including checkout language and adding custom fields",
-      "tools for SEO, email, and marketing your business",
+      "You would need the business plan but its only suitable for small-medium businesses.",
+      '"Sell up to 1000 products and services, schedule appointments" - Hostinger; so this is just for small to medium businesses.',
+      '"Sell custom merch with built-in Printful integration" - Hostinger',
+      '"Custom discount codes and gift cards" - Hostinger',
+      '"Keep 100% of your profits with zero transaction fees" - Hostinger (but any payment providers you select might still have fees)',
+      '"Its e-commerce features work best for smaller sellers. (The) inability to sell subscriptions and product bundles, and lack of advanced sales and marketing features can quickly limit businesses with larger inventories." - WebsiteBuilderExpert',
+      "https://www.websitebuilderexpert.com/website-builders/hostinger-website-builder-review/",
+      "Abandoned cart recovery - WebsiteBuilderExpert",
+      "100+ payment methods, such as Stripe and Apple Pay - WebsiteBuilderExpert",
+      "Customizable checkout options including checkout language and adding custom fields - WebsiteBuilderExpert",
+      "tools for SEO, email, and marketing your business - WebsiteBuilderExpert",
     ],
     appStore: ["No plugin store"],
     seo: [
+      "For a simple local business, portfolio, or small shop with light SEO needs, Hostinger is usually totally fine.",
+
       "Hostinger's website builder is pretty good for basic SEO, especially for newer businesses that want a simple, low-cost setup. It gives you the essentials, but not the advanced SEO power you'd get with platforms like WordPress, Shopify, or even Wix.",
-      "Key points:",
-      "- If you choose the Business Website Builder plan ($3.79/mo), you get access to Hostinger's AI SEO guidance. It walks you through titles, descriptions, keyword suggestions, and content tweaks.",
-      "  - AI-generated content still needs human editing to avoid keyword stuffing or awkward phrasing.",
-      "- You can customize SEO settings for individual pages, products, and blog posts.",
-      "- Supports the core essentials:",
+
+      "If you choose the Business Website Builder plan ($3.79/mo), you get access to Hostinger's AI SEO guidance. It walks you through titles, descriptions, keyword suggestions, and content tweaks.",
+
+      "AI-generated content still needs human editing to avoid keyword stuffing or awkward phrasing.",
+
+      "You can customize SEO settings for individual pages, products, and blog posts.",
+
+      " Supports the core essentials:",
+
       "  - Meta titles and descriptions",
+
       "  - Custom URLs",
+
       "  - Alt text for images",
+
       "  - Optimized heading structure",
-      "- The biggest limitation: there's no app store. So you can't fill in SEO gaps with plugins like image optimization, keyword research tools, or advanced analytics.",
-      "- It's missing more advanced features like:",
+
+      "The biggest limitation: there's no app store. So you can't fill in SEO gaps with plugins like image optimization, keyword research tools, or advanced analytics.",
+
+      " It's missing more advanced features like:",
+
       "  - Built-in image compression tools",
+
       "  - Rich schema customization",
+
       "  - Technical SEO controls (robots.txt editing, canonical tag tweaks, structured data beyond basics)",
+
       "  - Deep SEO performance analytics across pages",
-      "- Hostinger's builder is fast and lightweight, which does help SEO. Speed is one of its strengths compared to heavier builders.",
-      "- If you're planning to scale your SEO long-term (content-heavy blog, competitive niche, national audience), you may eventually outgrow the builder and move to WordPress or another platform.",
-      "- For a simple local business, portfolio, or small shop with light SEO needs, Hostinger is usually totally fine.",
+
+      "Hostinger's builder is fast and lightweight, which does help SEO. Speed is one of its strengths compared to heavier builders.",
+
+      "If you're planning to scale your SEO long-term (content-heavy blog, competitive niche, national audience), you may eventually outgrow the builder and move to WordPress or another platform.",
+
       "Hostinger provides an official SEO settings guide if you want a step-by-step walkthrough:",
+
       "https://www.hostinger.com/support/6466320-hostinger-website-builder-seo-settings/",
     ],
     pros: [
@@ -544,7 +612,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       '"20 Inspiring Hostinger Website Builder Examples" https://www.sitebuilderreport.com/inspiration/hostinger-websites',
     ],
     perfectIf: [
-      "You just need a simple website with text, images and maybe some contact forms. You don't need all the bells and whistles (addons/plugins).",
+      "If you just need a simple website with text, images and maybe a contact form. You don't need all the bells and whistles (addons/plugins).",
     ],
     skipIf: [
       "You want to heavily customize the look of your website, or you want plugin/addons to add extra features to your website.",
@@ -587,8 +655,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "    You can check for updated support hours here: https://squareup.com/us/en/online-store/plans#support",
       "https://squareup.com/help/us/en/article/4993-contact-square-support",
     ],
-    migration:
+    migration: [
       "You can export certain data like customers, item library, orders and reports, but you can't export the website itself",
+    ],
     security: "Handles security, you don't have to do anything.",
     accessibility: [
       "The square checkout has accessibility options:",
@@ -596,31 +665,46 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Unclear how accessible the square online themes are but there are some widgets to help check your accessibility.",
     ],
     handoff: [
-      "To give an employee access to **edit the Square Online website itself**, you must assign them a permission set that includes **Full Access** to the account. This permission level still prevents them from making major account changes like managing bank accounts, but grants the necessary permissions for website building and editing.",
+      "Giving other users basic permission is free",
+
+      "To give an employee access to edit the Square Online website itself, you must assign them a permission set that includes Full Access to the account. This permission level still prevents them from making major account changes like managing bank accounts, but grants the necessary permissions for website building and editing.",
+
       "Note that basic team permissions are free, but if you need to create custom permission sets for different access levels to your online store and other features, you may need a subscription to the paid Team Management plan.",
+
       "https://www.gentlefrog.com/how-to-add-a-full-access-team-member-to-square/",
     ],
     ecommerce: [
-      "Low upfront cost, perfect if you don't need hardcore features. Pay per transaction, no monthly fees for a basic account",
+      "Low upfront cost, great for small to medium buisnesses",
+
+      "Perfect if you don't need hardcore features. Pay per transaction, no monthly fees for a basic account",
+
       "The cheapest path to a functional POS with good online ordering tools",
+
       "Not ideal for large retail chains since inventory & multi-location tools are basic",
+
       "E-commerce features are weaker than Shopify, best to use shopify if you want a strong e-commerce platform. If you're a small business though, Shopify would be overkill.",
       "If you need a highly unique checkout flow, square might be too rigid for you",
     ],
     appStore: [
-      "https://squareup.com/us/en/app-marketplace",
-      "https://squareup.com/help/us/en/article/5437-manage-your-square-app-marketplace-subscriptions",
+      "Has an appStore",
+
       "Some apps will cost extra, but that's the same for all website builders.",
+
+      "https://squareup.com/us/en/app-marketplace",
+
+      "https://squareup.com/help/us/en/article/5437-manage-your-square-app-marketplace-subscriptions",
     ],
     seo: [
       "when it comes to SEO, it's definitely on the basic end. However for small business, restaurants and cafes and small service, Square's simple SEO settings will likely be enough.",
-      "- What Square does well:",
+
+      "What Square does well:",
       "  - Covers the fundamentals:",
       "    You can set meta titles, descriptions, custom URLs, heading tags, and image alt text.",
       "  - Simple interface:",
       "    SEO fields are easy to find and add, so beginners don't feel overwhelmed.",
       "  - Delivered by Weebly's backend: Square Online still uses Weebly's framework underneath, so it inherits the basic SEO tools that platform built over the years.",
-      "- Where it struggles:",
+
+      "Where it struggles:",
       "  - Limited SEO flexibility",
       "    Compared to Shopify, WordPress, or even Ecwid, Square doesn't offer much in the way of advanced SEO customization.",
       "  - No structured data controls",
@@ -630,17 +714,23 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "  - No advanced URL structure management",
       "  - No strong app market for SEO. If the built-in SEO tools fall short, there's no plugin ecosystem to fill the gaps, unlike Shopify or WordPress.",
       '  - Some users report weaker ranking potential. Not because Square "can\'t rank," but because it lacks the deeper SEO tuning options needed in competitive niches.',
-      '    - "SEO isn\'t its strongest suit compared to Shopify or even Ecwid. While you can do basic SEO (meta titles, descriptions, alt text), its customization and flexibility for advanced SEO strategies (like structured data or technical SEO tweaks) are limited"',
-      "      https://www.reddit.com/r/ecommerce/comments/1i7ewhn/comment/m8p8jor/",
+
+      '"SEO isn\'t its strongest suit compared to Shopify or even Ecwid. While you can do basic SEO (meta titles, descriptions, alt text), its customization and flexibility for advanced SEO strategies (like structured data or technical SEO tweaks) are limited" - reddit link below',
+
+      "https://www.reddit.com/r/ecommerce/comments/1i7ewhn/comment/m8p8jor/",
+
       "Their official SEO guide for beginners is straightforward and practical.",
+
       "https://squareup.com/us/en/the-bottom-line/starting-your-business/seo-guide-for-business",
-      "Video walkthrough:",
+
       "17-minute tutorial on setting up SEO:",
       "https://www.youtube.com/watch?v=QVJ4dQ2P-xk",
     ],
     pros: [
       "You can learn in a day, clean user interface",
+
       "Staff management starting on the square plus plan",
+
       "They have a website builder as well (square online, which is included in every square plan, even the free one)",
     ],
     cons: [
@@ -667,7 +757,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: ["built in POS"],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐–⭐⭐⭐",
+    difficulty: "⭐⭐⭐",
     cost: [
       "Free (with Wix ads, have to use a wixsite.com domain name)",
       "Light $17/mo (no eCommerce capabilities, need Core or higher)",
@@ -680,25 +770,29 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "A business that wants greater control how their site looks, doesn't mind that it will take some more time to get it to look just right, while not dealing with the complexity of Webflow or WordPress",
     ],
     support: [
-      "Hours vary based on what language you speak:",
+      "24/7 chat, email, phone hours vary based on what language you speak:",
+
+      "Phone: (English) Monday-Friday 2AM-6PM EST",
+
       "https://support.wix.com/en/article/contacting-wix-customer-care-for-support",
-      "You're have to start with the chat, and then select if you want to use chat, email or phone support.",
-      "Chat:",
-      '  - "Describe your issue in a chat to get help right away, 24/7"',
-      "Email",
-      "Phone:",
-      "  - (English) Monday-Friday 2AM-6PM EST",
     ],
-    migration:
-      "Can't be migrated, the website is stuck on Wix. If you want to move, you'd have to rebuild from scratch elsewhere. https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+    migration: [
+      "Can't be migrated. If you want to move, you'd have to rebuild from scratch elsewhere.",
+      "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+    ],
     security: "Handles security, you don't have to do anything.",
+
     accessibility: [
-      'Their "features comply with the highest global standards (WCAG 2.0)." and they have guides about how to make sure your website is accessible:',
+      '"Features comply with the highest global standards (WCAG 2.0)." - Wix; and they have guides to make sure your website is accessible',
+
       "https://www.wix.com/accessibility",
-      "These specific template were built with accessibility in mind (though you'd still have to manually enter alt text for images, which would be the same for any accessible template): https://es.wix.com/website/templates/html/accessible",
+
+      "These specific template were built with accessibility in mind (though you'd still have to manually enter alt text for images, which would be the same for any accessible template):",
+      "https://es.wix.com/website/templates/html/accessible",
     ],
+
     handoff: [
-      "More limitations. On a free Wix site (non-Studio), you only get 1 person beyond yourself who can be invited as a collaborator.",
+      "More limitations. On a free Wix site (non-Studio), you only get 1 person who can be invited as a collaborator.",
       "If you expect more than one person to edit the site you'll need a paid plan:",
       "https://support.wix.com/en/article/inviting-people-to-contribute-to-your-site",
     ],
@@ -720,12 +814,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "  - https://www.merchantmaverick.com/reviews/wix-pos-review/",
     ],
     appStore: [
-      "Has more apps/plugins than Squarespace, over 300 that you can add to your site with a click to easily extend the functionality of your site.",
+      "Has more apps/plugins than Squarespace, over 300.",
       "https://www.wix.com/app-market",
     ],
     seo: [
       "Wix used to have a rough reputation for SEO many years ago but that version of Wix doesn't exist anymore. Today, Wix has some of the strongest SEO tools of any no-code builder. It's beginner-friendly on the surface, but surprisingly advanced underneath.",
-      "- What Wix does really well:",
+
+      "What Wix does really well:",
       "  - SEO tools go way beyond the basics",
       "  - Wix includes features most drag-and-drop builders still don't:",
       "    - Built-in structured data / schema markup (auto-generated for many page types)",
@@ -735,18 +830,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "    - Editable page URL structure",
       "    - Breadcrumbs for improved indexing",
       "    - Accelerated Mobile Pages (AMP) for blogs (optional)",
-      "  - SEO Wiz: Genuinely helpful for beginners. Wix's SEO Wiz gives you a personalized SEO plan based on your:",
+      " SEO Wiz: Genuinely helpful for beginners. Wix's SEO Wiz gives you a personalized SEO plan based on your:",
       "    - Industry",
       "    - Goals",
       "    - Keywords",
       "    - It walks you through, step-by-step, what to fix and why.",
       "  - Integrated analytics. Easy connection to Google Analytics, Search Console, and the built-in analytics dashboard.",
       "  - Fast hosting & performance updates. Wix now uses a global CDN, caching, lazy loading, and other optimizations behind the scenes. (Wix used to be slow. Not anymore.)",
-      "- Where Wix struggles:",
+      "Where Wix struggles:",
       "  - Code bloat compared to custom or lightweight platforms",
       "  - Even with their performance improvements, Wix sites can still be heavier than WordPress or custom-coded sites.",
       "  - It's fine for most small businesses, but large content-heavy sites may feel the edges.",
-      "- Helpful resources:",
+      "Helpful resources:",
       "  - Wix SEO Learning Hub: https://www.wix.com/seo/learn",
       "  - Official SEO Guide: https://support.wix.com/en/article/seo-checklist",
       "  - Structured data guide: https://support.wix.com/en/article/about-wix-seo-structured-data",
@@ -800,21 +895,31 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "No trial, but you can build your entire site for free before publishing. The free domain will use the simple domain",
     bestFor: [
       "Local service businesses",
+
       "Those who need a simple one page website, with a basic form. Small businesses, creatives, freelancers.",
+
       "If you need very basic e-commerce, you could attach a payment processor like paypal, etc.",
+
       "Owners who don't want to fuss with plugins or complex settings",
     ],
     support: [
-      '"Siimple is made with care and attention my team of 3 friends that have been building websites for over 2 decades. If anything gets tricky, you can talk to a real person immediately."',
+      '"Siimple is made with care and attention my team of 3 friends that have been building websites for over 2 decades. If anything gets tricky, you can talk to a real person immediately." - Siimple',
+
       "They have a chat feature, but it's not clear what the hours are.",
     ],
-    migration: "Would need to start from scratch",
+    migration: ["Would need to start from scratch"],
+
     security: "Handled for you, automatic updates",
+
     accessibility: [
+      "Strong accessibility features",
       "\"Accessibility features aren't just nice-to-have — they're part of the default setup. Siimple's templates are mobile-first, use readable fonts, maintain strong color contrast, and follow clean navigation structures that work with assistive technologies. https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/",
     ],
     handoff: [
-      "I made a free account and there was no obvious way to share access with someone else. There's a chance it might only be visible when the site is published/after payment.",
+      "Unclear, but its easy enough to edit that even if you have to share your login with employees it'd be easy for them to update the site",
+
+      "I made a free account and there was no obvious way to share access with someone else. There's a chance it might only be visible after payment.",
+
       "However the site itself is easy to edit, so at the very minimum even if you have to share your login it'd be easy for them to update.",
     ],
     ecommerce: [
@@ -822,9 +927,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "how to use paypal, gumroad or stripe https://docs.getsiimple.com/en/articles/9830861-does-siimple-offer-e-commerce-or-shop-features",
     ],
     appStore: ["no app store"],
+
     seo: [
       "Siimple is, well simple but in this case that's a good thing. It's built for fast-loading, clean, lightweight websites, which gives small local businesses a solid SEO foundation right out of the box.",
-      "- What Siimple does well:",
+      "What Siimple does well:",
       "  - Excellent for Local SEO",
       '    - Their templates are intentionally minimal, fast, and mobile-friendly; all ranking signals Google loves for local businesses. If your goal is to show up in "near me" searches, Siimple won\'t get in your way.',
       "  - Super clean, lightweight pages",
@@ -843,7 +949,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "  - This covers the core SEO settings most small businesses need.",
       "  - Beginner-friendly SEO guidance",
       "  - Their SEO guide is genuinely helpful and written in plain English: https://getsiimple.com/blog/how-a-siimple-website-can-get-your-local-business-found-on-google/",
-      "- Where Siimple is limited:",
+      "Where Siimple is limited:",
       "  - No advanced SEO tools. Unlike Wix, WordPress, or Webflow, Siimple doesn't offer:",
       "    - Structured data controls",
       "    - Custom schema markup",
@@ -852,8 +958,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "    - Canonical tags",
       "    - SEO analytics or keyword tools",
       "    - App marketplace for SEO add-ons",
-      "  - It's intentionally simple, but that means fewer levers to pull if you're in a competitive niche.",
-      "  - Not ideal for content-heavy SEO strategies. There's no blog, no complex sitemap control, and no tools for long-form content. If content marketing is part of your plan, you'll quickly outgrow it.",
+      " It's intentionally simple, but that means fewer levers to pull if you're in a competitive niche.",
+      " Not ideal for content-heavy SEO strategies. There's no blog, no complex sitemap control, and no tools for long-form content. If content marketing is part of your plan, you'll quickly outgrow it.",
     ],
     pros: [
       "You can bring your own domain or purchase the domain through them. Or use their free Siimple domain.",
@@ -869,7 +975,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     examples: [] as string[],
     perfectIf: [
       "You just need a simple one page website with minimal upkeep, with no blogging. It does have a contact form that will send messages to your email.",
+
       "Need a simple site where any purchases would be done through a payment processor (like Paypal, Gumroad or Stripe)",
+
       "Heavy focus on local SEO makes it great for localized small businesses",
     ],
     skipIf: [
@@ -881,12 +989,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
     name: "Shopify",
     tags: {
       pages: ["multi-page"],
-      shop: ["small shop", "big shop"],
+      shop: ["big shop"],
       "creative freedom": ["medium customization"],
       POS: ["built in POS"],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐–⭐⭐⭐",
+    difficulty: "⭐⭐⭐",
     cost: [
       "Basic (solo) $29/mo",
       "There are more expensive plans as well",
@@ -896,7 +1004,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     trial: "3 day free trial + $1/mo for the first 3 months of some plans",
     bestFor: [] as string[],
     support: [
-      "Chat: for all plans: (available 24/7)",
+      "Varies based on your plan, but chat is available for all plans 24/7",
       "Phone: Shopify Plus and Retail plans only",
       "Email: Shopify Plus and Retail plans only",
       '"If you use a free Shopify theme and are on the Basic plan or higher, then you get up to 60 minutes of free design support (in 15-minute increments) for small theme changes."',
@@ -904,11 +1012,15 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://help.shopify.com/en/manual/your-account/contact-shopify-support",
       "https://help.shopify.com/en/manual/online-store/themes/theme-support#where-to-find-support-for-your-theme",
     ],
-    migration:
-      "Very limited, you can export your stores data but the theme is specific to shopify. You'd basically need to hire a developer to fully migrate or just start from scratch on the new platform https://wpcreative.com.au/convert-shopify-theme-to-wordpress/",
+    migration: [
+      "Very limited, you can export your stores data but the theme is specific to shopify.",
+      "You'd basically need to hire a developer to fully migrate or just start from scratch on the new platform.",
+      "https://wpcreative.com.au/convert-shopify-theme-to-wordpress/",
+    ],
     security:
-      'Handles security, you don\'t have to do anything. "All Shopify sites are PCI compliant and SSL certified, ensuring your business and customer data are protected."',
+      'Handles security, you don\'t have to do anything. "All Shopify sites are PCI compliant and SSL certified, ensuring your business and customer data are protected." - Shopify',
     accessibility: [
+      "There are accessibility guides and more accessible themes, but you'd also have to be careful if your plugins are accessible as well.",
       "Guide on how to make your site accessible:",
       "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/accessibility",
       "These are some of the more accessible themes:",
@@ -916,19 +1028,31 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Though the plugins/ apps you use might not be as accessible as your theme.",
     ],
     handoff: [
+      "You can easily add collaborators for free to make limited edits, but staff accounts would require the pricey $79/mo plan",
+
       "Collaborator Accounts do not count towards staff limits, so you can give designers, developers, and marketing limited access to the store.",
+
       "Can easily personalize staff permissions BUT the basic plan has 0, you can't even buy 1 staff account to use with the basic plan.",
+
       "You'd need to buy the pricey $79/mo grow plan to get any staff accounts (5 staff)",
+
       "https://community.shopify.com/t/how-can-i-view-and-edit-staff-privileges-on-my-website/78602",
+
       "https://help.shopify.com/en/manual/your-account/users/users-plan-requirements",
     ],
     ecommerce: [
-      "Shopify was made for E-commerce",
+      "Shopify was made for E-commerce.",
+
       "Unlimited products (though they'll ban you if you share illegal or NSFW products)",
+
       "Can dropship with shopify's network",
+
       "Marketing, abandoned checkout recovery, discount codes",
+
       "They make it easy to manage your inventory, order fulfillment, etc, though there will be transaction fees",
+
       "Basic and plus plans have limited checkout customization options, the pricier plans have more customization options.",
+
       'Scroll down to "Full list of features" and click to see what features are available for every plan: https://www.shopify.com/pricing?country=us&lang=en',
     ],
     appStore: [
@@ -936,7 +1060,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     seo: [
       "Shopify is one of the strongest e-commerce platforms for SEO, especially if you have a real online store with lots of products. It comes with well-structured code, fast hosting, and a huge ecosystem of SEO tools and apps.",
-      "- What Shopify does well:",
+      "What Shopify does well:",
       "  - Great built-in SEO foundations. Shopify automatically handles a lot of the technical stuff for you:",
       "    - Clean, readable URLs",
       "    - Automatic sitemap generation",
@@ -972,7 +1096,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "      - https://www.shopify.com/blog/shopify-seo#",
       "    - And this is a solid no-fluff walkthrough:",
       "      - https://www.youtube.com/watch?v=LMGj7N2iW2A",
-      "- Where Shopify is limited:",
+      "Where Shopify is limited:",
       "  - Limited control over URL structure. Shopify forces certain URL patterns you can't change:",
       "    - /products/",
       "    - /collections/",
@@ -987,26 +1111,35 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       "But the sections are built to be easy to edit, and to look good on any size screen (be responsive).",
-      "It now has a drag and drop page builder: https://www.shopify.com/website/builder?country=us&lang=en, though you can use third party apps to add more advanced drag and drop features.",
+
+      "It now has a drag and drop page builder: though you can use third party apps to add more advanced drag and drop features.",
+      "https://www.shopify.com/website/builder",
     ],
     cons: [
       "Less creative freedom",
+
       "Learning curve for advanced features like SEO, analytics, automation flows",
+
       "Shopify can ban your store if it suspects you're a bot, selling prohibited items, running multiple brands in the same store (they want a store for each brand), and various other reasons. You can speak to shopify support on the off chance it does happen to you.",
     ],
     moreInfo: [] as string[],
     examples: [
       "Official store examples: https://www.shopify.com/examples",
+
       "More detailed list: https://www.sitebuilderreport.com/shopify-stores-examples",
     ],
     perfectIf: [
       "You have a medium or large eCommerce business.",
+
       "Businesses with lots of SKUs or complex product setups",
+
       "Brands that want strong SEO without touching code",
     ],
     skipIf: [
       "You're not running a store, it's overkill.",
+
       "Businesses needing total control over URL structure or advanced technical SEO",
+
       "Brands focused mostly on blogging/SEO content marketing",
     ],
   },
@@ -1020,7 +1153,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: ["built in POS"],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐–⭐⭐⭐",
+    difficulty: "⭐⭐⭐",
     cost: [
       "Starter $5/mo (same price to pay annually or monthly)",
       "Venture: $30/mo ($25 if paid annually)",
@@ -1032,44 +1165,55 @@ export const websiteBuilders: WebsiteBuilder[] = [
     trial: "none",
     bestFor: ["Smaller businesses"],
     support: [
-      "Email: all plans",
+      "All plans have email support, chat and phone depends on your plan",
       "Chat: Venture plan or above required (24/7 monday through friday)",
       'Phone: Business or above required: "Call-backs are available 2PM-10PM PDT, Monday-Friday in English. Scheduling via chat is required"',
       "Store Customization help (Annual Business or unlimited plan required): 2 to 6 hours of help customizing your shop",
     ],
-    migration:
-      "Ecwid lets you export/import product catalogs via CSV, so if you migrate later",
+    migration: [
+      "Shop can be exported but the Ecwid website would have to be rebuilt.",
+      "You'd use something like cart2Cart to fully export the site",
+      "Ecwid lets you export/import product catalogs via CSV",
+      "https://www.shopping-cart-migration.com/shopping-cart-migration-options/24788-ecwid-to-shopify-migration",
+    ],
     security:
       'Handled by Ecwid. "Ecwid uses Amazon Web Services (AWS), so your store inherits some great security features, and both AWS and Ecwid are Level 1 PCI DSS certified." https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/',
     accessibility: [
+      "Strong accessibility features",
       '"Ecwid is designed with accessibility in mind and you can be sure that your Ecwid store is a welcoming place for everyone. Your store doesn\'t have any access barriers, you can sell online to people with disabilities - to visually-impaired buyers that have to use screen readers for browsing online shops or buyers that navigate with keyboard only. And you can be sure that your store follows ADA standards (ADA is short for the Americans with Disabilities Act, which became law in 1990)."',
+
       '"you can use the store with Instant Site that successfully passed accessibility tests along with Ecwid storefront."',
+
       "source for both quotes: https://support.ecwid.com/hc/en-us/articles/360004696179-Meeting-accessibility-guidelines-ADA",
     ],
     handoff: [
-      "You would need a business plan to be able to give specific editing permissions to staff, designers, developers etc. https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts",
+      "You would need a business plan to be able to give specific editing permissions to staff, designers, developers etc.",
+      "https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts",
     ],
     ecommerce: [
-      "To see a breakdown of all the features available to each plan go here: https://www.ecwid.com/pricing",
-      "Ideal for a small to medium sized business, not a full enterprise shop",
-      "No transaction fees through them (though third party payment processors might still charge fees)",
-      "Can sell physical or digital products, manage orders & inventory, and integrate with many payment gateways",
-      "Mobile POS requires Venture or higher plans",
-      "POS integration with Lightspeed Retail POS requires the business or higher plan",
-      "POS integration with Square, Clover is only available on the unlimited plan",
-      "supports multi-channel selling: storefront + social media shops + marketplace integrations, which is useful if you want to reach customers outside just your website",
-      "Abandoned cart emails only available on business plan or above",
-      '"Ecwid works with over 70 payment providers worldwide, including PayPal and Stripe, so there\'s a great chance we support your favorite option."',
-      '"email marketing, discount management, product variations and automated sales tax calculations, and it handles physical, subscription and digital product types." https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/',
+      "Ideal for a small to medium sized business, not a full enterprise shop.",
+      "To see a breakdown of all the features available to each plan go here:",
+      "https://www.ecwid.com/pricing",
+      "No transaction fees through them (though third party payment processors might still charge fees).",
+      "Can sell physical or digital products, manage orders & inventory, and integrate with many payment gateways.",
+      "Mobile POS requires Venture or higher plans.",
+      "POS integration with Lightspeed Retail POS requires the business or higher plan.",
+      "POS integration with Square, Clover is only available on the unlimited plan.",
+      "Supports multi-channel selling: storefront + social media shops + marketplace integrations, which is useful if you want to reach customers outside just your website",
+      "Abandoned cart emails only available on business plan or above.",
+      '"Ecwid works with over 70 payment providers worldwide, including PayPal and Stripe, so there\'s a great chance we support your favorite option." - Forbes',
+      "https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/",
+      '"Email marketing, discount management, product variations and automated sales tax calculations, and it handles physical, subscription and digital product types. -Forbes',
     ],
     appStore: [
-      "Yes https://www.ecwid.com/apps/Featured",
       "App store is much smaller than Shopify's",
+
+      "https://www.ecwid.com/apps/Featured",
     ],
     seo: [
       "If you're embedding Ecwid into another website, your overall SEO strength depends partly on the platform you're attaching it to (WordPress, Wix, Squarespace, etc.). Ecwid handles the product-level SEO, while the main site builder controls most of the technical SEO.",
       "However you can also use Ecwid's very basic site builder instead of embedding your Ecwid store in a separate site.",
-      "- What it does well:",
+      "What it does well:",
       "  - Basic built-in SEO tools:",
       "    - Meta titles",
       "    - Meta descriptions",
@@ -1081,7 +1225,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "  - Fast, lightweight templates: Ecwid's Instant Site is optimized for speed, which boosts both rankings and conversion rates.",
       "  - Good for local SEO: Their Instant Site is simple, clean, and mobile-friendly, helping small businesses get found in local search.",
       "  - 301 redirects are supported: Useful if you rename products or reorganize your catalog.",
-      "- Where it is limited:",
+      "Where it is limited:",
       "  - For anything advanced you'd rely on third-party tools or separate apps on the platform you're using (WordPress plugins, Wix apps, etc.).",
       "    - Keyword analysis",
       "    - SEO auditing",
@@ -1099,25 +1243,47 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       "Largely easy to use, but the initial process can be a bit difficult at first since the initial shop setup controls are lumped together.",
+
       '"Can set up a store in 10-15 minutes". Pick a template, add content + products, and publish. https://www.youtube.com/watch?v=UWT2vDUOUFc',
+
       "Nonprofits get 6 months of Venture plans for free:",
-      '  - "Tell us more about your nonprofit and get 6 months of Venture for free." Scroll down to "Do you offer any discounts for nonprofit organizations?" and click it to see the link to the form.',
-      "all Ecwid plans come with unlimited bandwidth and storage at no extra cost.",
-      "Ecwid supports connecting a custom domain (or using a free subdomain) if you don't have another website. https://support.ecwid.com/hc/en-us/articles/115005609945-Ecwid-overview",
+
+      '"Tell us more about your nonprofit and get 6 months of Venture for free." Scroll down the pricing page to "Do you offer any discounts for nonprofit organizations?" and click it to see the link to the form.',
+
+      "https://www.ecwid.com/pricing",
+
+      "All Ecwid plans come with unlimited bandwidth and storage at no extra cost.",
+
+      "Ecwid supports connecting a custom domain (or using a free subdomain) if you don't have another website.",
+
+      "https://support.ecwid.com/hc/en-us/articles/115005609945-Ecwid-overview",
     ],
     cons: [
       "Some plugins have left ecwid so some businesses have had to move to shopify, if they needed those integrations.",
+
       "Would need the venture plan or higher to use a custom domain, but each plan has a free .company.site domain",
+
       "For large shops, or shops that expect to get big it can be limiting.",
+
       "Limited customization options, but might be enough for a small shop that doesn't need heavy customization.",
+
       "Weaker marketing tools, though you can use plugins to get access to more marketing tools.",
-      '"Wix and Ecwid can work for small hobby shops, but they get messy once you add more products, variants, shipping rules, or start running ads. Shopify has better checkout, payment options, apps, and support for scaling. Plus if you ever want to run Meta/TikTok ads, Shopify integrates smoothly." https://www.reddit.com/r/EcommerceWebsite/comments/1n8i79t/comment/ncirbj9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
-      "It lacks features you might expect in a full CMS: there's no built-in blog support, and page-type flexibility is limited (good for shops/catalogs but not ideal if you need heavy content, blogs, or complex site structure) https://www.workswaves.com/ecwid-review/",
-      "Customization options beyond what the template/section editor allows are minimal; for deeper control (special layouts, advanced SEO tweaks, custom pages) you might need to embed Ecwid into a more flexible site or code manually https://www.workswaves.com/ecwid-review/",
+
+      '"Wix and Ecwid can work for small hobby shops, but they get messy once you add more products, variants, shipping rules, or start running ads. Shopify has better checkout, payment options, apps, and support for scaling. Plus if you ever want to run Meta/TikTok ads, Shopify integrates smoothly. - reddit post below',
+
+      "https://www.reddit.com/r/EcommerceWebsite/comments/1n8i79t/comment/ncirbj9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+
+      '"It lacks features you might expect in a full CMS: there is no built-in blog support, and page-type flexibility is limited (good for shops/catalogs but not ideal if you need heavy content, blogs, or complex site structure)" - WorksWaves',
+
+      "https://www.workswaves.com/ecwid-review/",
+
+      '"Customization options beyond what the template/section editor allows are minimal; for deeper control (special layouts, advanced SEO tweaks, custom pages) you might need to embed Ecwid into a more flexible site or code manually."  - WorksWaves',
     ],
     moreInfo: [
-      "Article comparing Ecwid to Shopify: https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/",
-      "22 minute tutorial for setting up an Ecwid site: https://www.youtube.com/watch?v=UWT2vDUOUFc",
+      "Article comparing Ecwid to Shopify:",
+      "https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/",
+      "22 minute tutorial for setting up an Ecwid site:",
+      "https://www.youtube.com/watch?v=UWT2vDUOUFc",
     ],
     examples: [] as string[],
     perfectIf: [
@@ -1139,7 +1305,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["high difficulty"],
     },
-    difficulty: "⭐⭐⭐-⭐⭐⭐⭐",
+    difficulty: "⭐⭐⭐⭐⭐",
     cost: [
       "Depends on where you host it, WordPress itself is free. You'd choose your host and build your WordPress site there. Most hosts have 1-click install.",
       "Hostinger $1.95/mo for 48 months 10.99/mo regular price at renewal",
@@ -1153,8 +1319,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Support varies based on your hosting platform",
       "Theme and plugin support levels vary by the creators",
     ],
-    migration:
+    migration: [
       "This is where WordPress shines, it's the easiest to move away from. You can easily switch from one hosting provider to another.",
+    ],
     security:
       "If you use managed WordPress hosting they'll handle security. If you use a self-hosted solution you'd have to manually update plugins, themes and other security updates.",
     accessibility: [
@@ -1183,7 +1350,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "No themes or plugins are restricted, you can use any that you want.",
     ],
     seo: [
-      "Both .com and .org versions run on the same underlying WordPress software, so their basic SEO potential is similar. Both can rank extremely well. WordPress is one of the strongest SEO platforms overall. The difference is mainly how much control you have. - Clean HTML markup - Good use of headings (H1–H6) - Fast, mobile-optimized themes (depending on what you pick) - Ability to edit: - Page/post titles - Meta descriptions - Image alt text - URL slugs - Built-in blog functionality (amazing for SEO) - Support for schema via plugins or themes (with limitations on .com)",
+      "Strong SEO potential",
+      "Both .com and .org versions run on the same underlying WordPress software, so their basic SEO potential is similar.",
+      "Both can rank extremely well. WordPress is one of the strongest SEO platforms overall.",
+      "The difference is mainly how much control you have. - Clean HTML markup - Good use of headings (H1–H6) - Fast, mobile-optimized themes (depending on what you pick) - Ability to edit: - Page/post titles - Meta descriptions - Image alt text - URL slugs - Built-in blog functionality (amazing for SEO) - Support for schema via plugins or themes (with limitations on .com)",
+
       "What's great for SEO:",
       "- Full control over everything technical:",
       "  - Custom URL structure",
@@ -1197,7 +1368,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "- Advanced image optimization plugins",
       "- Full access to performance plugins",
       "- Total design freedom, you're not limited by platform rules.",
-      "- Where it can be weaker:",
+      " Where it can be weaker:",
       "  - SEO success heavily depends on:",
       "    - Your hosting quality (some hosts will have faster servers than others)",
       "    - How you configure caching/CDNs",
@@ -1206,30 +1377,47 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       "Very customizable. Over 30,000 themes and 70,000 plugins to choose from to personalize your site, at various prices (some are free)",
+
       "No themes or plugins are restricted, you can use any that you want.",
+
       "Freedom to customize anything (themes, plugins, code)",
+
       "Full access to files, database, server",
+
       "You can heavily customize performance, caching, SEO",
+
       "You can install SEO plugins like RankMath or yoast to help drive traffic to your site.",
+
       'You can easily switch hosting providers, if one of them suddenly raises prices on you. Or you just want to take advantage of the "new client" plans by jumping around.',
       "Need a site that will grow with your business (scalable)",
+
       "Can add e-commerce capabilities with plugins",
+
       "Not locked into a specific platform like the other website builders, you can pick up your website and move to another platform if a hosting platform starts price gouging you.",
+
       "Can be relatively cheap, as long as you don't go crazy with adding plugins.",
     ],
     cons: [
       "You have to deal with finding hosting. If you don't choose a provider that offers \"Managed WordPress hosting\", then you'd have to manually do plugin updates, security updates and backups.",
+
       "You have to use more care when choosing themes and plugins, as not all of them are good quality. Look at reviews, avoid ones with low reviews.",
+
       "You'll have to deal with more technical aspects of your website, especially if you don't use \"Managed WordPress Hosting\"",
+
       "Bigger learning curve, takes time to get used to the setup.",
     ],
     moreInfo: [] as string[],
     examples: [
-      'Official "showcase" of real sites built on WordPress: https://wordpress.org/showcase/',
-      "Big brands using WordPress: https://kinsta.com/blog/wordpress-site-examples/",
-      'Collection of "100+ real WordPress website examples": https://reallygooddesigns.com/wordpress-website-examples',
-      'Kinsta "130+ WordPress Site Examples" https://kinsta.com/blog/wordpress-site-examples/',
-      '10Web "26 WordPress Website Examples to Inspire You" https://10web.io/blog/wordpress-websites/',
+      'Official "showcase" of real sites built on WordPress:',
+      "https://wordpress.org/showcase/",
+      "Big brands using WordPress:",
+      "https://kinsta.com/blog/wordpress-site-examples/",
+      'Collection of "100+ real WordPress website examples":',
+      "https://reallygooddesigns.com/wordpress-website-examples",
+      'Kinsta "130+ WordPress Site Examples":',
+      "https://kinsta.com/blog/wordpress-site-examples/",
+      '10Web "26 WordPress Website Examples to Inspire You":',
+      "https://10web.io/blog/wordpress-websites/",
     ],
     perfectIf: [
       "You want flexibility, something highly customizable, plugins, blogging, or long-term scalability.",
@@ -1251,7 +1439,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐⭐",
+    difficulty: "⭐⭐⭐⭐",
     cost: [
       "Free $0/mo (will have ads, can't install plugins or themes)",
       "There are discounts if you pay yearly or once every 2 years, saving up to 68%",
@@ -1270,8 +1458,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "  - https://wordpress.com/support/plugins/get-help-with-plugins-and-themes/",
       "Third party Plugin and theme issues will depend on the support options listed by the creator",
     ],
-    migration:
+    migration: [
       "You can move the website to another hosting provider: https://wordpress.com/support/export/",
+    ],
     security: "Handles security, you don't have to do anything.",
     accessibility: [
       "Varies by theme, these are some of the more accessible themes:",
@@ -1378,8 +1567,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Phone and video call: only for Enterprise plans",
       "https://help.webflow.com/hc/en-us/articles/39672881707155-Customer-Support-Policy#h_01JQ478K6QZS3YTS9N2566E3TM",
     ],
-    migration:
+    migration: [
       "Limited. You can only export your code on the workspace plans but a good chunk of the content won't be included in the export (CMS, user accounts, e-commerce content, form logic, etc). https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code",
+    ],
     security: "Handles security, you don't have to do anything.",
     accessibility: [
       "Has built in tools to audit your website for accessibility issues",
@@ -1506,8 +1696,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "When you contact them for help, you'll have to deal with aggressive upselling. Example: saying the problem will probably be fixed if you upgrade to a new plan versus trying to solve the actual problem.",
       "Common complaint is that the responses were unhelpful and had long wait times, if the problem was even resolved at the end.",
     ],
-    migration:
+    migration: [
       "You'd have to rebuild your site from scratch. Difficulty migrating. If you outgrow GoDaddy's builder, migrating away is often painful (limited export options, rigid templates). Not great if you expect growth or hope to switch platforms later. https://www.forbes.com/advisor/business/software/godaddy-website-builder-review/",
+    ],
     security:
       "Basic security is included (SSL, standard protections). GoDaddy has been involved in several security incidents, exposing customer and visitor information, which lead to a class action settlements.",
     accessibility: [
@@ -1580,7 +1771,7 @@ export const guidingQuestions: GuidingQuestion[] = [
   {
     id: 1,
     question:
-      "Just need your website to show your basic information and have a contact form?",
+      "Do you just need your website to show basic information and have a contact form?",
     options: [
       {
         label: "Yes",
@@ -1598,7 +1789,7 @@ export const guidingQuestions: GuidingQuestion[] = [
     options: [
       {
         label: "No",
-        action: { category: "shop", tag: "" },
+        action: { category: "shop", tag: "none" },
       },
       {
         label: "Yes, a small shop",
@@ -1633,33 +1824,6 @@ export const guidingQuestions: GuidingQuestion[] = [
         action: {
           category: "creative freedom",
           tag: "heavy customization",
-        },
-      },
-    ],
-  },
-  {
-    id: 4,
-    question: "How much time do you have to learn the web builder? ",
-    options: [
-      {
-        label: "Very little",
-        action: {
-          category: "learning curve",
-          tag: "low difficulty",
-        },
-      },
-      {
-        label: "Some",
-        action: {
-          category: "learning curve",
-          tag: "medium difficulty",
-        },
-      },
-      {
-        label: "A lot",
-        action: {
-          category: "learning curve",
-          tag: "high difficulty",
         },
       },
     ],

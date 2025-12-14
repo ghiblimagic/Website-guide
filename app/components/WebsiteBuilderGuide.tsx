@@ -123,16 +123,33 @@ export default function WebsiteBuilderGuide() {
     }
   };
 
-  const handleGuidingAnswer = (action: {
-    category: TagCategory;
+  const handleGuidingAnswer = ({
+    category,
+    tag,
+  }: {
+    category: keyof SelectedTags;
     tag: string;
   }) => {
-    setSelectedTags((prev) => ({
-      ...prev,
-      [action.category]: [action.tag],
-    }));
-  };
+    setSelectedTags((prev) => {
+      const current = prev[category];
 
+      if (!tag) {
+        return {
+          ...prev,
+          [category]: [],
+        };
+      }
+
+      const isSelected = current.includes(tag);
+
+      return {
+        ...prev,
+        [category]: isSelected
+          ? current.filter((t) => t !== tag) // deselect
+          : [tag],
+      };
+    });
+  };
   const toggleTag = (category: TagCategory, tag: string) => {
     setSelectedTags((prev) => {
       const currentTags = prev[category];
@@ -188,13 +205,13 @@ export default function WebsiteBuilderGuide() {
         <div className="fixed inset-0  backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="rounded-2xl bg-white shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0  border-b border-blue-200 px-8 py-6 rounded-t-2xl">
-              <div className="flex justify-between items-start">
-                <div>
+              <div className="flex justify-between">
+                <div className="w-full text-center">
                   <h2 className="text-3xl font-bold text-blue-950 mb-4">
                     Which Website Builder Fits You?
                   </h2>
-                  <p className="text-gray-600">
-                    Answer a few quick questions to narrow down your options
+                  <p className="text-gray-700">
+                    Answer a few quick questions to narrow down your options.
                   </p>
                 </div>
                 <button
@@ -212,20 +229,34 @@ export default function WebsiteBuilderGuide() {
                   key={q.id}
                   className="pb-8 border-b border-blue-200 last:border-0"
                 >
-                  <p className="text-lg font-medium text-gray-900 pt-1 mb-2">
-                    {q.question}
+                  <p className="text-lg font-medium text-gray-700 pt-1 mb-2">
+                    {q.question} (Optional)
                   </p>
 
                   <div className="flex gap-2 flex-wrap">
-                    {q.options.map((opt, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => handleGuidingAnswer(opt.action)}
-                        className="flex-1 bg-white border-2 border-blue-500 hover:bg-blue-50 text-blue-700 py-3 px-6 rounded-xl font-medium transition-all hover:shadow-md"
-                      >
-                        {opt.label}
-                      </button>
-                    ))}
+                    {q.options.map((opt, idx) => {
+                      const { category, tag } = opt.action;
+
+                      const isActive =
+                        tag && selectedTags[category]?.includes(tag);
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleGuidingAnswer(opt.action)}
+                          className={`
+          flex-1 py-3 px-6 rounded-xl font-medium transition-all
+          ${
+            isActive
+              ? "bg-blue-500 text-white shadow-lg"
+              : "bg-white border-2 border-blue-500 text-blue-700 hover:bg-blue-50 hover:shadow-md"
+          }
+        `}
+                        >
+                          {opt.label}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -253,7 +284,7 @@ export default function WebsiteBuilderGuide() {
       )}
 
       {/* Main Layout */}
-      <div className="flex ">
+      <div className="flex min-h-screen">
         {/* Sidebar */}
         <div
           style={{
