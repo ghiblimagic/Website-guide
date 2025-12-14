@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { openSans, dancingScript } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,27 +24,29 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/fonts/DancingScript-Regular.ttf"
+          href="/fonts/OpenSans-Regular.ttf"
           as="font"
-          type="font/woff2"
-          crossOrigin=""
+          type="font/ttf"
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/OpenSans-Bold.ttf"
           as="font"
-          type="font/woff2"
-          crossOrigin=""
+          type="font/ttf"
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/OpenSans-Regular.ttf"
+          href="/fonts/DancingScript-Regular.ttf"
           as="font"
-          type="font/woff2"
-          crossOrigin=""
+          type="font/ttf"
+          crossOrigin="anonymous"
         />
       </head>
-      <body className={`antialiased`}>
+      <body
+        className={`${openSans.variable} ${dancingScript.variable} antialiased`}
+      >
         <nav className="bg-blue-900 border-b-2 border-white py-2 px-6">
           {" "}
           <a href="https://janetspellman.com">
