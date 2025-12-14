@@ -2,31 +2,31 @@ export default function ConvertStringLinkToA({ item }: { item: string }) {
   return item.split(/(https?:\/\/\S+)/g).map((part, i) => {
     if (part.startsWith("http")) {
       // Check if it's a YouTube URL
-      const youtubeMatch = part.match(
-        /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/,
-      );
+      // const youtubeMatch = part.match(
+      //   /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/,
+      // );
 
-      if (youtubeMatch) {
-        const videoId = youtubeMatch[1];
+      // if (youtubeMatch) {
+      //   const videoId = youtubeMatch[1];
 
-        const videoTitle = `Embedded YouTube video (${videoId})`;
+      //   const videoTitle = `Embedded YouTube video (${videoId})`;
 
-        return (
-          <div
-            key={i}
-            className="my-2 aspect-video w-full"
-          >
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              loading="lazy"
-              title={videoTitle}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-lg"
-            />
-          </div>
-        );
-      }
+      //   return (
+      //     <div
+      //       key={i}
+      //       className="my-2 aspect-video w-full"
+      //     >
+      //       <iframe
+      //         src={`https://www.youtube.com/embed/${videoId}`}
+      //         loading="lazy"
+      //         title={videoTitle}
+      //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      //         allowFullScreen
+      //         className="w-full h-full rounded-lg"
+      //       />
+      //     </div>
+      //   );
+      // }
 
       // Otherwise, normal URL
       return (
