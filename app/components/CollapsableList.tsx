@@ -1,0 +1,103 @@
+interface CollapsibleListProps {
+  items: (string | string[] | (string | string[])[])[];
+  singleItemClassName?: string;
+  summaryClassName?: string;
+  listItemClassName?: string;
+  level?: number;
+}
+
+const CollapsibleList = ({
+  items,
+  singleItemClassName = "text-sm text-gray-700",
+  summaryClassName = "cursor-pointer text-sm text-gray-700",
+  listItemClassName = "text-sm my-2 text-gray-700  mb-2 break-words overflow-hidden",
+  level = 0,
+}: CollapsibleListProps) => {
+  const itemsArray = Array.isArray(items) ? items : [items];
+
+  if (!itemsArray || itemsArray.length === 0) return null;
+
+  if (itemsArray.length === 1 && typeof itemsArray[0] === "string") {
+    return <p className={singleItemClassName}>{itemsArray[0]}</p>;
+  }
+  const renderItem = (
+    item: string | string[] | (string | string[])[],
+    idx: number,
+  ) => {
+    // Level 1: Direct string
+    if (typeof item === "string") {
+      return (
+        <li
+          key={idx}
+          className={listItemClassName}
+        >
+          {item}
+        </li>
+      );
+    }
+
+    // Level 2 & 3: Arrays
+    if (Array.isArray(item)) {
+      return (
+        <li
+          key={idx}
+          className="list-none ml-0 my-2"
+        >
+          <ul className="space-y-1 ml-4">
+            {item.map((subItem, subIdx) => {
+              // Level 2: String in first array - use ◦
+              if (typeof subItem === "string") {
+                return (
+                  <li
+                    key={subIdx}
+                    className={listItemClassName}
+                  >
+                    ◦ {subItem}
+                  </li>
+                );
+              }
+
+              // Level 3: Array within array - use ⁃
+              if (Array.isArray(subItem)) {
+                return (
+                  <li
+                    key={subIdx}
+                    className="list-none ml-0 "
+                  >
+                    <ul className="space-y-1 ml-6 mb-6  mt-2">
+                      {subItem.map((deepItem, deepIdx) => (
+                        <li
+                          key={`${subIdx}-${deepIdx}`}
+                          className={listItemClassName}
+                        >
+                          ⁃ {deepItem}
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+
+              return null;
+            })}
+          </ul>
+        </li>
+      );
+    }
+
+    return null;
+  };
+
+  return (
+    <details>
+      <summary className={summaryClassName}>
+        {typeof items[0] === "string" ? items[0] : "Details"}
+      </summary>
+      <ul className="space-y-1 list-disc mt-2 ml-4 mb-2">
+        {items.slice(1).map(renderItem)}
+      </ul>
+    </details>
+  );
+};
+
+export default CollapsibleList;

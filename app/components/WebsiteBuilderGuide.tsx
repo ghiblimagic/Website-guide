@@ -739,7 +739,7 @@ export default function WebsiteBuilderGuide() {
                                   {builder.examples.map((item, idx) => (
                                     <li
                                       key={idx}
-                                      className="text-sm my-3  text-gray-700 break-all"
+                                      className="text-sm my-3  text-gray-700 break-words overflow-hidden"
                                     >
                                       {item}
                                     </li>
@@ -759,7 +759,7 @@ export default function WebsiteBuilderGuide() {
                               {builder.moreInfo.map((item, idx) => (
                                 <li
                                   key={idx}
-                                  className="text-sm my-3  text-gray-700 break-all"
+                                  className="text-sm my-3  text-gray-700 break-words overflow-hidden"
                                 >
                                   {item}
                                 </li>
