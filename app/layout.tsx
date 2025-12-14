@@ -25,6 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link
+        rel="preload"
+        as="image"
+        href="/images/dotsBackground.png"
+        fetchPriority="high"
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -32,7 +38,7 @@ export default function RootLayout({
           {" "}
           <a href="https://janetspellman.com">
             <div className="flex align-baseline">
-              <span className="font-dancing text-2xl">
+              <span className="font-dancing text-2xl text-white">
                 {" "}
                 Spellman&apos;s Consulting{" "}
               </span>

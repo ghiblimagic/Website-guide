@@ -36,7 +36,7 @@ export interface WebsiteBuilder {
   migration: string[];
   security: (string | string[] | (string | string[])[])[];
   accessibility: string[];
-  handoff: string[];
+  collaboration: string[];
   ecommerce: (string | string[] | (string | string[])[])[];
   appStore: string[];
   seo: (string | string[] | (string | string[])[])[]; // Can be string OR array of strings
@@ -73,7 +73,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     migration: ["N/A, this is a google listing not a website."],
     security: ["N/A, this is a google listing not a website."],
     accessibility: ["N/A, this is a google listing not a website."],
-    handoff: [
+    collaboration: [
       "You can easily add users to help manage your Google Business Listing Profile.",
       "Here's a video guide for adding users and admins: https://www.youtube.com/watch?v=SqqqOF3AJo8",
     ],
@@ -133,7 +133,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Not great for accessibility but there are guides to make use of the accessibility features it does have",
       "such as this 7 minute video: https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
     ],
-    handoff: [
+    collaboration: [
       `Very Easy to add someone, and its a very simple website builder https://support.google.com/sites/answer/97934?hl=en`,
 
       `"If, at some point, I want/need to turn webmaster duties over to someone, it wouldn't take eons to show them what to do. I've shown other embroiderers (most of whom are not terribly techie) how to start their sites, and all have been successful. ... it's perfect for the groups I work with (demographics tilt toward senior citizen)"https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjlw7bb/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button`,
@@ -232,7 +232,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Simple accessibility tips for Carrd: https://accessibility.carrd.co",
       "Web accessibility Resources: https://weba11y.carrd.co/",
     ],
-    handoff: [
+    collaboration: [
       "Very simple to share access",
       "https://carrd.co/docs/sites/sharing-access-to-a-site",
     ],
@@ -321,7 +321,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "From this article, it seems like its decent with accessibility but of course, you would have to follow the guide.",
       "https://help.pixpa.com/kb/improving-web-accessibility-of-your-website-on-pixpa/",
     ],
-    handoff: [
+    collaboration: [
       "Easy to collaborate.",
       "The Contributors feature enables you to allow any person to edit any section of your Pixpa account. You can specify and give any permissions you prefer.",
       "The (contributors) feature is available starting from the Creator plan (up to 2 contributors). Professional and Advanced plans include unlimited contributors.",
@@ -423,7 +423,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "https://accessibe.com/blog/knowledgebase/squarespace-website-accessibility",
     ],
-    handoff: [
+    collaboration: [
       "Easy to add them as a contributor and easy for them to edit.",
 
       "https://support.squarespace.com/hc/en-us/articles/206537287-Inviting-a-contributor",
@@ -559,7 +559,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "However they have an article about how to make your site more accessible: https://www.hostinger.com/tutorials/web-accessibility",
       "How to add alt text on Hostinger: https://www.hostinger.com/support/6466460-hostinger-website-builder-how-to-add-alt-text/",
     ],
-    handoff: [
+    collaboration: [
       "Can share access with an employee, easy to edit site:",
       "https://www.hostinger.com/support/1583777-how-to-share-access-to-your-account-at-hostinger/",
     ],
@@ -693,7 +693,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://squareup.com/help/us/en/article/8337-set-up-accessibility-features",
       "Unclear how accessible the square online themes are but there are some widgets to help check your accessibility.",
     ],
-    handoff: [
+    collaboration: [
       "Giving other users basic permission is free",
 
       "To give an employee access to edit the Square Online website itself, you must assign them a permission set that includes Full Access to the account. This permission level still prevents them from making major account changes like managing bank accounts, but grants the necessary permissions for website building and editing.",
@@ -826,7 +826,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://es.wix.com/website/templates/html/accessible",
     ],
 
-    handoff: [
+    collaboration: [
       "More limitations. On a free Wix site (non-Studio), you only get 1 person who can be invited as a collaborator.",
       "If you expect more than one person to edit the site you'll need a paid plan:",
       "https://support.wix.com/en/article/inviting-people-to-contribute-to-your-site",
@@ -981,7 +981,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Strong accessibility features",
       "\"Accessibility features aren't just nice-to-have — they're part of the default setup. Siimple's templates are mobile-first, use readable fonts, maintain strong color contrast, and follow clean navigation structures that work with assistive technologies. https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/",
     ],
-    handoff: [
+    collaboration: [
       "Unclear, but its easy enough to edit that even if you have to share your login with employees it'd be easy for them to update the site",
 
       "I made a free account and there was no obvious way to share access with someone else. There's a chance it might only be visible after payment.",
@@ -1108,7 +1108,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://accessibe.com/blog/knowledgebase/accessible-shopify-themes",
       "Though the plugins/ apps you use might not be as accessible as your theme.",
     ],
-    handoff: [
+    collaboration: [
       "You can easily add collaborators for free to make limited edits, but staff accounts would require the pricey $79/mo plan",
 
       "Collaborator Accounts do not count towards staff limits, so you can give designers, developers, and marketing limited access to the store.",
@@ -1290,7 +1290,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "source for both quotes: https://support.ecwid.com/hc/en-us/articles/360004696179-Meeting-accessibility-guidelines-ADA",
     ],
-    handoff: [
+    collaboration: [
       "You would need a business plan to be able to give specific editing permissions to staff, designers, developers etc.",
       "https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts",
     ],
@@ -1459,7 +1459,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://wordpress.org/themes/tags/accessibility-ready/",
       "Though your plugins/apps might not be as accessible.",
     ],
-    handoff: [
+    collaboration: [
       "You can easily add editors with various permission levels:",
       "https://wordpress.com/support/invite-people/",
     ],
@@ -1622,7 +1622,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://wordpress.com/themes/filter/accessibility-ready",
       "Though your plugins/apps might not be as accessible.",
     ],
-    handoff: [
+    collaboration: [
       "You can create an account for an employee and edit what permissions they have:",
       "https://learn.wordpress.org/lesson-plan/user-management/",
     ],
@@ -1756,7 +1756,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "There wasn't a way to sort through the templates by accessibility but some people do create templates with accessibility in mind, such as this person:",
       "https://www.bryntaylor.co.uk/templates/accessible-webflow",
     ],
-    handoff: [
+    collaboration: [
       "Relatively easy: Up to 25 concurrent members per site",
       'However the different "modes" affect what can be edited:',
       "https://help.webflow.com/hc/en-us/articles/33961260491795-Collaborate-on-your-site-in-Webflow",
@@ -1910,7 +1910,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Limited tools for accessibility checking",
       "Minimal accessibility controls, especially compared to Squarespace, WordPress and Wix.",
     ],
-    handoff: [
+    collaboration: [
       "You can add an unlimited amount of delegates (collaborators)",
       "Different levels of permission, they won't have access to billing information etc",
       "https://www.godaddy.com/help/invite-a-delegate-to-access-my-godaddy-account-12376",

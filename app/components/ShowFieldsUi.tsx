@@ -1,0 +1,62 @@
+import { Check } from "lucide-react";
+
+import { FieldType } from "../types/types";
+
+interface FieldToggleProps {
+  visibleFields: Record<FieldType, boolean>;
+  toggleField: (field: FieldType) => void;
+}
+
+export default function FieldToggles({
+  visibleFields,
+  toggleField,
+}: FieldToggleProps) {
+  const fieldLabels: Record<FieldType, string> = {
+    summary: "Summary",
+    bestFor: "Best For",
+    difficulty: "Difficulty",
+    trial: "Trial",
+    cost: "Cost",
+    seo: "SEO",
+    support: "Support",
+    ecommerce: "E-commerce",
+    migration: "Migration",
+    security: "Security",
+    accessibility: "Accessibility",
+    collaboration: "Collaboration",
+    appStore: "App store",
+    examples: "Examples",
+    moreInfo: "More Info",
+    proCons: "Pro Cons",
+  };
+
+  return (
+    <div className="flex items-center gap-2 flex-wrap mb-6">
+      <span className="text-sm font-semibold text-blue-950 mr-2">
+        Show fields:
+      </span>
+      {Object.entries(visibleFields).map(([field, visible]) => (
+        <button
+          key={field}
+          onClick={() => toggleField(field as FieldType)}
+          aria-pressed={visible}
+          className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-semibold transition-all text-sm ${
+            visible
+              ? "bg-blue-100 text-blue-900 hover:bg-blue-200 ring-2 ring-blue-500"
+              : "bg-slate-700 text-gray-200 hover:bg-gray-200 hover:text-gray-800"
+          }`}
+        >
+          <span className="sr-only">{visible ? "Hide" : "Show"}</span>
+          {visible && (
+            <Check
+              size={16}
+              className="text-blue-900"
+              aria-hidden="true"
+            />
+          )}
+          {fieldLabels[field as FieldType]}
+        </button>
+      ))}
+    </div>
+  );
+}

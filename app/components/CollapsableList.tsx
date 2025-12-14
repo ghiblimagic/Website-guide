@@ -12,7 +12,7 @@ const CollapsibleList = ({
   items,
   singleItemClassName = "text-sm text-gray-700",
   summaryClassName = "cursor-pointer text-sm text-gray-700",
-  listItemClassName = "text-sm my-2 text-gray-700  mb-2 break-words overflow-hidden",
+  listItemClassName = "text-sm my-2 text-gray-700  mb-2 break-words",
   level = 0,
 }: CollapsibleListProps) => {
   const itemsArray = Array.isArray(items) ? items : [items];
