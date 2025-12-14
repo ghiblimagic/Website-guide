@@ -1,19 +1,5 @@
 import { X } from "lucide-react";
-import type { SelectedTags } from "../types/types";
-
-interface GuidingQuestionOption {
-  label: string;
-  action: {
-    category: keyof SelectedTags;
-    tag: string;
-  };
-}
-
-interface GuidingQuestion {
-  id: number | string;
-  question: string;
-  options: GuidingQuestionOption[];
-}
+import type { SelectedTags, GuidingQuestion } from "../types/types";
 
 interface GuidingQuestionsModalProps {
   show: boolean;

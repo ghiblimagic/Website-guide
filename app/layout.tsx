@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Website Builder Finder",
@@ -25,15 +14,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link
-        rel="preload"
-        as="image"
-        href="/images/dotsBackground.png"
-        fetchPriority="high"
-      />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/dotsBackground.png"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/fonts/DancingScript-Regular.ttf"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/OpenSans-Bold.ttf"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/OpenSans-Regular.ttf"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+      </head>
+      <body className={`antialiased`}>
         <nav className="bg-blue-900 border-b-2 border-white py-2 px-6">
           {" "}
           <a href="https://janetspellman.com">

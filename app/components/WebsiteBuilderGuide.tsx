@@ -18,7 +18,7 @@ import {
 } from "../data/websiteBuilderData";
 
 import GuidingQuestionsModal from "./GuidingQuestionsModal";
-import BuilderCard from "./BuilderCard";
+import BuildersList from "./BuildersList";
 import ShowFieldsUi from "./ShowFieldsUi";
 
 import StyledButton from "../components/StyledButton";
@@ -226,30 +226,11 @@ export default function WebsiteBuilderGuide() {
               {filteredBuilders.length === 0 ? (
                 <NoBuildersFound clearAllTags={clearAllTags} />
               ) : (
-                <div className="space-y-6">
-                  {filteredBuilders.slice(0, itemCount).map((builder) => (
-                    <BuilderCard
-                      key={builder.id}
-                      {...builder}
-                      summaryVisible={visibleFields.summary}
-                      difficultyVisible={visibleFields.difficulty}
-                      costVisible={visibleFields.cost}
-                      seoVisible={visibleFields.seo}
-                      supportVisible={visibleFields.support}
-                      ecommerceVisible={visibleFields.ecommerce}
-                      trialVisible={visibleFields.trial}
-                      bestForVisible={visibleFields.bestFor}
-                      migrationVisible={visibleFields.migration}
-                      securityVisible={visibleFields.security}
-                      accessibilityVisible={visibleFields.accessibility}
-                      collaborationVisible={visibleFields.collaboration}
-                      appStoreVisible={visibleFields.appStore}
-                      examplesVisible={visibleFields.examples}
-                      moreInfoVisible={visibleFields.moreInfo}
-                      proConsVisible={visibleFields.proCons}
-                    />
-                  ))}
-                </div>
+                <BuildersList
+                  builders={filteredBuilders} // client-side filter still works
+                  visibleFields={visibleFields}
+                  itemCount={itemCount}
+                />
               )}
               <p className=" text-center text-sm font-semibold text-blue-950 my-4">
                 {" "}

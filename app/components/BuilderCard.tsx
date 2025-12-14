@@ -1,17 +1,8 @@
-import {
-  ChevronLeft,
-  X,
-  Filter,
-  RotateCcw,
-  CheckCircle2,
-  XCircle,
-  Check,
-} from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
 
 import ConvertStringLinkToA from "../utils/ConvertStringLinkToA";
 
 import CollapsableList from "./CollapsableList";
-import { websiteBuilders } from "../data/websiteBuilderData";
 
 interface BuilderCardProps {
   // WebsiteBuilder fields
