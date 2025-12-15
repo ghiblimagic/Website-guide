@@ -116,9 +116,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Free with a google account!",
       "All google sites are made to work on desktop and mobile devices, so it'll save you time troubleshooting the appearance of the site on different screens.",
       "If your organization also uses Google Drive and other Google products, the native integration can help a lot.",
-      "You can get templates through their store, theres both free and premium templates: https://www.kirksvillewebdesign.com/google-sites/google-sites-templates",
-      '"I\'ve used Wordpress, Wix, and Squarespace, and just really enjoy the simplicity. There are great prebuilt templates out there, but even using Canva and a few embeds from other platforms and you can have a decent site." https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjs9emf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
-      '" We are a school using Google Workspace for Education, basically all of the Google apps like docs, sheets, slides etc. I decided on Google Sites as it is collaborative, and our team could easily work on it, adding content and pulling in images from Google Photos. Most of the team have no experience in web designing but it was easy to set up and we have no complaints!" https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjtzq4q/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+      "You can get templates through their store, theres both free and premium templates",
+      [
+        "https://www.kirksvillewebdesign.com/google-sites/google-sites-templates",
+      ],
+      '"I\'ve used Wordpress, Wix, and Squarespace, and just really enjoy the simplicity. There are great prebuilt templates out there, but even using Canva and a few embeds from other platforms and you can have a decent site."',
+      [
+        "https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjs9emf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+      ],
+      '" We are a school using Google Workspace for Education, basically all of the Google apps like docs, sheets, slides etc. I decided on Google Sites as it is collaborative, and our team could easily work on it, adding content and pulling in images from Google Photos. Most of the team have no experience in web designing but it was easy to set up and we have no complaints!"',
+      [
+        "https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjtzq4q/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+      ],
       "Google sites used to share your google drive or google worksplace storage, but that is no longer the case for new google sites.",
     ],
     cons: [
@@ -218,7 +227,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
     cons: [
       'For single page websites. Though if you want it to "look" like a multi page website you can use their sections feature. However it won\'t have the SEO benefits of a true multi page website.',
       '"A "multi page" Carrd is also slightly more complicated to set up.',
-      "3 minute guide: https://www.youtube.com/watch?v=RVcovcKaeq4",
+      "3 minute guide",
+      ["https://www.youtube.com/watch?v=RVcovcKaeq4"],
     ],
     moreInfo: [
       "8 minute overview: https://www.youtube.com/watch?v=oAtkeesUW68",
@@ -320,7 +330,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Already responsive",
     ],
     cons: [
-      'Storage limitations, depends on plan. Scroll down to "Storage" https://www.pixpa.com/pricing',
+      'Storage limitations, depends on plan. Scroll down to "Storage',
+      ["https://www.pixpa.com/pricing"],
       "Doesn't have much customization",
     ],
     moreInfo: [] as string[],
@@ -1168,7 +1179,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "But the sections are built to be easy to edit, and to look good on any size screen (be responsive).",
 
       "It now has a drag and drop page builder: though you can use third party apps to add more advanced drag and drop features.",
-      "https://www.shopify.com/website/builder",
+      ["https://www.shopify.com/website/builder"],
     ],
     cons: [
       "Less creative freedom",
@@ -1326,19 +1337,21 @@ export const websiteBuilders: WebsiteBuilder[] = [
     pros: [
       "Largely easy to use, but the initial process can be a bit difficult at first since the initial shop setup controls are lumped together.",
 
-      '"Can set up a store in 10-15 minutes". Pick a template, add content + products, and publish. https://www.youtube.com/watch?v=UWT2vDUOUFc',
+      '"Can set up a store in 10-15 minutes". Pick a template, add content + products, and publish.',
+      ["https://www.youtube.com/watch?v=UWT2vDUOUFc"],
 
-      "Nonprofits get 6 months of Venture plans for free:",
-
-      '"Tell us more about your nonprofit and get 6 months of Venture for free." Scroll down the pricing page to "Do you offer any discounts for nonprofit organizations?" and click it to see the link to the form.',
-
-      "https://www.ecwid.com/pricing",
-
-      "All Ecwid plans come with unlimited bandwidth and storage at no extra cost.",
-
-      "Ecwid supports connecting a custom domain (or using a free subdomain) if you don't have another website.",
-
-      "https://support.ecwid.com/hc/en-us/articles/115005609945-Ecwid-overview",
+      "https://www.ecwid.com/pricing :",
+      [
+        "Nonprofits get 6 months of Venture plans for free:",
+        [
+          '"Tell us more about your nonprofit and get 6 months of Venture for free." Scroll down the pricing page to "Do you offer any discounts for nonprofit organizations?" and click it to see the link to the form.',
+        ],
+        "All Ecwid plans come with unlimited bandwidth and storage at no extra cost.",
+      ],
+      '"A free web address on an Ecwid subdomain, with options to connect a third-party domain or purchase one directly from the store admin."',
+      [
+        "https://support.ecwid.com/hc/en-us/articles/115005609945-Ecwid-overview",
+      ],
     ],
     cons: [
       "Some plugins have left ecwid so some businesses have had to move to shopify, if they needed those integrations.",
@@ -1351,15 +1364,15 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "Weaker marketing tools, though you can use plugins to get access to more marketing tools.",
 
-      '"Wix and Ecwid can work for small hobby shops, but they get messy once you add more products, variants, shipping rules, or start running ads. Shopify has better checkout, payment options, apps, and support for scaling. Plus if you ever want to run Meta/TikTok ads, Shopify integrates smoothly. - reddit post below',
-
-      "https://www.reddit.com/r/EcommerceWebsite/comments/1n8i79t/comment/ncirbj9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
-
-      '"It lacks features you might expect in a full CMS: there is no built-in blog support, and page-type flexibility is limited (good for shops/catalogs but not ideal if you need heavy content, blogs, or complex site structure)" - WorksWaves',
-
+      '"Wix and Ecwid can work for small hobby shops, but they get messy once you add more products, variants, shipping rules, or start running ads. Shopify has better checkout, payment options, apps, and support for scaling. Plus if you ever want to run Meta/TikTok ads, Shopify integrates smoothly.',
+      [
+        "https://www.reddit.com/r/EcommerceWebsite/comments/1n8i79t/comment/ncirbj9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+      ],
       "https://www.workswaves.com/ecwid-review/",
-
-      '"Customization options beyond what the template/section editor allows are minimal; for deeper control (special layouts, advanced SEO tweaks, custom pages) you might need to embed Ecwid into a more flexible site or code manually."  - WorksWaves',
+      [
+        '"It lacks features you might expect in a full CMS: there is no built-in blog support, and page-type flexibility is limited (good for shops/catalogs but not ideal if you need heavy content, blogs, or complex site structure)"',
+        '"Customization options beyond what the template/section editor allows are minimal; for deeper control (special layouts, advanced SEO tweaks, custom pages) you might need to embed Ecwid into a more flexible site or code manually."',
+      ],
     ],
     moreInfo: [
       "Article comparing Ecwid to Shopify:",

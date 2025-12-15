@@ -72,8 +72,8 @@ export interface WebsiteBuilder {
   ecommerce: (string | string[] | (string | string[])[])[];
   appStore: string[];
   seo: (string | string[] | (string | string[])[])[]; // Can be string OR array of strings
-  pros: string[];
-  cons: string[];
+  pros: (string | string[] | (string | string[])[])[];
+  cons: (string | string[] | (string | string[])[])[];
   moreInfo: string[];
   examples: string[];
   perfectIf: string[];
