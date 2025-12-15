@@ -1,9 +1,4 @@
-import {
-  TagCategory,
-  WebsiteBuilder,
-  GuidingOption,
-  GuidingQuestion,
-} from "../types/types";
+import { TagCategory, WebsiteBuilder, GuidingQuestion } from "../types/types";
 
 export const websiteBuilders: WebsiteBuilder[] = [
   {

@@ -1,23 +1,29 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState, useMemo, useEffect } from "react";
 import { Filter } from "lucide-react";
 
 import type {
+  WebsiteBuilder,
   SelectedTags,
   TagCategory,
   FieldType,
   VisibleFields,
+  GuidingQuestion,
 } from "../types/types";
 import Sidebar from "./SideBar";
 
-import {
-  websiteBuilders,
-  guidingQuestions,
-  tagCategories,
-} from "../data/websiteBuilderData";
+interface Props {
+  builders: WebsiteBuilder[];
+  questions: GuidingQuestion[];
+  categories: Record<TagCategory, string[]>;
+}
 
-import GuidingQuestionsModal from "./GuidingQuestionsModal";
+const GuidingQuestionsModal = dynamic(() => import("./GuidingQuestionsModal"), {
+  ssr: false, // Don't render on server
+});
+
 import BuildersList from "./BuildersList";
 import ShowFieldsUi from "./ShowFieldsUi";
 
@@ -25,7 +31,11 @@ import StyledButton from "../components/StyledButton";
 
 import NoBuildersFound from "./NoBuildersFound";
 
-export default function WebsiteBuilderGuide() {
+export default function WebsiteBuilderGuide({
+  builders,
+  questions,
+  categories,
+}: Props) {
   const [showGuidingQuestions, setShowGuidingQuestions] = useState(false);
   const [selectedTags, setSelectedTags] = useState<SelectedTags>({
     pages: [],
@@ -139,9 +149,9 @@ export default function WebsiteBuilderGuide() {
       (tags) => tags.length > 0,
     );
 
-    if (!hasAnyTags) return websiteBuilders;
+    if (!hasAnyTags) return builders;
 
-    return websiteBuilders.filter((builder) => {
+    return builders.filter((builder) => {
       return Object.entries(selectedTags).every(([category, tags]) => {
         if (tags.length === 0) return true;
         return tags.some((tag: string) =>
@@ -149,7 +159,7 @@ export default function WebsiteBuilderGuide() {
         );
       });
     });
-  }, [selectedTags]);
+  }, [selectedTags, builders]);
 
   const activeTagCount = Object.values(selectedTags).flat().length;
 
@@ -158,7 +168,7 @@ export default function WebsiteBuilderGuide() {
       <GuidingQuestionsModal
         show={showGuidingQuestions}
         setShow={setShowGuidingQuestions}
-        guidingQuestions={guidingQuestions}
+        guidingQuestions={questions}
         selectedTags={selectedTags}
         handleGuidingAnswer={handleGuidingAnswer}
         onChange={handleCheckbox}
@@ -173,7 +183,7 @@ export default function WebsiteBuilderGuide() {
           toggleTag={toggleTag}
           clearAllTags={clearAllTags}
           activeTagCount={activeTagCount}
-          tagCategories={tagCategories}
+          tagCategories={categories}
         />
 
         {/* Main Content */}

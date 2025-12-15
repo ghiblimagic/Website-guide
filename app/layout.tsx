@@ -37,6 +37,15 @@ export default function RootLayout({
           {" "}
           <a href="https://janetspellman.com">
             <div className="flex items-center  align-baseline">
+              {/* Bug Fix: img kept showing as the wrong aspect ratio
+              
+              Fix: items-cente
+              
+              Why: By default, flex items stretch to fill the container's cross-axis.
+              Adding items-center to the flex container tells it to not stretch
+
+   */}
+
               <span className="font-dancing text-2xl mr-2 text-white">
                 {" "}
                 Spellman&apos;s Consulting{" "}
