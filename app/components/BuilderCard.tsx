@@ -1,7 +1,5 @@
 import { CheckCircle2, XCircle } from "lucide-react";
 
-import ConvertStringLinkToA from "../utils/ConvertStringLinkToA";
-
 import CollapsableList from "./CollapsableList";
 import NestedList from "./NestedList";
 
@@ -17,11 +15,11 @@ interface BuilderCardProps {
     "learning curve": string[];
   };
   difficulty: string;
-  cost: string[];
+  cost: (string | string[] | (string | string[])[])[];
   trial: (string | string[] | (string | string[])[])[];
-  bestFor: string[];
+  bestFor: (string | string[] | (string | string[])[])[];
   support: (string | string[] | (string | string[])[])[];
-  migration: string[];
+  migration: (string | string[] | (string | string[])[])[];
   security: (string | string[] | (string | string[])[])[];
   accessibility: string[];
   collaboration: string[];
@@ -82,18 +80,10 @@ export default function BuilderCard(props: BuilderCardProps) {
                 Perfect if:
               </h3>
             </div>
-            <ul className="space-y-2">
-              {props.perfectIf.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-2 my-3 text-sm text-green-900"
-                >
-                  <span className="text-green-600 mt-0.5">•</span>
-
-                  <ConvertStringLinkToA item={item} />
-                </li>
-              ))}
-            </ul>
+            <NestedList
+              items={props.perfectIf}
+              iconStyling="text-green-900 "
+            />
           </div>
 
           <div className="bg-red-50 rounded-lg p-6 border border-red-200">
@@ -104,18 +94,10 @@ export default function BuilderCard(props: BuilderCardProps) {
               />
               <h3 className="font-semibold text-red-900 text-lg">Skip if:</h3>
             </div>
-            <ul className="space-y-2">
-              {props.skipIf.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start my-3  gap-2 text-sm text-red-900"
-                >
-                  <span className="text-red-600 mt-0.5">•</span>
-
-                  <ConvertStringLinkToA item={item} />
-                </li>
-              ))}
-            </ul>
+            <NestedList
+              items={props.skipIf}
+              iconStyling="text-red-900 "
+            />
           </div>
         </div>
 
@@ -129,16 +111,7 @@ export default function BuilderCard(props: BuilderCardProps) {
           <div className="flex items-center gap-2 mb-2">
             <h3 className="text-xl font-semibold text-gray-700">Best For</h3>
           </div>
-          <ul className="space-y-1 ">
-            {props.bestFor.map((item, idx) => (
-              <li
-                key={idx}
-                className="text-sm  text-gray-700"
-              >
-                <ConvertStringLinkToA item={item} />
-              </li>
-            ))}
-          </ul>
+          <NestedList items={props.bestFor} />
         </div>
 
         {/* Quick Stats Grid */}
@@ -194,14 +167,7 @@ export default function BuilderCard(props: BuilderCardProps) {
               <h3 className="text-xl font-semibold text-gray-700">Cost</h3>
             </div>
             <ul className="space-y-1 list-disc list-inside">
-              {props.cost.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="text-sm my-3  text-gray-700"
-                >
-                  <ConvertStringLinkToA item={item} />
-                </li>
-              ))}
+              <NestedList items={props.cost} />
             </ul>
           </div>
 
@@ -261,7 +227,7 @@ export default function BuilderCard(props: BuilderCardProps) {
                 (Can you move your site somewhere else)
               </p>
             </div>
-            <CollapsableList items={props.migration} />
+            <NestedList items={props.migration} />
           </div>
 
           <div
@@ -333,16 +299,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             <div className="flex items-center gap-2 mb-2">
               <h3 className="text-xl font-semibold text-gray-700">Examples</h3>
             </div>
-            <ul className="space-y-1 list-disc list-inside">
-              {props.examples.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="text-sm my-3  text-gray-700 break-words overflow-hidden"
-                >
-                  <ConvertStringLinkToA item={item} />
-                </li>
-              ))}
-            </ul>
+            <NestedList items={props.examples} />
           </div>
         </div>
 
@@ -358,16 +315,7 @@ export default function BuilderCard(props: BuilderCardProps) {
           <h3 className="font-semibold text-gray-700 text-xl mb-3">
             More Informatiion
           </h3>
-          <ul className="space-y-1 list-disc">
-            {props.moreInfo.map((item, idx) => (
-              <li
-                key={idx}
-                className="text-sm my-3  text-gray-700 break-words overflow-hidden"
-              >
-                • <ConvertStringLinkToA item={item} />
-              </li>
-            ))}
-          </ul>
+          <NestedList items={props.moreInfo} />
         </div>
 
         {/* Pros / Cons */}

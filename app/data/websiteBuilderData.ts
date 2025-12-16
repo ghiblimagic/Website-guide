@@ -15,8 +15,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
     cost: ["Free"],
     trial: ["N/A"],
     bestFor: [
-      'Local visibility, great for "I need something NOW."',
-      "Most businesses should create a google business profile, it's free, relatively easy to setup and it's often the first thing that potential clients see about your business.",
+      "Local visibility.",
+      'Great for "I need something NOW."',
+      "Most businesses should create a google business profile:",
+      [
+        "it's free.",
+        "Relatively easy to setup.",
+        "It's often the first thing that potential clients will see about your business.",
+      ],
     ],
     support: [
       "Difficult to get a hold of support",
@@ -32,7 +38,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ecommerce: ["N/A"],
     appStore: ["N/A"],
     seo: [
-      "If you have this and link your website, it will help improve your SEO. Because google likes to see your website linked on other sites, to boost its trustworthiness.",
+      "If you have this and link your website, it will help improve your SEO.",
+      [
+        "Because google likes to see your website linked on other sites, to boost its trustworthiness.",
+      ],
     ],
     pros: [
       "Free, will help people find your business to potentially lead to some more sales",
@@ -44,10 +53,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [
       "It's free, so it's worth getting your google business profile setup. it usually takes a few weeks for the business to be verified.",
-      "13 minute set up guide: https://www.youtube.com/watch?v=KPfjzL9oPiE",
+      "13 minute set up guide",
+      ["https://www.youtube.com/watch?v=KPfjzL9oPiE"],
     ],
     examples: [] as string[],
-    perfectIf: ["you only need people to find you on Google, quickly."],
+    perfectIf: ["You only need people to find you on Google, quickly."],
     skipIf: ["You need an actual website."],
   },
   {
@@ -62,13 +72,28 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐",
     cost: [
-      'Free website builder and hosting with a google account, free SSL cert, no tiers, no ads, there is a tiny, semi-transparent "Report Abuse" button in the bottom left.',
-      "Although you can use the free Google.sites subdomain I highly recommend buying a custom domain. Why? Because lots of scams use sites with google.sites subdomains because its free, so some socials/websites filter out google.site subdomains. Also it looks more professional to have a cheap custom domain added to your site.",
+      "Free website builder and hosting with a google account",
+      [
+        "Free SSL cert",
+        "No tiers",
+        "No ads",
+        'However there is a tiny, semi-transparent "Report Abuse" button in the bottom left.',
+      ],
+      "Although you can use the free Google.sites subdomain I highly recommend buying a custom domain.",
+      [
+        "Because lots of scams create sites with google.sites subdomains (site names). So some websites filter out google.site subdomains. Also, it looks more professional to have a cheap custom domain added to your site.",
+      ],
       '"Google Sites are free to build, host, and maintain with a Google or Gmail account. There are no web hosting fees. If, however, you are using Google Sites in conjunction with Google Workspace, the cost is rolled into the user license fee of all plans."',
+      ["https://sites.google.com/site/horstwebdesign/about-google-sites"],
     ],
-    trial: ["N/A its free"],
+    trial: ["N/A it's free."],
     bestFor: [
-      "Simple blogs, bio sites, portfolios, simple websites, internal team sites, disposable sites for one time events or reports",
+      "Simple blogs",
+      "Bio sites",
+      "Portfolios",
+      "Simple websites",
+      "Internal team sites",
+      "Disposable sites for one time events or reports",
     ],
     support: [
       `Basically no support if just have a free Gmail account instead of a workspace subscription, however there is a help community.`,
@@ -76,14 +101,16 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     migration: [
       "You'd have to build from scratch",
-      "You can only migrate it to sharepoint (used for corporate intranets) otherwise you'd have to rebuild from scratch https://cloudiway.com/solutions/google-sites-migration/",
+      "You can only migrate it to sharepoint (used for corporate intranets) otherwise you'd have to rebuild from scratch",
+      ["https://cloudiway.com/solutions/google-sites-migration/"],
     ],
     security: [
       "Your website data is stored on Google's servers, which could raise concerns about data privacy and security for some people.",
     ],
     accessibility: [
       "Not great for accessibility but there are guides to make use of the accessibility features it does have",
-      "such as this 7 minute video: https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
+      "such as this 7 minute video: https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s",
+      "https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
     ],
     collaboration: [
       `Very Easy to add someone, and its a very simple website builder https://support.google.com/sites/answer/97934?hl=en`,
@@ -168,14 +195,25 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐",
     cost: [
-      "Pro Lite $9/year",
-      "Pro Standard $19/year (need this tier or higher to use a custom domain)",
-      "Pro Plus $49/yr",
       "https://carrd.co/pro",
+      [
+        "Pro Lite $9/year",
+        "Pro Standard $19/year",
+        ["You need this tier or higher to use a custom domain"],
+        "Pro Plus $49/yr",
+      ],
     ],
     trial: ["7 day trial"],
     bestFor: [
-      "Simple one-page sites for: Freelancers, Entrepreneurs, Portfolios, Personal Brands, Event Organizers, Small Biz Landing Pages",
+      "Simple one-page sites for:",
+      [
+        "Freelancers",
+        "Entrepreneurs",
+        "Portfolios",
+        "Personal Brands",
+        "Event Organizers",
+        "Small Biz Landing Pages",
+      ],
     ],
     support: [
       "Offers email support, no phone support. Usually replies within 24 hours.",
@@ -184,7 +222,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     migration: [
       "Very limited, you'll basically be rebuilding the website",
       "You Can only export the website on a pro plus plan or higher, though even then the form elements will not be functional in the download.",
-      "https://carrd.co/docs/sites/downloading",
+      ["https://carrd.co/docs/sites/downloading"],
     ],
     security: ["Handled by Carrd, you don't have to do anything."],
     accessibility: [
@@ -220,8 +258,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "Since Carrd sites are lightweight by design, they're often pretty fast. Just avoid huge images or videos and you'll be in good shape.",
 
-      "Helpful SEO guides for Carrd: 7-minute YouTube walkthrough: https://www.youtube.com/watch?v=F7_1BWxxYoQ",
-      "More in-depth tips: https://www.nocode.mba/articles/10-essential-card-seo-tips-to-boost-your-website#",
+      "Helpful SEO guides for Carrd: 7-minute YouTube walkthrough:",
+      ["https://www.youtube.com/watch?v=F7_1BWxxYoQ"],
+      "More in-depth tips",
+      [
+        "https://www.nocode.mba/articles/10-essential-card-seo-tips-to-boost-your-website#",
+      ],
     ],
     pros: ["Very affordable!", "Easy to use"],
     cons: [
@@ -231,17 +273,23 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ["https://www.youtube.com/watch?v=RVcovcKaeq4"],
     ],
     moreInfo: [
-      "8 minute overview: https://www.youtube.com/watch?v=oAtkeesUW68",
-      "15 minute tutorial: https://www.youtube.com/watch?v=1PL6NntBaK4",
+      "8 minute overview:",
+      ["https://www.youtube.com/watch?v=oAtkeesUW68"],
+      "15 minute tutorial:",
+      ["https://www.youtube.com/watch?v=1PL6NntBaK4"],
     ],
     examples: [
-      '"18 Best Carrd Websites" inspiration article: https://colorlib.com/wp/carrd-websites/',
-      "Also: a curated gallery of Carrd one-page sites: https://onepagelove.com/tag/carrd",
-      '"20 Inspiring Carrd Website Examples": https://www.sitebuilderreport.com/inspiration/carrd-websites',
-      "Curated gallery of Carrd one-pagers: https://deckof.carrd.co/",
+      '"18 Best Carrd Websites":',
+      ["https://colorlib.com/wp/carrd-websites/"],
+      "A curated gallery of Carrd one-page sites:",
+      ["https://onepagelove.com/tag/carrd"],
+      '"20 Inspiring Carrd Website Examples":',
+      ["https://www.sitebuilderreport.com/inspiration/carrd-websites"],
+      "Curated gallery of Carrd one-pagers:",
+      ["https://deckof.carrd.co/"],
     ],
     perfectIf: [
-      "you want a clean simple, affordable one page website in roughly an hour. (You can add forms to it)",
+      "You want a clean simple, affordable one page website in roughly an hour. (You can add forms to it)",
       "You want to make it `look` like it has multiple pages, and don't mind the SEO hit & that `multiple pages` on Caard can be buggy",
     ],
     skipIf: [
@@ -261,16 +309,24 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐",
     cost: [
-      "Basic: $9/mo (per month), $4.05/mo (pay for 2 years)",
-      "Creator: $15/mo (per month), $6.75/mo (pay for 2 years)",
-      "Professional: $20/mo (per month), $9/mo (pay for 2 years)",
-      "one more higher tier",
-      "There are limits for the amount of products, images and storage based on tier (see link for details).",
       "https://www.pixpa.com/pricing",
+      [
+        "Basic:",
+        ["$9/mo (by month)", "$4.05/mo (pay for 2 years)"],
+        "Creator:",
+        ["$15/mo (by month)", "$6.75/mo (pay for 2 years)"],
+        "Professional:",
+        ["$20/mo (by month", "$9/mo (pay for 2 years)"],
+        "One more higher tier",
+        "There are limits for the amount of products, images and storage based on tier (see pricing link for details).",
+      ],
     ],
     trial: ["15 days"],
     bestFor: [
-      "small to moderate creative businesses who want an all in one platform",
+      "Small to medium creative businesses who want an all in one platform.",
+      ["Photographers, designers, artists", "Writers and illustrators"],
+      "Businesses that need password-protected client galleries",
+      "Creatives selling prints, digital downloads, or a few physical products",
     ],
     support: [
       'Chat and Email: "24/7 via live chat and email. Get a fast response, any time."',
@@ -291,14 +347,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     ecommerce: [
       "Great for selling prints, digital downloads, small-batch goods, limited inventory with low traffic",
-      '"sell anything, no limits" https://www.pixpa.com/stores. However what this actually means if the first plan you can sell 3 products, the next you can sell 10 products, and the tiers after that allow for unlimited products.',
-      '"No hidden fees, no commissions. With Pixpa, every sale is yours." https://www.pixpa.com/stores',
+      '"sell anything, no limits". However, that phrase only applies to the highest tier. For the first plan you can sell 3 products, the next you can sell 10 products, and the tiers after that allow for unlimited products.',
+      ["https://www.pixpa.com/stores"],
+      '"No hidden fees, no commissions. With Pixpa, every sale is yours."',
+      ["https://www.pixpa.com/stores"],
       "Paid directly to your paypal, stripe, ect, money goes straight to you.",
       "Not for big businesses",
       "(only for the advanced plan) inventory tracking, abandoned cart recovery, order management",
       "(for creator plan or higher) custom discounts and promotions",
       'Scroll down to "online store" to see how it varies by plan https://www.pixpa.com/pricing',
       "Example of stores build on Pixpa: https://www.pixpa.com/examples/stores",
+      "No advanced variations, subscriptions, or complex checkout flows",
+      "Multi-currency and shipping options are basic",
     ],
     appStore: [
       "Has 100+ apps to extend your site's functionality",
@@ -333,14 +393,19 @@ export const websiteBuilders: WebsiteBuilder[] = [
       'Storage limitations, depends on plan. Scroll down to "Storage',
       ["https://www.pixpa.com/pricing"],
       "Doesn't have much customization",
+      "Blog and CMS are basic",
     ],
     moreInfo: [] as string[],
-    examples: ["Some of the templates: https://www.pixpa.com/templates/blog"],
+    examples: [
+      "Some of the templates",
+      ["https://www.pixpa.com/templates/blog"],
+    ],
     perfectIf: [
       "You're a photographer/artist/creative & want a portfolio, store, gallery and blog in one bundle.",
     ],
     skipIf: [
-      "You expect heavy traffic, many pages, complex functionality, or plan for the business to get large (scale). (In that case Shopify would be better)",
+      "You expect heavy traffic, many pages, complex functionality, or plan for the business to get large (scale).",
+      ["In that case Shopify would be better"],
     ],
   },
   {
@@ -355,16 +420,26 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐",
     cost: [
-      "Basic $16/mo (with year payment) $25 pay per month",
-      "Core $23/mo (with year payment) $36 to pay per month",
-      "2 more plans for more advanced businesses",
       "https://www.squarespace.com/pricing",
+      [
+        "Basic:",
+        ["$16/mo (with year payment)", "$25 by month"],
+        "Core:",
+        ["$23/mo (with year payment)", "$36 by month"],
+        "2 more plans for more advanced businesses",
+      ],
     ],
-    trial: ["14 day trial"],
+    trial: ["14 day"],
     bestFor: [
-      "Small biz, creatives, portfolios, blogs, personal sites, simple e-commerce",
-      "Those who prioritize simplicity versus customization",
-      "For small businesses and bloggers that want something easy to use and fast to setup, while also having a professional looking site",
+      "For small businesses and bloggers that want something easy to use and fast to setup, while also having a professional looking site.",
+      [
+        "Creatives",
+        "Portfolios",
+        "Blogs",
+        "Personal sites",
+        "Simple e-commerce",
+      ],
+      "Those who prioritize simplicity versus customization.",
     ],
     support: [
       "Live chat (open 4am-8pm EST)",
@@ -376,7 +451,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     migration: [
       "Very limited and painful to deal with; you'll basically be rebuilding your site",
       "Some things can be exported to WordPress, but its hit or miss.",
-      "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+      [
+        "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+      ],
     ],
     security: ["Handles security, you don't have to do anything."],
     accessibility: [
@@ -449,9 +526,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "Their SSL, sitemaps, structured data, and automatic canonical tags are all handled for you behind the scenes. No plugins needed.",
         "Since Squarespace uses server-side rendering, Google can read everything without issues.",
       ],
-      "Helpful blog guide: https://katescott.co/blog/squarespace-seo",
-      "In-depth 21-minute SEO tutorial: https://www.youtube.com/watch?v=g4eF_H3rOhQ",
-      "Their SEO Guide: https://support.squarespace.com/hc/en-us/articles/360002090267-SEO-checklist",
+      "Helpful blog guide:",
+      ["https://katescott.co/blog/squarespace-seo"],
+      "In-depth 21-minute SEO tutorial:",
+      ["https://www.youtube.com/watch?v=g4eF_H3rOhQ"],
+      "Their SEO Guide:",
+      [
+        "https://support.squarespace.com/hc/en-us/articles/360002090267-SEO-checklist",
+      ],
     ],
     pros: [
       "All in one platform, you can buy your domain within Squarespace.",
@@ -465,20 +547,26 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "If you have multiple locations, you'd have to make a site for each once since their e-commerce capabilities are more limited due to their smaller app market.",
     ],
     moreInfo: [
-      "6 minute pro and cons: https://www.youtube.com/watch?v=FP1wTBM_8F8",
+      "6 minute pro and cons",
+      ["https://www.youtube.com/watch?v=FP1wTBM_8F8"],
     ],
     examples: [
-      "Official showcase: https://www.squarespace.com/showcase",
-      "More examples for creatives/businesses: https://www.landing.gallery/website-builder/squarespace",
-      'SiteBuilderReport "55 Beautiful Examples of Squarespace Websites" https://www.sitebuilderreport.com/squarespace-examples',
-      'Colorlib "21 Best Squarespace eCommerce Examples in 2025" https://colorlib.com/wp/squarespace-ecommerce-examples/',
+      "Official showcase",
+      ["https://www.squarespace.com/showcase"],
+      "More examples for creatives/businesses",
+      ["https://www.landing.gallery/website-builder/squarespace"],
+      'SiteBuilderReport "55 Beautiful Examples of Squarespace Websites"',
+      ["https://www.sitebuilderreport.com/squarespace-examples"],
+      'Colorlib "21 Best Squarespace eCommerce Examples in 2025"',
+      ["https://colorlib.com/wp/squarespace-ecommerce-examples/"],
     ],
     perfectIf: [
       "You want beautiful templates and zero fuss, you don't need tons of extra features.",
     ],
     skipIf: [
       "You want heavy customization or pixel-perfect control.",
-      "Need a private gallery. If you're a creative that needs gallery software then Pixpa would be better for you. You can see a deeper comparison here: https://www.youtube.com/watch?v=JkGh0W8j9f0",
+      "Need a private gallery. If you're a creative that needs gallery software then Pixpa would be better for you. You can see a deeper comparison here:",
+      ["https://www.youtube.com/watch?v=JkGh0W8j9f0"],
     ],
   },
   {
@@ -493,19 +581,32 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐",
     cost: [
-      "Premium $12.95/mo ($1.95/mo with a 2 year sub)",
-      "Business/E-commerce $18.95/mo ($2.75/mo with a 2 year sub) + free domain for a year",
       "https://www.hostinger.com/pricing/website-builder",
+      [
+        "Premium website builder",
+        ["$11.99/mo", "$3.49/mo with a 2 year sub"],
+        "Business/E-commerce website builder",
+        ["$13.99/mo", "$4.49/mo with a 2 year sub]"],
+        "Free domain for a year for both plans.",
+      ],
+
       "https://www.hostinger.com/ecommerce-website",
+      [
+        "This page goes into more detail about the Business/E-commerce website builder.",
+      ],
     ],
     trial: [
-      "30 day money back guarantee, currently has a 14 day trial though it's a bit hidden",
-      "https://www.hostinger.com/support/10323594-how-to-try-hostinger-website-builder-for-free/",
+      "30 day money back guarantee",
+      "currently has a 14 day trial though it's a bit hidden",
+      [
+        "https://www.hostinger.com/support/10323594-how-to-try-hostinger-website-builder-for-free/",
+      ],
     ],
     bestFor: [
-      "For those that need a simple website: just text, videos, pictures, contact form or appointment form.",
+      "For those that need a simple website:",
+      ["Just text, videos, pictures, contact form or appointment form."],
       "Useful to create very simple websites for cheap",
-      "eCommerce is technically there for extra $$ but it has very minimal customization currently",
+      "E- Commerce is technically there for extra $$ but it has very minimal customization currently.",
     ],
     support: [
       "Live chat (24/7), email, no phone support",
@@ -514,7 +615,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://www.hostinger.com/contacts",
     ],
     migration: [
-      "Not everything can be exported to WordPress, it's hit or miss. https://www.hostinger.com/support/6572573-hostinger-website-builder-how-to-export-content-to-wordpress/",
+      "Not everything can be exported to WordPress, it's hit or miss.",
+      [
+        "https://www.hostinger.com/support/6572573-hostinger-website-builder-how-to-export-content-to-wordpress/",
+      ],
     ],
     security: ["Handles security, you don't have to do anything."],
     accessibility: [
@@ -586,7 +690,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "Hostinger provides an official SEO settings guide if you want a step-by-step walkthrough:",
 
-      "https://www.hostinger.com/support/6466320-hostinger-website-builder-seo-settings/",
+      [
+        "https://www.hostinger.com/support/6466320-hostinger-website-builder-seo-settings/",
+      ],
     ],
     pros: [
       "Has templates that are created by the platform itself and are regularly updated",
@@ -599,7 +705,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [] as string[],
     examples: [
-      '"20 Inspiring Hostinger Website Builder Examples" https://www.sitebuilderreport.com/inspiration/hostinger-websites',
+      '"20 Inspiring Hostinger Website Builder Examples"',
+      ["https://www.sitebuilderreport.com/inspiration/hostinger-websites"],
     ],
     perfectIf: [
       "If you just need a simple website with text, images and maybe a contact form. You don't need all the bells and whistles (addons/plugins).",
@@ -621,16 +728,32 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐",
     cost: [
-      "Free + processing fees (though its website builder square online has very limited themes for the free plan)",
-      "Plus $49/mo + processing fees",
-      "Premium which is more $$$",
-      '"No hidden fees or locked-in contracts. Cancel or switch plans anytime."',
       "https://squareup.com/us/en/pricing",
+      [
+        "Free",
+        [
+          "Processing fees.",
+          "It's website builder square online has very limited themes for the free plan.",
+        ],
+        "Plus",
+        ["$49/mo + processing fees."],
+        "Premium which is more $$$.",
+        '"No hidden fees or locked-in contracts. Cancel or switch plans anytime."',
+      ],
     ],
     trial: ["30 day trial"],
     bestFor: [
-      "Small to medium businesses that don't need many e-commerce options",
-      "Pop up shops, bookstores, Cafés, appointment-based businesses, artists and creators, service businesses, food trucks, quick-serve",
+      "Small to medium businesses that don't need many e-commerce options:",
+      [
+        "Pop up shops",
+        "Bookstores",
+        "Cafés",
+        "Appointment-based businesses",
+        "Artists and creators",
+        "Service businesses",
+        "Food trucks",
+        "Quick-serve",
+      ],
       "Owners who want something simple + affordable",
       "Hybrid businesses (retail + café, etc.)",
       "Product sellers who don't rely heavily on blog SEO or content marketing",
@@ -722,7 +845,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://squareup.com/us/en/the-bottom-line/starting-your-business/seo-guide-for-business",
       ],
 
-      "17-minute tutorial on setting up SEO: https://www.youtube.com/watch?v=QVJ4dQ2P-xk",
+      "17-minute tutorial on setting up SEO",
+      ["https://www.youtube.com/watch?v=QVJ4dQ2P-xk"],
     ],
     pros: [
       "You can learn in a day, clean user interface",
@@ -736,7 +860,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [] as string[],
     examples: [
-      "10 Inspirational Square Online Store Examples: https://alvarotrigo.com/blog/square-online-store-examples/",
+      "10 Inspirational Square Online Store Examples",
+      ["https://alvarotrigo.com/blog/square-online-store-examples/"],
     ],
     perfectIf: [
       "You are a small to medium business that wants an easy way to handle mobile/ online payments",
@@ -757,15 +882,27 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐⭐",
     cost: [
-      "Free (with Wix ads, have to use a wixsite.com domain name)",
-      "Light $17/mo (no eCommerce capabilities, need Core or higher)",
-      "Core $29/mo",
-      "And some more expensive plans https://www.wix.com/plans",
+      "https://www.wix.com/plans",
+      [
+        "Free",
+        ["With Wix ads", "You have to use a wixsite.com domain name."],
+        "Light",
+        ["$17/mo", "No eCommerce capabilities, need Core or higher."],
+        "Core",
+        ["$29/mo"],
+        "And some more expensive plans",
+      ],
     ],
     trial: ["14 day trial for premium plans"],
     bestFor: [
-      "Creative service businesses, small shops that want a cute storefront, personal brands, service businesses with scheduling",
-      "A business that wants greater control how their site looks, doesn't mind that it will take some more time to get it to look just right, while not dealing with the complexity of Webflow or WordPress",
+      "Creative service businesses.",
+      "Small shops that want a cute storefront.",
+      "Personal brands.",
+      "Service businesses with scheduling.",
+      "A business that wants greater control how their site looks.",
+      [
+        "And doesn't mind that it will take some more time to get it to look just right, while not dealing with the complexity of Webflow or WordPress",
+      ],
     ],
     support: [
       "24/7 chat, email, phone hours vary based on what language you speak:",
@@ -776,7 +913,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     migration: [
       "Can't be migrated. If you want to move, you'd have to rebuild from scratch elsewhere.",
-      "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+      [
+        "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+      ],
     ],
     security: ["Handles security, you don't have to do anything."],
 
@@ -886,17 +1025,20 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Blogging is good, but not amazing. It's definitely usable, but serious content marketers may prefer WordPress for ultimate control.",
     ],
     moreInfo: [
-      "Wix Review 2025: The Brutal Truth After Building 30+ Sites https://www.youtube.com/watch?v=FSpGyiRX3ck",
+      "Wix Review 2025: The Brutal Truth After Building 30+ Sites",
+      ["https://www.youtube.com/watch?v=FSpGyiRX3ck"],
     ],
     examples: [
-      "Blog post with 15 outstanding Wix examples: https://www.wix.com/blog/wix-websites-examples",
-      "Gallery of real-life Wix websites: https://www.sitebuilderreport.com/wix-examples",
+      "Blog post with 15 outstanding Wix examples",
+      ["https://www.wix.com/blog/wix-websites-examples"],
+      "Gallery of real-life Wix websites",
+      ["https://www.sitebuilderreport.com/wix-examples"],
     ],
     perfectIf: [
       "You are willing to spend a bit more time editing in return for having access to more templates, or you need more apps to add more features",
     ],
     skipIf: [
-      "you might migrate later (it's not easy). Or you don't want to fiddle with an editor too much to get everything looking right.",
+      "You might migrate later (it's not easy). Or you don't want to fiddle with an editor too much to get everything looking right.",
     ],
   },
   {
@@ -911,20 +1053,25 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐",
     cost: [
-      "$10/mo (monthly)",
-      "$8/mo (if you pay for a year)",
-      "Special note, you can make your site for free but you only start paying when you publish it.",
       "https://getsiimple.com/#pricing",
+      [
+        "It just has one plan.",
+        ["$10/mo", "$8/mo (if you pay for a year)"],
+        "Special note, you can make your site for free. You only start paying when you publish it.",
+      ],
     ],
     trial: [
-      "No trial, but you can build your entire site for free before publishing. The free domain will use the simple domain",
+      "No trial, but you can build your entire site for free before publishing.",
+      ["The free domain will use the simple domain"],
     ],
     bestFor: [
       "Local service businesses",
 
-      "Those who need a simple one page website, with a basic form. Small businesses, creatives, freelancers.",
+      "Those who need a simple one page website, with a basic form.",
+      ["Small businesses", "Creatives", "Freelancers."],
 
-      "If you need very basic e-commerce, you could attach a payment processor like paypal, etc.",
+      "Need very basic e-commerce",
+      ["you could attach a payment processor like paypal, etc."],
 
       "Owners who don't want to fuss with plugins or complex settings",
     ],
@@ -1006,8 +1153,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       "You can bring your own domain or purchase the domain through them. Or use their free Siimple domain.",
-      '"you can cancel your subscription at any time. There are no contracts or hidden fees."',
-      '"Version History and Backups"',
+      "https://getsiimple.com/",
+      [
+        '"You can cancel your subscription at any time. There are no contracts or hidden fees."',
+        '"Version History and Backups"',
+      ],
     ],
     cons: [
       "No blogging features",
@@ -1039,13 +1189,30 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐⭐",
     cost: [
-      "Basic (solo) $29/mo",
-      "There are more expensive plans as well",
-      "3 day free trial + $1/mo for the first 3 months of some plans",
       "https://www.shopify.com/pricing",
+      [
+        "Basic (solo)",
+        ["$29/mo"],
+        "Grow",
+        ["$79/mo"],
+        "There are more expensive plans as well",
+        "3 day free trial + $1/mo for the first 3 months of some plans",
+      ],
     ],
     trial: ["3 day free trial + $1/mo for the first 3 months of some plans"],
-    bestFor: [] as string[],
+    bestFor: [
+      "For online businesses that sell lots of items and expect to grow.",
+      [
+        "Online retail stores",
+        "DTC (direct-to-consumer) brands",
+        "Subscription boxes",
+        "Print-on-demand businesses",
+        "Dropshipping stores",
+        "Apparel, skincare, supplements, merch",
+      ],
+      "Businesses with lots of SKUs or variants",
+      "Businesses selling internationally, since it handles multi-currency, multi-country selling",
+    ],
     support: [
       "Varies based on your plan, but chat is available for all plans 24/7",
       "Phone: Shopify Plus and Retail plans only",
@@ -1058,7 +1225,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     migration: [
       "Very limited, you can export your stores data but the theme is specific to shopify.",
       "You'd basically need to hire a developer to fully migrate or just start from scratch on the new platform.",
-      "https://wpcreative.com.au/convert-shopify-theme-to-wordpress/",
+      ["https://wpcreative.com.au/convert-shopify-theme-to-wordpress/"],
     ],
     security: [
       'Handles security, you don\'t have to do anything. "All Shopify sites are PCI compliant and SSL certified, ensuring your business and customer data are protected." - Shopify',
@@ -1176,10 +1343,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     pros: [
-      "But the sections are built to be easy to edit, and to look good on any size screen (be responsive).",
+      "The sections are built to be easy to edit, and to look good on any size screen (be responsive).",
 
       "It now has a drag and drop page builder: though you can use third party apps to add more advanced drag and drop features.",
       ["https://www.shopify.com/website/builder"],
+      "Natively supports",
+      ["Google shopping", "TikTok", "Instagram / Facebook shopping"],
     ],
     cons: [
       "Less creative freedom",
@@ -1190,9 +1359,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [] as string[],
     examples: [
-      "Official store examples: https://www.shopify.com/examples",
+      "Official store examples",
+      ["https://www.shopify.com/examples"],
 
-      "More detailed list: https://www.sitebuilderreport.com/shopify-stores-examples",
+      "More detailed list",
+      ["https://www.sitebuilderreport.com/shopify-stores-examples"],
     ],
     perfectIf: [
       "You have a medium or large eCommerce business.",
@@ -1221,15 +1392,30 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐⭐",
     cost: [
-      "Starter $5/mo (same price to pay annually or monthly)",
-      "Venture: $30/mo ($25 if paid annually)",
-      "Business: $55/mo ($45 if paid annually)",
-      "Unlimited: $130/mo ($105 if paid annually)",
       "https://www.ecwid.com/pricing",
-      "https://www.ecwid.com/website-builder",
+      [
+        "Starter",
+        ["$5/mo (same price to pay annually or monthly)"],
+        "Venture",
+        ["$30/mo", "$25 if paid annually"],
+        "Business",
+        ["$55/mo", "$45 if paid annually"],
+        "Unlimited:",
+        ["$130/mo", "$105 if paid annually"],
+      ],
     ],
-    trial: ["none"],
-    bestFor: ["Smaller businesses"],
+    trial: ["None"],
+    bestFor: [
+      "Smaller businesses",
+      [
+        "Local service businesses (cleaners, handymen, tutors, landscapers)",
+        "Freelancers & consultants",
+        "Coaches",
+        "Therapists",
+        "Personal brands",
+        "Side projects / hobby businesses",
+      ],
+    ],
     support: [
       "All plans have email support, chat and phone depends on your plan",
       "Chat: Venture plan or above required (24/7 monday through friday)",
@@ -1240,7 +1426,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Shop can be exported but the Ecwid website would have to be rebuilt.",
       "You'd use something like cart2Cart to fully export the site",
       "Ecwid lets you export/import product catalogs via CSV",
-      "https://www.shopping-cart-migration.com/shopping-cart-migration-options/24788-ecwid-to-shopify-migration",
+      [
+        "https://www.shopping-cart-migration.com/shopping-cart-migration-options/24788-ecwid-to-shopify-migration",
+      ],
     ],
     security: [
       'Handled by Ecwid. "Ecwid uses Amazon Web Services (AWS), so your store inherits some great security features, and both AWS and Ecwid are Level 1 PCI DSS certified." https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/',
@@ -1340,13 +1528,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
       '"Can set up a store in 10-15 minutes". Pick a template, add content + products, and publish.',
       ["https://www.youtube.com/watch?v=UWT2vDUOUFc"],
 
-      "https://www.ecwid.com/pricing :",
+      "https://www.ecwid.com/pricing",
       [
         "Nonprofits get 6 months of Venture plans for free:",
         [
           '"Tell us more about your nonprofit and get 6 months of Venture for free." Scroll down the pricing page to "Do you offer any discounts for nonprofit organizations?" and click it to see the link to the form.',
         ],
-        "All Ecwid plans come with unlimited bandwidth and storage at no extra cost.",
+        '"All Ecwid plans come with unlimited bandwidth and storage at no extra cost."',
       ],
       '"A free web address on an Ecwid subdomain, with options to connect a third-party domain or purchase one directly from the store admin."',
       [
@@ -1376,13 +1564,21 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [
       "Article comparing Ecwid to Shopify:",
-      "https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/",
-      "22 minute tutorial for setting up an Ecwid site: https://www.youtube.com/watch?v=UWT2vDUOUFc",
+      ["https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/"],
+
+      "22 minute tutorial for setting up an Ecwid site:",
+      ["https://www.youtube.com/watch?v=UWT2vDUOUFc"],
+
+      "Goes into more detail about the website builder's features:",
+      ["https://www.ecwid.com/website-builder"],
     ],
     examples: [] as string[],
     perfectIf: [
       "You have a website that needs e-commerce functionality embed into it through code or a widget.",
-      "You just need a basic website and simple e-commerce store and you want them in the same place, however most people will built on wix/squarespace/Carrd/etc and add their Ecwid store to it, instead of using Ecwid's more limited website builder.",
+      "You just need a basic website and simple e-commerce store and you want them in the same place",
+      [
+        "However most people will built on wix/ Squarespace/ Carrd/etc and add their Ecwid store to it, instead of using Ecwid's more limited website builder.",
+      ],
       "Straightforward shops with small budgets that don't need a lot of customized features or integrations with a ton of third-party tools.",
     ],
     skipIf: [
@@ -1402,13 +1598,32 @@ export const websiteBuilders: WebsiteBuilder[] = [
     difficulty: "⭐⭐⭐⭐⭐",
     cost: [
       "Depends on where you host it, WordPress itself is free. You'd choose your host and build your WordPress site there. Most hosts have 1-click install.",
-      "Hostinger $1.95/mo for 48 months 10.99/mo regular price at renewal",
-      "Bluehost: 2.95-3.00/mo starting",
-      "Dreamhost: starts at $2.59/mo",
+      "Hostinger",
+      [
+        "$1.95/mo for 48 months",
+        "10.99/mo regular price at renewal",
+        "https://www.hostinger.com/wordpress-hosting",
+      ],
+      "Bluehost",
+      ["2.95-3.00/mo starting", "https://www.bluehost.com/wordpress-hosting"],
+      "Dreamhost",
+      ["$2.59/mo starting", "https://www.dreamhost.com/wordpress/"],
       "Also use care when selecting apps/plugins, these prices can stack up quietly ($10/mo here, $20/mo there)",
     ],
     trial: ["Depends on the provider you chose."],
-    bestFor: [] as string[],
+    bestFor: [
+      "Businesses that want full control over the appearance, performance, caching, and SEO of their site.",
+      "E-commerce stores",
+      [
+        "With the WooCommerce or similar plugins.",
+        "You have access to the full WooCommerce platform, so its possible for it to support even medium to large e-commerce businesses",
+      ],
+      "Membership sites",
+      "Content-heavy businesses",
+      "Agencies and startups",
+      "SEO-driven companies",
+      "Online publications",
+    ],
     support: [
       "Support varies based on your hosting platform",
       "Theme and plugin support levels vary by the creators",
@@ -1528,25 +1743,31 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [] as string[],
     examples: [
-      'Official "showcase" of real sites built on WordPress:',
-      "https://wordpress.org/showcase/",
-      "Big brands using WordPress:",
-      "https://kinsta.com/blog/wordpress-site-examples/",
-      'Collection of "100+ real WordPress website examples":',
-      "https://reallygooddesigns.com/wordpress-website-examples",
+      'Official "showcase" of real sites built on WordPress',
+      ["https://wordpress.org/showcase/"],
+      "Big brands using WordPress",
+      ["https://kinsta.com/blog/wordpress-site-examples/"],
+      'Collection of "100+ real WordPress website examples"',
+      ["https://reallygooddesigns.com/wordpress-website-examples"],
       'Kinsta "130+ WordPress Site Examples":',
-      "https://kinsta.com/blog/wordpress-site-examples/",
-      '10Web "26 WordPress Website Examples to Inspire You":',
-      "https://10web.io/blog/wordpress-websites/",
+      ["https://kinsta.com/blog/wordpress-site-examples/"],
+      '10Web "26 WordPress Website Examples to Inspire You"',
+      ["https://10web.io/blog/wordpress-websites/"],
     ],
     perfectIf: [
       "You want flexibility, something highly customizable, plugins, blogging, or long-term scalability.",
-      "You want to be able to have total ownership of your site and do heavy customization at a relatively low price. And you don't mind a higher learning curve and some more setup to get those benefits.",
+      "You want to be able to have total ownership of your site and do heavy customization at a relatively low price.",
+      [
+        "And you don't mind a higher learning curve and some more setup to get those benefits.",
+      ],
     ],
     skipIf: [
       "You want something extremely simple right away.",
-      "You don't have the time to research hosting providers",
-      "If you choose basic WP hosting instead of WP managed hosting, you'd have to do technical maintenance manually. (Manually telling the plugins to update, and server side security updates, manual backups)",
+      "You don't have the time to research hosting providers.",
+      "If you choose basic WP hosting instead of WP managed hosting, you'd have to do technical maintenance manually.",
+      [
+        "This means manually telling the plugins to update, and server side security updates, manual backups.",
+      ],
     ],
   },
   {
@@ -1561,15 +1782,47 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐⭐⭐",
     cost: [
-      "Free $0/mo (will have ads, can't install plugins or themes)",
-      "There are discounts if you pay yearly or once every 2 years, saving up to 68%",
-      "Personal $9/mo (access plugin and some premium themes)",
-      "Premium plans ($18/mo), (access to plugin and all premium themes)",
-      "Business plan at $40/mo (to access e-commerce options with plugins)",
-      "https://wordpress.com/pricing/#lpc-pricing (to see all the pricing including yearly and biyearly pricing)",
+      "https://wordpress.com/pricing/#lpc-pricing",
+      [
+        "Free",
+        ["$0/mo", "Will have ads.", "Can't install plugins or themes."],
+
+        "Personal",
+        ["$9/mo", "Can access plugins and some premium themes)"],
+        "Premium plans",
+        ["$18/mo", "Access to plugin and all premium themes)"],
+        "Business plan",
+        ["$40/mo", "Access to e-commerce options with plugins)"],
+        "There are discounts if you pay yearly or once every 2 years, saving up to 68%",
+      ],
     ],
-    trial: ["No trial, but they do have a free plan"],
-    bestFor: [] as string[],
+    trial: ["No trial, but they do have a free plan."],
+    bestFor: [
+      "Small to medium businesses that want wordpress without the stress",
+      [
+        "Local service businesses",
+        "Coaches, consultants, therapists",
+        "Bloggers",
+        "Nonprofits",
+        "Small e-commerce sites (on higher plans).",
+        [
+          "Digital Downloads",
+          "Merch",
+          "Courses",
+          "Service business with appointments",
+          "Content sites monetizing with products on the side",
+          "Roughly < 100 products.",
+          "Simple products without complex variants or bundles.",
+        ],
+        "Medium to larger ecommerce sites would struggle with:",
+        [
+          "Some WooCommerce extensions aren’t available or recommended, limiting your stores potential.",
+          "Checkout & cart customization limits",
+          "Having to handle complex inventory",
+          "Business / Commerce plans can get expensive fast",
+        ],
+      ],
+    ],
     support: [
       "Chat and email: for paid plans (reply within 24 hours)",
       "Phone: no phone support",
@@ -1579,7 +1832,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Third party Plugin and theme issues will depend on the support options listed by the creator",
     ],
     migration: [
-      "You can move the website to another hosting provider: https://wordpress.com/support/export/",
+      "You can move the website to another hosting provider",
+      ["https://wordpress.com/support/export/"],
+      "However e-commerce sites are more painful to migrate.",
+      [
+        "Stripe, PayPal, subscriptions, saved cards, webhooks often depend on the exact site URL and environment. Migrating can break checkout or subscriptions if not reconfigured perfectly.",
+        "Ecommerce sites rely heavily on plugins, and those plugins rely on other plugins. Change the hosting or WordPress flavor and suddenly one missing dependency takes down checkout.",
+        "On WordPress.com (especially non-Business plans), you don’t always have full server or plugin access. That makes clean exports and deep config control harder compared to self-hosted WordPress.",
+      ],
     ],
     security: ["Handles security, you don't have to do anything."],
     accessibility: [
@@ -1665,19 +1925,26 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Automatic backups are only available on business and higher plans. Lower tier plans would have to use a plugin for backups.",
       "Can't do deep backend customization",
       "At high plan levels, WordPress.com almost matches WordPress.org but you pay for the convenience.",
+      "As a business grows more complex (custom features, integrations, advanced ecommerce), WordPress.com can feel restrictive, and WordPress.org or a custom setup usually becomes a better fit.",
     ],
     moreInfo: [] as string[],
     examples: [
-      'Official "showcase" of real sites built on WordPress: https://wordpress.org/showcase/',
-      "Big brands using WordPress: https://kinsta.com/blog/wordpress-site-examples/",
-      'Collection of "100+ real WordPress website examples": https://reallygooddesigns.com/wordpress-website-examples',
-      'Kinsta "130+ WordPress Site Examples" https://kinsta.com/blog/wordpress-site-examples/',
-      '10Web "26 WordPress Website Examples to Inspire You" https://10web.io/blog/wordpress-websites/',
+      "Official showcase of real sites built on WordPress",
+      ["https://wordpress.org/showcase/"],
+      "Big brands using WordPress",
+      ["https://kinsta.com/blog/wordpress-site-examples/"],
+      'Collection of "100+ real WordPress website examples"',
+      ["https://reallygooddesigns.com/wordpress-website-examples"],
+      'Kinsta "130+ WordPress Site Examples"',
+      ["https://kinsta.com/blog/wordpress-site-examples/"],
+      '10Web "26 WordPress Website Examples to Inspire You"',
+      ["https://10web.io/blog/wordpress-websites/"],
     ],
     perfectIf: [
       "You want flexibility, something highly customizable, plugins, blogging, or long-term scalability.",
       "You want to be able to heavily customize your website visually",
-      "You want the technical bits handled (plugin and security updates). Higher tier plans also get automatic backups.",
+      "You want the technical bits handled (plugin and security updates).",
+      ["Higher tier plans get automatic backups."],
     ],
     skipIf: [
       "You want something extremely simple right away.",
@@ -1697,13 +1964,47 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐⭐⭐⭐⭐",
     cost: [
-      "Free (for 2 page websites & 50 form submissions)",
-      "Basic $14/mo (with yearly payment)",
+      "https://webflow.com/pricing",
+      [
+        "Free",
+        ["For 2 page websites.", "50 form submissions."],
+        "Basic",
+        ["$14/mo (with yearly payment)"],
+        "CMS",
+        ["$23/mon (with yearly payment)"],
+        "Business",
+        ["$39/mon (with yearly payment}"],
+      ],
     ],
     trial: [
-      "No free trial for the premium plans but it has a limited free plan",
+      "No free trial for the premium plans, but it has a limited free plan you can use as a trial.",
     ],
-    bestFor: [] as string[],
+    bestFor: [
+      "Marketing-first businesses that care a great deal about design but don't wan't to touch code.",
+      [
+        "Agencies",
+        "Startups",
+        "Personal brands",
+        "Portfolios",
+        "SaaS Marketing sites",
+      ],
+      "Content-heavy but low complexity",
+      ["Blogs", "Case studies", "Documentation", "Editorial Sites"],
+      "Small, simple ecommerce",
+      [
+        "Digital Products",
+        "Merch",
+        "One-time purchase",
+        "Once you need subscriptions, Custom checkout flows, complex shipping, heavy product variations, Advanced inventory logic, or fancy tax logic Webflow starts sweating.",
+        "Often businesses with use Webflow for marketing and Shopify / custom backend for e-commerce",
+      ],
+      "Teams without a dev-on-call",
+      [
+        "Marketing Teams",
+        "Designers who want autonomy",
+        "Founders who don't want to touch code",
+      ],
+    ],
     support: [
       "Chat: AI 24/7, live agent varies based on the time of day",
       "Email: through their Webflow Support Portal",
@@ -1711,7 +2012,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://help.webflow.com/hc/en-us/articles/39672881707155-Customer-Support-Policy#h_01JQ478K6QZS3YTS9N2566E3TM",
     ],
     migration: [
-      "Limited. You can only export your code on the workspace plans but a good chunk of the content won't be included in the export (CMS, user accounts, e-commerce content, form logic, etc). https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code",
+      "Limited. You can only export your code on the workspace plans but a good chunk of the content won't be included in the export (CMS, user accounts, e-commerce content, form logic, etc).",
+      [
+        "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code",
+      ],
     ],
     security: ["Handles security, you don't have to do anything."],
     accessibility: [
@@ -1822,9 +2126,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     moreInfo: [] as string[],
     examples: [
-      "Community showcase of sites: https://webflow.com/made-in-webflow",
-      "Blog article with top Webflow examples: https://www.flux-academy.com/blog/12-stunning-webflow-examples-that-show-just-how-versatile-the-website-builder-is",
-      'Digidop "10 Great Company Websites Built on Webflow" https://www.digidop.com/blog/large-enterprise-webflow-sites',
+      "Community showcase of sites",
+      ["https://webflow.com/made-in-webflow"],
+      "Blog article with top Webflow examples",
+      [
+        "https://www.flux-academy.com/blog/12-stunning-webflow-examples-that-show-just-how-versatile-the-website-builder-is",
+      ],
+      'Digidop "10 Great Company Websites Built on Webflow"',
+      ["https://www.digidop.com/blog/large-enterprise-webflow-sites"],
     ],
     perfectIf: [
       "You love design and want total visual control while not dealing with coding.",
@@ -1847,17 +2156,51 @@ export const websiteBuilders: WebsiteBuilder[] = [
     },
     difficulty: "⭐",
     cost: [
-      "Free: Though you must join the 7 day trial first, and it only has very basic services + have ads on your website, can't use custom domain on the free version.",
-      "https://www.godaddy.com/help/whats-included-in-my-free-websites-marketing-plan-41840",
-      "Basic: 10.99/mo for 1st year, 203.99 renewal (16.99/mo)",
-      "Premium: 15.99/mo for 1st year, 359.88 renewal (29.99/mo)",
-      "Commerce: 21.99/mo for 1st year, $419.88 renewal (34.99/mo)",
+      "Free",
+      [
+        "Though you must join the 7 day trial first, and it only has very basic service.",
+        "Ads on your website.",
+        "Can't use a custom domain on the free version.",
+        "https://www.godaddy.com/help/whats-included-in-my-free-websites-marketing-plan-41840",
+      ],
+      "Basic",
+      ["$10.99/mo for 1st year", "$203.99 renewal ($16.99/mo)"],
+      "Premium",
+      ["$15.99/mo for 1st year", "$359.88 renewal ($29.99/mo)"],
+      "Commerce",
+      ["$21.99/mo for 1st year", "$419.88 renewal ($34.99/mo)"],
       "Domain is only free for the first year.",
       "Special note: I had to jump through some weird hoops to find the renewal prices without making an account, they don't make it easy to find before you sign up for an account.",
-      'They will try to sneak in a "Microsoft 365 Email Essentials" plan in, you have to manually click no thanks. It will start off as a free trial, but the renewal price is $179.88/year.',
+      'They will try to sneak in a "Microsoft 365 Email Essentials" plan in, you have to manually click no thanks.',
+      [
+        "It will start off as a free trial, but the renewal price is $179.88/year.",
+      ],
     ],
     trial: ["7 day trial"],
-    bestFor: [] as string[],
+    bestFor: [
+      "Businesses willing to pay for the convinence of having everything bundled together in one place.",
+      ["Domain", "Email", "Hosting", "Site builder"],
+      "Businesses that don't expect to grow much.",
+      "Ultra-simple, local, and service-based businesses (just need a phone number, hours, contact form).",
+      [
+        "Plumbers",
+        "Salons",
+        "Electricians",
+        "Consultants",
+        "Real estate agents",
+      ],
+      "First-time website owners",
+      [
+        "Their builder is opinionated and guided, so you don’t get lost or creative.",
+      ],
+      "“Set it and forget it” sites.",
+      [
+        "Brochure websites",
+        "Temporary campaigns",
+        "Landing pages that rarely change",
+      ],
+      "Very small e-commerce businesses",
+    ],
     support: [
       "24/7 phone, chat and text support, though they offshored so there can be a language barrier.",
       "https://www.godaddy.com/help/contact-us",
@@ -1866,7 +2209,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     migration: [
       "You'd have to rebuild your site from scratch.",
-      "If you outgrow GoDaddy's builder, migrating away is often painful (limited export options, rigid templates). Not great if you expect growth or hope to switch platforms later. https://www.forbes.com/advisor/business/software/godaddy-website-builder-review/",
+      "If you outgrow GoDaddy's builder, migrating away is often painful (limited export options, rigid templates). Not great if you expect growth or hope to switch platforms later.",
+      [
+        "https://www.forbes.com/advisor/business/software/godaddy-website-builder-review/",
+      ],
     ],
     security: [
       "Basic security is included (SSL, standard protections). GoDaddy has been involved in several security incidents, exposing customer and visitor information, which lead to a class action settlements.",
@@ -1880,7 +2226,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Different levels of permission, they won't have access to billing information etc",
       "https://www.godaddy.com/help/invite-a-delegate-to-access-my-godaddy-account-12376",
     ],
-    ecommerce: ["very limited e-commerce options."],
+    ecommerce: [
+      "very limited e-commerce options",
+      [
+        "Few simple physical products or downloads.",
+        "No subscriptions, no product variations, no advanced bundles, no complex pricing rules.",
+        "Basic inventory tracking only.",
+        "No multi-warehouse.",
+        "no advanced fulfillment flows.",
+        "Minimal checkout extensions.",
+        "integrations are limited.",
+      ],
+    ],
     appStore: [
       "No app/plugin ecosystem to access SEO apps. Without the ability to add third-party SEO tools, image optimizers, performance plugins, or content-marketing tools, you're stuck with what's built-in.",
     ],
@@ -1933,10 +2290,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Perfect for very few people, I'd highly suggest avoiding this service.",
       "You already use GoDaddy for your domain and you want everything in one place.",
       "Want an easy but basic building experience and you just need a simple website, such as a business landing page or small personal projects.",
-      "Just want to get online fast, don't care about having a website builder that will grow with your business needs.",
+      "You just want to get online fast.",
+      [
+        "You don't care about having a website builder that will grow with your business needs.",
+      ],
     ],
     skipIf: [
-      "You don't want to deal with a company known for especially aggressive introductory discounts followed by high renewal prices and known for heavy upselling.",
+      "You don't want to deal with a company known for exceptionally aggressive introductory discounts followed by high renewal prices and heavy upselling.",
       "You need something more than a basic site.",
       "You want more than bare bones customization.",
     ],

@@ -33,7 +33,7 @@ const CollapsibleList = ({
           key={idx}
           className={listItemClassName}
         >
-          • <ConvertStringLinkToA item={item} />
+          ● <ConvertStringLinkToA item={item} />
         </li>
       );
     }
@@ -95,7 +95,7 @@ const CollapsibleList = ({
       <summary className={summaryClassName}>
         {typeof items[0] === "string" ? items[0] : "Details"}
       </summary>
-      <ul className="space-y-1 list-disc mt-2 ml-4 mb-2">
+      <ul className="space-y-1  mt-2 ml-4 mb-2">
         {items.slice(1).map(renderItem)}
       </ul>
     </details>

@@ -61,11 +61,11 @@ export interface WebsiteBuilder {
     "learning curve": string[];
   };
   difficulty: string;
-  cost: string[];
+  cost: (string | string[] | (string | string[])[])[];
   trial: (string | string[] | (string | string[])[])[];
-  bestFor: string[];
+  bestFor: (string | string[] | (string | string[])[])[];
   support: (string | string[] | (string | string[])[])[];
-  migration: string[];
+  migration: (string | string[] | (string | string[])[])[];
   security: (string | string[] | (string | string[])[])[];
   accessibility: string[];
   collaboration: string[];
@@ -74,10 +74,10 @@ export interface WebsiteBuilder {
   seo: (string | string[] | (string | string[])[])[]; // Can be string OR array of strings
   pros: (string | string[] | (string | string[])[])[];
   cons: (string | string[] | (string | string[])[])[];
-  moreInfo: string[];
-  examples: string[];
-  perfectIf: string[];
-  skipIf: string[];
+  moreInfo: (string | string[] | (string | string[])[])[];
+  examples: (string | string[] | (string | string[])[])[];
+  perfectIf: (string | string[] | (string | string[])[])[];
+  skipIf: (string | string[] | (string | string[])[])[];
 }
 
 export type GuidingOption = {

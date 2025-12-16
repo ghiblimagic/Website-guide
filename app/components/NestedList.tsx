@@ -24,9 +24,6 @@ const CollapsibleList = ({
 
   if (!itemsArray || itemsArray.length === 0) return null;
 
-  if (itemsArray.length === 1 && typeof itemsArray[0] === "string") {
-    return <p className={singleItemClassName}>{itemsArray[0]}</p>;
-  }
   const renderItem = (
     item: string | string[] | (string | string[])[],
     idx: number,
@@ -39,11 +36,13 @@ const CollapsibleList = ({
           key={idx}
           className={`${listItemClassName} flex items-start  gap-2 mb-3`}
         >
-          {IconComponent && (
+          {IconComponent ? (
             <IconComponent
               size={16}
               className={`${iconStyling}`}
             />
+          ) : (
+            <span className={`${iconStyling}`}>●</span>
           )}
           <ConvertStringLinkToA item={item} />
         </li>
@@ -102,7 +101,7 @@ const CollapsibleList = ({
     return null;
   };
 
-  return <ul className="space-y-1  mt-2 ml-4 mb-2">{items.map(renderItem)}</ul>;
+  return <ul className=" mt-2  mb-2">{items.map(renderItem)}</ul>;
 };
 
 export default CollapsibleList;
