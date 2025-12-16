@@ -28,10 +28,10 @@ interface BuilderCardProps {
   seo: (string | string[] | (string | string[])[])[];
   pros: (string | string[] | (string | string[])[])[];
   cons: (string | string[] | (string | string[])[])[];
-  moreInfo: string[];
-  examples: string[];
-  perfectIf: string[];
-  skipIf: string[];
+  moreInfo: (string | string[] | (string | string[])[])[];
+  examples: (string | string[] | (string | string[])[])[];
+  perfectIf: (string | string[] | (string | string[])[])[];
+  skipIf: (string | string[] | (string | string[])[])[];
 
   // VisibleFields
   summaryVisible: boolean;
