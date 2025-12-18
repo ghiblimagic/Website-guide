@@ -100,12 +100,22 @@ export const websiteBuilders: WebsiteBuilder[] = [
       '"Google Sites support for a free Gmail account is basically none existent from Google Inc. themselves. There isn\'t a way to submit a ticket or talk to a Google representative. With a Google Workspace subscription the situation improves, but it comes at a cost there. However, there is an active Help Community of product experts, which is a forum type system." https://www.kirksvillewebdesign.com/google-sites-developer/google-sites-news/free-website-builder-plans',
     ],
     migration: [
-      "You'd have to build from scratch",
-      "You can only migrate it to sharepoint (used for corporate intranets) otherwise you'd have to rebuild from scratch",
+      "You'd have to build from scratch.",
+      "You can only migrate it to sharepoint (used for corporate intranets).",
       ["https://cloudiway.com/solutions/google-sites-migration/"],
     ],
     security: [
+      "Handles basic security for you.",
+      "https://sites.google.com/view/templates-marketplace/googlesites/about-google-sites",
+
+      [
+        '"Your site is hosted on Google’s reliable servers, ensuring performance and uptime."',
+        '"Google Sites provides automatic backups of your content, ensuring that your work is secure and easily recoverable in case of accidental deletion or changes."',
+        '"Every Google Site automatically comes with SSL security, ensuring that your site is encrypted and safe for visitors, which helps build trust."',
+        '"View and restore previous versions of your site, adding a layer of security to your content management."',
+      ],
       "Your website data is stored on Google's servers, which could raise concerns about data privacy and security for some people.",
+      ["https://grokipedia.com/page/Google_Sites?utm_source=chatgpt.com"],
     ],
     accessibility: [
       "Not great for accessibility but there are guides to make use of the accessibility features it does have.",
@@ -221,11 +231,16 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://carrd.co/contact",
     ],
     migration: [
-      "Very limited, you'll basically be rebuilding the website",
+      "Very limited, you'll basically be rebuilding the website.",
       "You Can only export the website on a pro plus plan or higher, though even then the form elements will not be functional in the download.",
       ["https://carrd.co/docs/sites/downloading"],
     ],
-    security: ["Handled by Carrd, you don't have to do anything."],
+    security: [
+      "Handled by Carrd.",
+      ["https://carrd.co/docs/sites/setting-up-ssl"],
+      "Regular Audits: Continuous monitoring and updates to ensure compliance and security",
+      ["https://www.caard.net/privacy-policy-web"],
+    ],
     accessibility: [
       "Since Carrd sites are simpler they're more likely to be accessible but you'll have to manually check for accessibility compliance.",
       "There's nothing about \"we meet WCAG 2.1 Level AA\" for the templates, so if you legally need to meet this requirements or want to care for all your potential customers, you'd likely have to manually check for accessibility compliance.",
@@ -336,7 +351,15 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Can also hire a Pixpa expert for $199",
     ],
     migration: ["Can't migrate out of Pixpa."],
-    security: ["Handled for you"],
+    security: [
+      "Handled for you and you can disable AI crawling your website, so AI can't take your works from your site.",
+      "'Right-click protection is available across your entire website, preventing unauthorized copying of your images and text.'",
+      [
+        "https://www.pixpa.com/updates/new-security-features-for-your-website",
+        "https://help.pixpa.com/kb/where-is-my-site-hosted/",
+        "https://help.pixpa.com/kb/where-is-my-site-hosted/",
+      ],
+    ],
     accessibility: [
       "Decent accessibility.",
       "From this article, it seems like its decent with accessibility but of course, you would have to follow the guide.",
@@ -460,7 +483,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
       ],
     ],
-    security: ["Handles security, you don't have to do anything."],
+    security: [
+      "Handles security, you don't have to do anything.",
+      ["https://www.squarespace.com/security"],
+    ],
     accessibility: [
       "Squarespace has built in tools to fine-tune your site to be more accessible.",
 
@@ -625,7 +651,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://www.hostinger.com/support/6572573-hostinger-website-builder-how-to-export-content-to-wordpress/",
       ],
     ],
-    security: ["Handles security, you don't have to do anything."],
+    security: [
+      "Handles security, you don't have to do anything.",
+      ["https://www.hostinger.com/blog/hostinger-security"],
+    ],
     accessibility: [
       "Couldn't find information about how accessible the templates are.",
       "However they have an article about how to make your site more accessible:",
@@ -780,9 +809,16 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://squareup.com/help/us/en/article/4993-contact-square-support",
     ],
     migration: [
-      "You can export certain data like customers, item library, orders and reports, but you can't export the website itself",
+      "You can export certain data like customers, item library, orders and reports, but you can't export the website itself.",
     ],
-    security: ["Handles security, you don't have to do anything."],
+    security: [
+      "Handles security, you don't have to do anything.",
+      '"Our free web hosting platform provides exceptional speed, performance, and security. With Square, you’ll experience no restriction on bandwidth. Your website includes a free SSL certificate, which ensures that visitors navigate your website over a secure 128-bit encrypted connection. Plus, SSL also helps power eCommerce by enabling customers to check out directly on your domain.',
+      [
+        'Quote is from FAQ for "Do I get free web hosting when I create a website with Square?"',
+        "https://squareup.com/us/en/online-store",
+      ],
+    ],
     accessibility: [
       "The square checkout has accessibility options:",
       "https://squareup.com/help/us/en/article/8337-set-up-accessibility-features",
@@ -939,7 +975,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
       ],
     ],
-    security: ["Handles security, you don't have to do anything."],
+    security: [
+      "Handles security, you don't have to do anything.",
+      ["https://www.wix.com/website-security"],
+    ],
 
     accessibility: [
       '"Features comply with the highest global standards (WCAG 2.0)." and they have guides to make sure your website is accessible',
@@ -1105,9 +1144,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
       "They have a chat feature, but it's not clear what the hours are.",
     ],
-    migration: ["Would need to start from scratch"],
+    migration: ["Would need to start from scratch."],
 
-    security: ["Handled for you, automatic updates"],
+    security: [
+      "Handled for you, automatic updates.",
+      '"We automatically backup, update and secure your site so you never have to worry.',
+      ["https://getsiimple.com/?ref=getsiimple.com"],
+    ],
 
     accessibility: [
       "Strong accessibility features",
@@ -1459,14 +1502,16 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     migration: [
       "Shop can be exported but the Ecwid website would have to be rebuilt.",
-      "You'd use something like cart2Cart to fully export the site",
-      "Ecwid lets you export/import product catalogs via CSV",
+      "You'd use something like cart2Cart to fully export the site.",
+      "Ecwid lets you export/import product catalogs via CSV.",
       [
         "https://www.shopping-cart-migration.com/shopping-cart-migration-options/24788-ecwid-to-shopify-migration",
       ],
     ],
     security: [
-      'Handled by Ecwid. "Ecwid uses Amazon Web Services (AWS), so your store inherits some great security features, and both AWS and Ecwid are Level 1 PCI DSS certified." https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/',
+      "Handled by Ecwid.",
+      '"Ecwid uses Amazon Web Services (AWS), so your store inherits some great security features, and both AWS and Ecwid are Level 1 PCI DSS certified."',
+      [" https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/"],
     ],
     accessibility: [
       "Strong accessibility features.",
@@ -1660,8 +1705,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Online publications",
     ],
     support: [
-      "Support varies based on your hosting platform",
-      "Theme and plugin support levels vary by the creators",
+      "Support varies based on your hosting platform.",
+      "Theme and plugin support levels vary by the creators.",
     ],
     migration: [
       "This is where WordPress shines, it's the easiest to move away from. You can easily switch from one hosting provider to another.",
@@ -1899,7 +1944,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Third party Plugin and theme issues will depend on the support options listed by the creator",
     ],
     migration: [
-      "You can move the website to another hosting provider",
+      "You can move the website to another hosting provider.",
       ["https://wordpress.com/support/export/"],
       "However e-commerce sites are more painful to migrate.",
       [
@@ -1908,7 +1953,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "On WordPress.com (especially non-Business plans), you don’t always have full server or plugin access. That makes clean exports and deep config control harder compared to self-hosted WordPress.",
       ],
     ],
-    security: ["Handles security, you don't have to do anything."],
+    security: [
+      "Handles security, you don't have to do anything.",
+      [
+        "https://developer.wordpress.com/docs/platform-features/account-security/",
+      ],
+    ],
     accessibility: [
       "Varies by theme, these are some of the more accessible themes:",
       ["https://wordpress.com/themes/filter/accessibility-ready"],
@@ -2114,7 +2164,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code",
       ],
     ],
-    security: ["Handles security, you don't have to do anything."],
+    security: [
+      "Handles security, you don't have to do anything.",
+      ["https://trust.webflow.com/"],
+    ],
     accessibility: [
       "Has built in tools to audit your website for accessibility issues",
       [
@@ -2317,6 +2370,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     security: [
       "Basic security is included (SSL, standard protections). GoDaddy has been involved in several security incidents, exposing customer and visitor information, which lead to a class action settlements.",
+      [
+        "https://www.ftc.gov/news-events/news/press-releases/2025/05/ftc-finalizes-order-godaddy-over-data-security-failures",
+      ],
     ],
     accessibility: [
       "Minimal accessibility controls, especially compared to Squarespace, WordPress and Wix.",
