@@ -118,8 +118,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ["https://grokipedia.com/page/Google_Sites?utm_source=chatgpt.com"],
     ],
     accessibility: [
-      "Not great for accessibility but there are guides to make use of the accessibility features it does have",
-      "such as this 7 minute video: https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s",
+      "Not great for accessibility but there are guides to make use of the accessibility features it does have.",
+      "Such as this 7 minute video:",
+      ["https://www.youtube.com/watch?v=XSsY9Wr0WD0&t=444s"],
       "https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
     ],
     collaboration: [
@@ -243,8 +244,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
     accessibility: [
       "Since Carrd sites are simpler they're more likely to be accessible but you'll have to manually check for accessibility compliance.",
       "There's nothing about \"we meet WCAG 2.1 Level AA\" for the templates, so if you legally need to meet this requirements or want to care for all your potential customers, you'd likely have to manually check for accessibility compliance.",
-      "Simple accessibility tips for Carrd: https://accessibility.carrd.co",
-      "Web accessibility Resources: https://weba11y.carrd.co/",
+      "Simple accessibility tips for Carrd:",
+      ["https://accessibility.carrd.co"],
+      "Web accessibility Resources:",
+      ["https://weba11y.carrd.co/"],
     ],
     collaboration: [
       "Very simple to share access",
@@ -357,9 +360,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     accessibility: [
-      "Decent accessibility",
+      "Decent accessibility.",
       "From this article, it seems like its decent with accessibility but of course, you would have to follow the guide.",
-      "https://help.pixpa.com/kb/improving-web-accessibility-of-your-website-on-pixpa/",
+      [
+        "https://help.pixpa.com/kb/improving-web-accessibility-of-your-website-on-pixpa/",
+      ],
     ],
     collaboration: [
       "Easy to collaborate.",
@@ -651,8 +656,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     accessibility: [
       "Couldn't find information about how accessible the templates are.",
-      "However they have an article about how to make your site more accessible: https://www.hostinger.com/tutorials/web-accessibility",
-      "How to add alt text on Hostinger: https://www.hostinger.com/support/6466460-hostinger-website-builder-how-to-add-alt-text/",
+      "However they have an article about how to make your site more accessible:",
+      ["https://www.hostinger.com/tutorials/web-accessibility"],
+      "How to add alt text on Hostinger:",
+      [
+        "https://www.hostinger.com/support/6466460-hostinger-website-builder-how-to-add-alt-text/",
+      ],
     ],
     collaboration: [
       "Can share access with an employee, easy to edit site:",
@@ -813,6 +822,19 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "The square checkout has accessibility options:",
       "https://squareup.com/help/us/en/article/8337-set-up-accessibility-features",
       "Unclear how accessible the square online themes are but there are some widgets to help check your accessibility.",
+      "However, the widgets aren't well regarded and are seen as an expensive bandaid solution.",
+      "https://www.reddit.com/r/smallbusiness/comments/1ntz07u/comment/nm8t7z4/",
+      [
+        "\"I bet those $3K-$5K/year services are selling you the same $49/month widget with consulting markup. And honestly, the widgets (accessiBe, UserWay, etc.) don't actually solve the problem - they just add a toolbar that overlays your site. The underlying code issues are still there, which means you're still technically non-compliant. The real issue: if you get a demand letter, the lawyer will point out that the widget doesn't fix the actual WCAG violations. You're paying for something that doesn't protect you legally. ",
+        " Better approach:  Run an actual scan to see what's broken (most issues are fixable), Fix the common stuff yourself:",
+        [
+          "Add alt text to images",
+          "Fix color contrast",
+          "Make sure forms have proper labels",
+          "Check keyboard navigation",
+        ],
+        "For complex issues, hire a dev for a one-time fix. Once it's actually fixed, you don't need an ongoing subscription. Just rescan periodically when you add new features.",
+      ],
     ],
     collaboration: [
       "Giving other users basic permission is free",
@@ -960,10 +982,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
     accessibility: [
       '"Features comply with the highest global standards (WCAG 2.0)." and they have guides to make sure your website is accessible',
 
-      "https://www.wix.com/accessibility",
+      ["https://www.wix.com/accessibility"],
 
       "These specific template were built with accessibility in mind (though you'd still have to manually enter alt text for images, which would be the same for any accessible template):",
-      "https://es.wix.com/website/templates/html/accessible",
+      ["https://es.wix.com/website/templates/html/accessible"],
     ],
 
     collaboration: [
@@ -1131,7 +1153,10 @@ export const websiteBuilders: WebsiteBuilder[] = [
 
     accessibility: [
       "Strong accessibility features",
-      "\"Accessibility features aren't just nice-to-have — they're part of the default setup. Siimple's templates are mobile-first, use readable fonts, maintain strong color contrast, and follow clean navigation structures that work with assistive technologies. https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/",
+      "\"Accessibility features aren't just nice-to-have — they're part of the default setup. Siimple's templates are mobile-first, use readable fonts, maintain strong color contrast, and follow clean navigation structures that work with assistive technologies.",
+      [
+        "https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/",
+      ],
     ],
     collaboration: [
       "Unclear, but its easy enough to edit that even if you have to share your login with employees it'd be easy for them to update the site",
@@ -1271,15 +1296,23 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     security: [
       "Handles security, you don't have to do anything.",
-      '"All Shopify sites are PCI compliant and SSL certified, ensuring your business and customer data are protected."',
-      ["https://www.shopify.com/security/pci-compliant"],
+      "Their site are PCI compliant, which meanns it securely processes and protects cardholder information",
+      ["https://www.shopify.com/security?country=us&lang=en"],
+
+      "Free SSL certificate",
+      [
+        "Click on full list of features and under Hosting and administration",
+        "https://www.shopify.com/pricing",
+      ],
     ],
     accessibility: [
       "There are accessibility guides and more accessible themes, but you'd also have to be careful if your plugins are accessible as well.",
       "Guide on how to make your site accessible:",
-      "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/accessibility",
+      [
+        "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/accessibility",
+      ],
       "These are some of the more accessible themes:",
-      "https://accessibe.com/blog/knowledgebase/accessible-shopify-themes",
+      ["https://accessibe.com/blog/knowledgebase/accessible-shopify-themes"],
       "Though the plugins/ apps you use might not be as accessible as your theme.",
     ],
     collaboration: [
@@ -1480,12 +1513,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
       [" https://www.forbes.com/advisor/business/software/ecwid-vs-shopify/"],
     ],
     accessibility: [
-      "Strong accessibility features",
-      '"Ecwid is designed with accessibility in mind and you can be sure that your Ecwid store is a welcoming place for everyone. Your store doesn\'t have any access barriers, you can sell online to people with disabilities - to visually-impaired buyers that have to use screen readers for browsing online shops or buyers that navigate with keyboard only. And you can be sure that your store follows ADA standards (ADA is short for the Americans with Disabilities Act, which became law in 1990)."',
-
-      '"you can use the store with Instant Site that successfully passed accessibility tests along with Ecwid storefront."',
-
-      "source for both quotes: https://support.ecwid.com/hc/en-us/articles/360004696179-Meeting-accessibility-guidelines-ADA",
+      "Strong accessibility features.",
+      "https://support.ecwid.com/hc/en-us/articles/360004696179-Meeting-accessibility-guidelines-ADA",
+      [
+        '"Ecwid is designed with accessibility in mind and you can be sure that your Ecwid store is a welcoming place for everyone. Your store doesn\'t have any access barriers, you can sell online to people with disabilities - to visually-impaired buyers that have to use screen readers for browsing online shops or buyers that navigate with keyboard only. And you can be sure that your store follows ADA standards (ADA is short for the Americans with Disabilities Act, which became law in 1990)."',
+        '"You can use the store with Instant Site that successfully passed accessibility tests along with Ecwid storefront."',
+      ],
     ],
     collaboration: [
       "You would need a business plan to be able to give specific editing permissions to staff, designers, developers etc.",
@@ -1682,8 +1715,40 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     accessibility: [
       "Varies by theme, these are some of the more accessible themes:",
-      "https://wordpress.org/themes/tags/accessibility-ready/",
+      ["https://wordpress.org/themes/tags/accessibility-ready/"],
+      "Wordpress.org has an accessibility team which gives tips to make your site more accessible.",
+      [
+        "https://make.wordpress.org/accessibility/handbook/best-practices/quick-start-guide/",
+        "https://make.wordpress.org/accessibility/handbook/best-practices/",
+      ],
+
       "Though your plugins/apps might not be as accessible.",
+      [
+        '"While powerful, plugins are a common cause of accessibility issues. Since they add or modify your site’s code, they can easily introduce barriers, such as elements that are not keyboard-friendly, poor color contrast, or missing ARIA labels."',
+        "https://www.webyes.com/blogs/wordpress-accessibility/#title-6",
+      ],
+      "If you use a Wordpress Plugin to try to improve accessibility, it's best to use it to only test for issues. The accessibility overlay tends to make things worse, and these plugins can't actually fix many accessibility issues. It would be better to try to manually fix the issues or hire a dev to fix the issues.",
+      "https://www.boia.org/blog/wordpress-accessibility-plugins-and-ada-compliance",
+      [
+        "WordPress (accessibility) plugins aren’t always the best solution for compliance, especially if you’re unfamiliar with the basics of digital accessibility.",
+        "Many digital accessibility issues are somewhat subjective; they require human judgment.  If you have an image of an apple with the alt text, “a yellow banana,” your plugin probably won’t flag it as an issue — but it would violate WCAG, and it could create an accessibility issue for a user with vision disabilities.",
+        "Additionally, plugins often address only certain aspects of accessibility, leaving many potential issues unaddressed. They might focus on keyboard navigation or screen reader compatibility but overlook other critical factors like semantic HTML structure or proper form labeling. ",
+        "However, plugins can still be helpful, particularly for finding barriers that can be identified with simple pass-or-fail rulesets.",
+        [
+          "Automated tools can instantly check contrast ratios against WCAG guidelines.",
+          "Pointer targets (such as buttons) must meet minimum size requirements to ensure that users can activate them. Automated tools can find small pointer targets, and in some cases, fix them",
+          "The World Wide Web Consortium (W3C), which publishes WCAG, recommends a hybrid approach to web accessibility testing. That means pairing automated tests (such as WordPress accessibility plugins) with manual audits.",
+        ],
+      ],
+      "https://www.zaginteractive.com/insights/articles/january-2025/avoiding-accessibility-overlays-why-comprehensive-accessibility-matters",
+      [
+        '"In January 2025, the FTC proposed a $1 million fine on accessiBe, citing deceptive claims about its AI-powered product’s ability to make websites fully compliant with the Web Content Accessibility Guidelines (WCAG). The investigation revealed that accessWidget - the company’s flagship product - failed to deliver on its promise of complete accessibility."',
+      ],
+      "https://www.reddit.com/r/Wordpress/comments/1o84mnc/accessibility_plugins_are_so_evil_please_dont_use/",
+      [
+        '"Accessibility overlays are generally condemned by experts. They sometimes make it harder to use assistive technology like screen readers. Read some criticism: https://overlayfactsheet.com/en/"',
+        '"True the accessibility plugins often do more harm than good. A simple overlay button isn’t real accessibility and it can mess up screen readers or keyboard navigation. Honestly, learning a bit about proper accessibility and testing your site manually is way better than relying on a plugin. ',
+      ],
     ],
     collaboration: [
       "You can easily add editors with various permission levels:",
@@ -1895,8 +1960,38 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     accessibility: [
       "Varies by theme, these are some of the more accessible themes:",
-      "https://wordpress.com/themes/filter/accessibility-ready",
+      ["https://wordpress.com/themes/filter/accessibility-ready"],
+      "Accessibility tips:",
+      [
+        "https://wordpress.com/blog/2020/05/21/global-accessibility-awareness-day/",
+      ],
       "Though your plugins/apps might not be as accessible.",
+      [
+        '"While powerful, plugins are a common cause of accessibility issues. Since they add or modify your site’s code, they can easily introduce barriers, such as elements that are not keyboard-friendly, poor color contrast, or missing ARIA labels."',
+        "https://www.webyes.com/blogs/wordpress-accessibility/#title-6",
+      ],
+      "If you use a Wordpress Plugin to try to improve accessibility, it's best to use it to only test for issues. The accessibility overlay tends to make things worse, and these plugins can't actually fix many accessibility issues. It would be better to try to manually fix the issues or hire a dev to fix the issues.",
+      "https://www.boia.org/blog/wordpress-accessibility-plugins-and-ada-compliance",
+      [
+        "WordPress (accessibility) plugins aren’t always the best solution for compliance, especially if you’re unfamiliar with the basics of digital accessibility.",
+        "Many digital accessibility issues are somewhat subjective; they require human judgment.  If you have an image of an apple with the alt text, “a yellow banana,” your plugin probably won’t flag it as an issue — but it would violate WCAG, and it could create an accessibility issue for a user with vision disabilities.",
+        "Additionally, plugins often address only certain aspects of accessibility, leaving many potential issues unaddressed. They might focus on keyboard navigation or screen reader compatibility but overlook other critical factors like semantic HTML structure or proper form labeling. ",
+        "However, plugins can still be helpful, particularly for finding barriers that can be identified with simple pass-or-fail rulesets.",
+        [
+          "Automated tools can instantly check contrast ratios against WCAG guidelines.",
+          "Pointer targets (such as buttons) must meet minimum size requirements to ensure that users can activate them. Automated tools can find small pointer targets, and in some cases, fix them",
+          "The World Wide Web Consortium (W3C), which publishes WCAG, recommends a hybrid approach to web accessibility testing. That means pairing automated tests (such as WordPress accessibility plugins) with manual audits.",
+        ],
+      ],
+      "https://www.zaginteractive.com/insights/articles/january-2025/avoiding-accessibility-overlays-why-comprehensive-accessibility-matters",
+      [
+        '"In January 2025, the FTC proposed a $1 million fine on accessiBe, citing deceptive claims about its AI-powered product’s ability to make websites fully compliant with the Web Content Accessibility Guidelines (WCAG). The investigation revealed that accessWidget - the company’s flagship product - failed to deliver on its promise of complete accessibility."',
+      ],
+      "https://www.reddit.com/r/Wordpress/comments/1o84mnc/accessibility_plugins_are_so_evil_please_dont_use/",
+      [
+        '"Accessibility overlays are generally condemned by experts. They sometimes make it harder to use assistive technology like screen readers. Read some criticism: https://overlayfactsheet.com/en/"',
+        '"True the accessibility plugins often do more harm than good. A simple overlay button isn’t real accessibility and it can mess up screen readers or keyboard navigation. Honestly, learning a bit about proper accessibility and testing your site manually is way better than relying on a plugin. ',
+      ],
     ],
     collaboration: [
       "You can create an account for an employee and edit what permissions they have:",
@@ -2074,15 +2169,19 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     accessibility: [
       "Has built in tools to audit your website for accessibility issues",
-      "https://webflow.com/accessibility",
-      "https://webflow.com/blog/ada-testing",
+      [
+        "https://webflow.com/accessibility",
+        "https://webflow.com/blog/ada-testing",
+      ],
       "There wasn't a way to sort through the templates by accessibility but some people do create templates with accessibility in mind, such as this person:",
-      "https://www.bryntaylor.co.uk/templates/accessible-webflow",
+      ["https://www.bryntaylor.co.uk/templates/accessible-webflow"],
     ],
     collaboration: [
       "Relatively easy: Up to 25 concurrent members per site",
       'However the different "modes" affect what can be edited:',
-      "https://help.webflow.com/hc/en-us/articles/33961260491795-Collaborate-on-your-site-in-Webflow",
+      [
+        "https://help.webflow.com/hc/en-us/articles/33961260491795-Collaborate-on-your-site-in-Webflow",
+      ],
     ],
     ecommerce: [
       "E-commerce is very limited, only really an option if you have a micro shop and this feature has basically been abandoned:",
@@ -2275,8 +2374,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     accessibility: [
-      "Limited tools for accessibility checking",
       "Minimal accessibility controls, especially compared to Squarespace, WordPress and Wix.",
+      [
+        "GoDaddy blog on accessibility tools encourages using external checkers (DevTools, AChecker) rather than built-in GoDaddy features.",
+        "https://www.godaddy.com/resources/ca/design/what-is-web-accessibility-why-does-it-matter-and-how-do-you-get-started#h-web-accessibility-resources-nbsp",
+      ],
+      "They mention that their commited to improving their accessibility but they do not mention any robust in-built tooling for accessibility:",
+      ["https://www.godaddy.com/en/legal/agreements/accessibility-statement"],
+
+      "Installing an accessibility plugin or overlay on a GoDaddy site may appear to boost inclusivity or check a compliance box, but experts emphasize these tools do not replace manual auditing, design-level remediation, and proper code-based accessibility work — and can give a false sense of security about legal and practical accessibility compliance.",
+      [
+        "https://www.zaginteractive.com/insights/articles/january-2025/avoiding-accessibility-overlays-why-comprehensive-accessibility-matters",
+      ],
     ],
     collaboration: [
       "You can add an unlimited amount of delegates (collaborators)",

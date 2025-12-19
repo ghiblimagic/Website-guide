@@ -67,8 +67,8 @@ export interface WebsiteBuilder {
   support: (string | string[] | (string | string[])[])[];
   migration: (string | string[] | (string | string[])[])[];
   security: (string | string[] | (string | string[])[])[];
-  accessibility: string[];
-  collaboration: string[];
+  accessibility: (string | string[] | (string | string[])[])[];
+  collaboration: (string | string[] | (string | string[])[])[];
   ecommerce: (string | string[] | (string | string[])[])[];
   appStore: string[];
   seo: (string | string[] | (string | string[])[])[]; // Can be string OR array of strings
