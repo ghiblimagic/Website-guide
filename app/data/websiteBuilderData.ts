@@ -33,7 +33,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
     accessibility: ["N/A, this is a google listing not a website."],
     collaboration: [
       "You can easily add users to help manage your Google Business Listing Profile.",
-      "Here's a video guide for adding users and admins: https://www.youtube.com/watch?v=SqqqOF3AJo8",
+      "Here's a video guide for adding users and admins:",
+      ["https://www.youtube.com/watch?v=SqqqOF3AJo8"],
     ],
     ecommerce: ["N/A"],
     appStore: ["N/A"],
@@ -124,11 +125,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "https://sites.google.com/a/umich.edu/engcom-wiki/web/accessibility/google-sites-accessibilty",
     ],
     collaboration: [
-      `Very Easy to add someone, and its a very simple website builder https://support.google.com/sites/answer/97934?hl=en`,
+      `Very Easy to add someone, and its a very simple website builder`,
+      [`https://support.google.com/sites/answer/97934`],
 
-      `"If, at some point, I want/need to turn webmaster duties over to someone, it wouldn't take eons to show them what to do. I've shown other embroiderers (most of whom are not terribly techie) how to start their sites, and all have been successful. ... it's perfect for the groups I work with (demographics tilt toward senior citizen)"https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjlw7bb/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button`,
+      `"If, at some point, I want/need to turn webmaster duties over to someone, it wouldn't take eons to show them what to do. I've shown other embroiderers (most of whom are not terribly techie) how to start their sites, and all have been successful. ... it's perfect for the groups I work with (demographics tilt toward senior citizen)"`,
+      [
+        `https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjlw7bb/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button`,
+      ],
 
-      `"I onboarded many nonprofits onto Google Sites because they used Docs and Sheets, but also because your average person can easily make updates". https://www.reddit.com/r/GoogleSites/comments/1jih1vj/would_anyone_actually_recommend_google_sites/`,
+      `"I onboarded many nonprofits onto Google Sites because they used Docs and Sheets, but also because your average person can easily make updates".`,
+      [
+        `https://www.reddit.com/r/GoogleSites/comments/1jih1vj/would_anyone_actually_recommend_google_sites/`,
+      ],
     ],
     ecommerce: [
       "Only simple stores",
@@ -251,7 +259,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     collaboration: [
       "Very simple to share access",
-      "https://carrd.co/docs/sites/sharing-access-to-a-site",
+      ["https://carrd.co/docs/sites/sharing-access-to-a-site"],
     ],
     ecommerce: [
       "No built in E-commerce features. But you could have a small shop with an Ecommerce template Ecwid to embed an online store to your Carrd website",
@@ -368,9 +376,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     collaboration: [
       "Easy to collaborate.",
-      "The Contributors feature enables you to allow any person to edit any section of your Pixpa account. You can specify and give any permissions you prefer.",
-      "The (contributors) feature is available starting from the Creator plan (up to 2 contributors). Professional and Advanced plans include unlimited contributors.",
       "https://help.pixpa.com/kb/contributors/",
+      [
+        "The Contributors feature enables you to allow any person to edit any section of your Pixpa account. You can specify and give any permissions you prefer.",
+        "The (contributors) feature is available starting from the Creator plan (up to 2 contributors). Professional and Advanced plans include unlimited contributors.",
+      ],
     ],
     ecommerce: [
       "Great for selling prints, digital downloads, small-batch goods, limited inventory with low traffic",
@@ -496,7 +506,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     collaboration: [
       "Easy to add them as a contributor and easy for them to edit.",
 
-      "https://support.squarespace.com/hc/en-us/articles/206537287-Inviting-a-contributor",
+      [
+        "https://support.squarespace.com/hc/en-us/articles/206537287-Inviting-a-contributor",
+      ],
     ],
     ecommerce: [
       "Available for all plans, but at different levels",
@@ -665,7 +677,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     collaboration: [
       "Can share access with an employee, easy to edit site:",
-      "https://www.hostinger.com/support/1583777-how-to-share-access-to-your-account-at-hostinger/",
+      [
+        "https://www.hostinger.com/support/1583777-how-to-share-access-to-your-account-at-hostinger/",
+      ],
     ],
     ecommerce: [
       "You would need the business plan but its only suitable for small-medium businesses.",
@@ -840,10 +854,22 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Giving other users basic permission is free",
 
       "To give an employee access to edit the Square Online website itself, you must assign them a permission set that includes Full Access to the account. This permission level still prevents them from making major account changes like managing bank accounts, but grants the necessary permissions for website building and editing.",
+      [
+        "https://community.squareup.com/t5/Online-Store/How-to-add-another-user-to-edit-build-Square-Online-website/td-p/198964",
+      ],
+
+      'If you just want a team member "to manage the item catalog, orders, shipping and marketing settings associated with Square Online" instead of changing the visuals of the site itself, you can give them a specific permission for that.',
+      [
+        "https://community.squareup.com/t5/Online-Store/How-can-I-give-my-employees-team-members-access-to-my-Square/m-p/200013",
+      ],
 
       "Note that basic team permissions are free, but if you need to create custom permission sets for different access levels to your online store and other features, you may need a subscription to the paid Team Management plan.",
+      ["https://squareup.com/us/en/staff/advanced-access"],
 
-      "https://www.gentlefrog.com/how-to-add-a-full-access-team-member-to-square/",
+      "Guide for how to give a team member Full Access permission",
+      [
+        "https://www.gentlefrog.com/how-to-add-a-full-access-team-member-to-square/",
+      ],
     ],
     ecommerce: [
       "Low upfront cost, great for small to medium buisnesses",
@@ -989,9 +1015,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
 
     collaboration: [
-      "More limitations. On a free Wix site (non-Studio), you only get 1 person who can be invited as a collaborator.",
-      "If you expect more than one person to edit the site you'll need a paid plan:",
       "https://support.wix.com/en/article/inviting-people-to-contribute-to-your-site",
+      [
+        "More limitations. On a free Wix site (non-Studio), you only get 1 person who can be invited as a collaborator.",
+        "Theres different Collaborator roles, such as Admin (Co-Owner), Website Manager and WEbsite Designer.",
+        "If you expect more than one person to edit the site you'll need a paid plan.",
+      ],
     ],
     ecommerce: [
       "If you need very basic or minimal e-commerce, their e-commerce will likely be enough for your business. If your business is mostly e-commerce then Shopify would be better.",
@@ -1159,11 +1188,21 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     collaboration: [
-      "Unclear, but its easy enough to edit that even if you have to share your login with employees it'd be easy for them to update the site",
+      "Very limited, Siimple is primarily designed as a one-user, simple builder that keeps editing centralized and minimal, rather than as a team environment like larger builders offer.",
 
-      "I made a free account and there was no obvious way to share access with someone else. There's a chance it might only be visible after payment.",
+      "Its easy enough to edit that even if you have to share your login with employees it'd be easy for them to update the site.",
+      [
+        "This isn't ideal security wise, but with temporary shared credentials with careful password management this could work",
+      ],
 
-      "However the site itself is easy to edit, so at the very minimum even if you have to share your login it'd be easy for them to update.",
+      "You can share the preview link so teammates can review the site design before it’s published (but not edit it).",
+      [
+        "https://docs.getsiimple.com/en/articles/10717345-how-can-i-share-a-preview-of-my-site-with-someone",
+      ],
+      "You can clone the site and have someone else edit the copy. That’s useful if you want a developer to customize a separate project and then manually merge changes later.",
+      [
+        "https://docs.getsiimple.com/en/articles/9757948-how-to-clone-or-duplicate-your-site?utm_source=chatgpt.com",
+      ],
     ],
     ecommerce: [
       'no e-commerce features (creating a shop, managing inventory, shopping cart) BUT you can "connect your own checkout or payment processor (like Paypal, Gumroad or Stripe!)"',
@@ -1316,17 +1355,25 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Though the plugins/ apps you use might not be as accessible as your theme.",
     ],
     collaboration: [
-      "You can easily add collaborators for free to make limited edits, but staff accounts would require the pricey $79/mo plan",
+      "You can easily add collaborators (e.g., developers, designers, agencies) for free to make limited edits, but staff accounts would require the pricey $79/mo plan",
+      [
+        "https://help.shopify.com/en/manual/your-account/users/security/collaborator-accounts",
+      ],
 
-      "Collaborator Accounts do not count towards staff limits, so you can give designers, developers, and marketing limited access to the store.",
+      "https://help.shopify.com/en/manual/your-account/users/users-plan-requirements#staff-account-limits",
 
-      "Can easily personalize staff permissions BUT the basic plan has 0, you can't even buy 1 staff account to use with the basic plan.",
-
-      "You'd need to buy the pricey $79/mo grow plan to get any staff accounts (5 staff)",
-
-      "https://community.shopify.com/t/how-can-i-view-and-edit-staff-privileges-on-my-website/78602",
-
-      "https://help.shopify.com/en/manual/your-account/users/users-plan-requirements",
+      [
+        "Can easily personalize staff permissions BUT the basic plan has 0, you can't even buy 1 staff account to use with the basic plan.",
+        "You'd need to buy the pricey $79/mo grow plan to get any staff accounts (5 staff)",
+      ],
+      "How to edit staff permissions",
+      [
+        "https://community.shopify.com/t/how-can-i-view-and-edit-staff-privileges-on-my-website/78602",
+      ],
+      "Without staff access on Basic, people often rely on collaborators for external tasks like design, coding, or marketing support",
+      [
+        "https://community.shopify.com/t/understanding-changes-to-staff-accounts-in-basic-plan/292910",
+      ],
     ],
     ecommerce: [
       "Shopify was made for E-commerce.",
@@ -1521,8 +1568,26 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     collaboration: [
+      "Ecwid doesn’t have a separate “collaborator account” concept like Shopify, giving someone access generally means giving them a staff account (which requires you to be on the right plan).",
       "You would need a business plan to be able to give specific editing permissions to staff, designers, developers etc.",
-      "https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts",
+      [
+        "https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts",
+      ],
+      "Ecwid plans & staff account limits",
+      [
+        "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features#-compare-plans-and-features",
+      ],
+      "Ecwid lets you set exactly what each staff member can access, with 7 different permission types.",
+      [
+        "https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts?#-available-staff-permissions",
+      ],
+      "If you need just temporary access (like a developer), you can invite them as staff and then remove them after work is done.",
+      "Ecwid also has a directory of official Ecwid Experts you can hire for help with setup, design, and customization.",
+      ["https://www.ecwid.com/experts"],
+      "How to add a staff member",
+      [
+        "https://support.ecwid.com/hc/en-us/articles/115005355089-Adding-and-managing-staff-accounts",
+      ],
     ],
     ecommerce: [
       "Ideal for a small to medium sized business, not a full enterprise shop.",
@@ -1751,8 +1816,31 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     collaboration: [
-      "You can easily add editors with various permission levels:",
-      "https://wordpress.com/support/invite-people/",
+      "You can easily add editors with various permission levels",
+      "https://wordpress.com/support/invite-people/user-roles/",
+      [
+        "When you invite someone to your WordPress.com site you can choose from a set of pre-defined user roles — and each role determines what they can and can’t do:",
+        [
+          "Administrator – full control over everything (site settings, plugins/themes, users).",
+          "Editor – can create/edit/publish any content and moderate comments.",
+          "Author – can create/edit/publish their own posts.",
+          " Contributor – can write and edit posts but cannot publish them.",
+          " Subscriber/Viewer – minimal access (can follow or view content).",
+        ],
+      ],
+      "Even though WordPress.com doesn’t have a separate “collaborator” concept like Shopify, you can still manage access beyond the basics.",
+
+      "Some plugins (on Business/Commerce plans) let you customize or extend roles, control capabilities more granularly, or even create custom roles for your workflow (content reviewers, page designers, etc.).",
+      ["https://wordpress.com/plugins/browse/capabilities"],
+
+      "You can also remove access at any time if a collaborator’s work is done.",
+      ["https://wordpress.com/support/invite-people/"],
+
+      "WordPress roles have a built-in hierarchy where higher roles include all permissions of lower ones plus more (e.g., Editors can do everything Authors can, plus more). For strictly content tasks, Editor or Author roles are often enough, and safer.",
+      [
+        "https://developer.wordpress.org/apis/security/user-roles-and-capabilities/",
+        "https://wordpress.com/support/invite-people/user-roles/",
+      ],
     ],
     ecommerce: [
       "You can add a plugin, two popular ones are woocommerce and bigcommerce",
