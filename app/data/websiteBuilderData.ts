@@ -354,7 +354,6 @@ export const websiteBuilders: WebsiteBuilder[] = [
       [
         "https://www.pixpa.com/updates/new-security-features-for-your-website",
         "https://help.pixpa.com/kb/where-is-my-site-hosted/",
-        "https://help.pixpa.com/kb/where-is-my-site-hosted/",
       ],
     ],
     accessibility: [
