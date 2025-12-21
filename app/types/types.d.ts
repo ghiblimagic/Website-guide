@@ -70,7 +70,7 @@ export interface WebsiteBuilder {
   accessibility: (string | string[] | (string | string[])[])[];
   collaboration: (string | string[] | (string | string[])[])[];
   ecommerce: (string | string[] | (string | string[])[])[];
-  appStore: string[];
+  appStore: (string | string[] | (string | string[])[])[];
   seo: (string | string[] | (string | string[])[])[]; // Can be string OR array of strings
   pros: (string | string[] | (string | string[])[])[];
   cons: (string | string[] | (string | string[])[])[];

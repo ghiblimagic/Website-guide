@@ -24,7 +24,7 @@ interface BuilderCardProps {
   accessibility: (string | string[] | (string | string[])[])[];
   collaboration: (string | string[] | (string | string[])[])[];
   ecommerce: (string | string[] | (string | string[])[])[];
-  appStore: string[];
+  appStore: (string | string[] | (string | string[])[])[];
   seo: (string | string[] | (string | string[])[])[];
   pros: (string | string[] | (string | string[])[])[];
   cons: (string | string[] | (string | string[])[])[];
@@ -284,7 +284,9 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">App Store</h3>
+              <h3 className="text-xl font-semibold text-gray-700">
+                App Store (To add extra features to your website.)
+              </h3>
             </div>
             <CollapsableList items={props.appStore} />
           </div>
