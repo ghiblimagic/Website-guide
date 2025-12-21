@@ -315,14 +315,14 @@ export const websiteBuilders: WebsiteBuilder[] = [
     cons: [
       'For single page websites. Though if you want it to "look" like a multi page website you can use their sections feature. However it won\'t have the SEO benefits of a true multi page website.',
       '"A "multi page" Carrd is also slightly more complicated to set up.',
-      "3 minute guide",
-      ["https://www.youtube.com/watch?v=RVcovcKaeq4"],
     ],
     moreInfo: [
       "8 minute overview:",
       ["https://www.youtube.com/watch?v=oAtkeesUW68"],
       "15 minute tutorial:",
       ["https://www.youtube.com/watch?v=1PL6NntBaK4"],
+      "3 minute guide for setting up a multi page Caard website",
+      ["https://www.youtube.com/watch?v=RVcovcKaeq4"],
     ],
     examples: [
       '"18 Best Carrd Websites":',
