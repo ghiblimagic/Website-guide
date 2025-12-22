@@ -19,7 +19,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       'Great for "I need something NOW."',
       "Most businesses should create a google business profile:",
       [
-        "it's free.",
+        "It's free.",
         "Relatively easy to setup.",
         "It's often the first thing that potential clients will see about your business.",
       ],
@@ -173,8 +173,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       "Free with a google account!",
-      "All google sites are made to work on desktop and mobile devices, so it'll save you time troubleshooting the appearance of the site on different screens.",
+      "All google sites are made to work on desktop and mobile devices, so it'll save you time troubleshooting the appearance of the site.",
+      ["https://sites.google.com/site/horstwebdesign/mobile"],
       "If your organization also uses Google Drive and other Google products, the native integration can help a lot.",
+      [
+        '"Google Sites really excels at intranet applications because of the easy integration with apps like Google Drive, Google Calendar, etc. "',
+        ["https://sites.google.com/site/horstwebdesign/about-google-sites"],
+      ],
       "You can get templates through their store, theres both free and premium templates",
       [
         "https://www.kirksvillewebdesign.com/google-sites/google-sites-templates",
@@ -188,11 +193,16 @@ export const websiteBuilders: WebsiteBuilder[] = [
         "https://www.reddit.com/r/GoogleSites/comments/1jih1vj/comment/mjtzq4q/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
       ],
       "Google sites used to share your google drive or google worksplace storage, but that is no longer the case for new google sites.",
+      ["https://sites.google.com/site/horstwebdesign/about-google-sites"],
     ],
     cons: [
       "Minimal customization, so the sites tend to look basic.",
       "It only supports minimal blogging features.",
       "If you don't use a custom domain and stick with the google.sites domain, some sites such as reddit filter out google site links because of the high amount of scams and malware that create free google sites to trick potential victims.",
+      [
+        "https://www.reddit.com/r/SpeculativeEvolution/comments/11jp2av/reddit_has_blacklisted_google_sites/",
+        "https://mashable.com/article/google-sites-phishing-scams",
+      ],
     ],
     moreInfo: [
       "https://sites.google.com/site/horstwebdesign/about-google-sites",
