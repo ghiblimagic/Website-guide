@@ -313,7 +313,13 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: ["Very affordable!", "Easy to use"],
     cons: [
-      'For single page websites. Though if you want it to "look" like a multi page website you can use their sections feature. However it won\'t have the SEO benefits of a true multi page website.',
+      'For single page websites. Though if you want it to "look" like a multi page website you can use their sections feature or anchor navigator. However it won\'t have the SEO benefits of a true multi page website because they offer only one crawlable URL, fewer targeted meta tags, and minimal internal linking opportunities. Therefore, search engines will not index those as seperate pages.',
+      [
+        "https://www.silverservers.com/website-design/the-problem-with-one-page-websites-for-seo",
+        "However there are some solutions such as ZerpHost which are made to transform a Carrd site from a single-page hash-based layout into a properly structured multi-page website.",
+        "https://www.reddit.com/r/Carrd/comments/1frpdoz/comment/m7o3l97/",
+        "https://zerphost.com/",
+      ],
       '"A "multi page" Carrd is also slightly more complicated to set up.',
     ],
     moreInfo: [
@@ -474,15 +480,24 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ["https://www.pixpa.com/seo-tools"],
     ],
     pros: [
-      "focused on creatives",
-      "offers built-in portfolio, gallery, blog and e-commerce tools on one platform. So you don't need separate plugins, hosting, or store software.",
-      "Already responsive",
+      "Focused on creatives.",
+      "https://www.pixpa.com/features",
+
+      [
+        "Offers built-in portfolio, gallery, blog and e-commerce tools on one platform. So you don't need separate plugins, hosting, or store software.",
+        "Already fully responsive (visually change at different screen sizes)",
+      ],
     ],
     cons: [
-      'Storage limitations, depends on plan. Scroll down to "Storage',
+      'Storage limitations, depends on plan. Scroll down to "Storage".',
       ["https://www.pixpa.com/pricing"],
-      "Doesn't have much customization",
-      "Blog and CMS are basic",
+      "Doesn't have much customization. You’re often working with pre-built sections rather than free-form layout placement, which can feel limiting for granular control.",
+      ["https://theendearingdesigner.com/pixpa-review/"],
+      "Blog and CMS are basic.",
+      [
+        '"While Pixpa offers basic blogging tools, users who are looking for more advanced blogging features may find the platform lacking."',
+        ["https://www.velocenetwork.com/pixpa/"],
+      ],
     ],
     moreInfo: [] as string[],
     examples: [
@@ -517,18 +532,30 @@ export const websiteBuilders: WebsiteBuilder[] = [
         ["$23/mo (with year payment)", "$36 by month"],
         "2 more plans for more advanced businesses",
       ],
+      "https://createawebsite.io/squarespace-review",
+      [
+        "Budget Reality: Plan for $40-80/month for a professional Squarespace site with essential features.",
+        "Due to transaction eees, processing fees, acuity scheduling for service businesses, advanced email marketing features, domain privacy, premium integrations (these extra tools cost extra)",
+      ],
     ],
     trial: ["14 day"],
     bestFor: [
       "For small businesses and bloggers that want something easy to use and fast to setup, while also having a professional looking site.",
       [
         "Creatives",
-        "Portfolios",
+        "Professional Portfolios",
         "Blogs",
         "Personal sites",
         "Simple e-commerce",
       ],
-      "Those who prioritize simplicity versus customization.",
+
+      "https://createawebsite.io/squarespace-review/",
+      [
+        '"Non-Technical Users who prioritize ease over customization"',
+        '"Service-Based Businesses (consultants, agencies, wellness practitioners)',
+        '"Restaurants & Hospitality (the visual focus works perfectly)"',
+        '"Premium Brands where design quality justifies higher costs"',
+      ],
     ],
     support: [
       "Live chat (open 4am-8pm EST)",
@@ -547,6 +574,8 @@ export const websiteBuilders: WebsiteBuilder[] = [
     security: [
       "Handles security, you don't have to do anything.",
       ["https://www.squarespace.com/security"],
+      '"End-to-end encryption with DNSSEC powered by CloudDNS and SSL certificates to keep your connection safe, free with every domain."',
+      ["https://domains.squarespace.com/#premium-dns"],
     ],
     accessibility: [
       "Squarespace has built in tools to fine-tune your site to be more accessible.",
@@ -598,6 +627,37 @@ export const websiteBuilders: WebsiteBuilder[] = [
         '"Not great for international markets, because "While it supports 31 currencies, your store will only be able to display one at any time, meaning that when international customers visit, they will not see their local currency until checkout."',
       ],
       "https://www.squarespace.com/ecommerce-website",
+
+      "https://createawebsite.io/squarespace-review/",
+      [
+        "Everything needed for basic online sales.",
+        "Smooth checkout on all devices.",
+        "Seamless blog-to-store connection.",
+        "About 40 integrations (apps) vs thousands on other platforms.",
+        "Can’t customize payment flow significantly.",
+        "Basic inventory tools become limiting for complex operations.",
+        "Shipping calculations are less sophisticated than dedicated e-commerce platforms.",
+        "Limited marketplace integrations for multichannel selling.",
+        '"Real Client Example: A handmade jewelry business grew from $2,000/month to $15,000/month on Squarespace before hitting limitations. We eventually migrated to a specialized e-commerce solution for better inventory management and automated marketing."',
+      ],
+      "If you have multiple locations, and you want distinct inventory accounts versus a globacl inventory, you'd have to make a site for each once since their e-commerce capabilities are more limited.",
+      [
+        "https://georgebuildswebsites.co.uk/squarespace-guides/squarespace-ecommerce-features#:~:text=Squarespace%20assumes%20that%20you%20ship%20from%20one%20place",
+      ],
+      [
+        '"Square allows you to have multiple inventory locations, but Squarespace doesn’t"',
+        "https://www.sitebuilderreport.com/square-vs-squarespace",
+        "However you can use third-party inventory sync tools (like Trunk or SyncPenguin) to connect multiple Squarespace stores or link POS systems so stock levels stay in sync",
+        [
+          "https://syncpenguin.com/syncs/squarespace-store-inventory-quantities-sync/",
+        ],
+        "Squarespace doesn't natively support true multi-origin shipping (tracking inventory from different spots automatically), but you can achieve it through shipping extensions like Easyship or Sendcloud",
+        [
+          "https://kristineneil.com/blog/squarespace-vs-shopify-which-is-best-for-small-business",
+        ],
+        "Some business will instead use outside POS/inventory systems to handle the multi-location inventory issue.",
+        ["https://skuiq.com/squarespace-integration/"],
+      ],
     ],
     appStore: [
       "Less extensions/plugins than other options",
@@ -630,18 +690,39 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       "All in one platform, you can buy your domain within Squarespace.",
+      [
+        "https://www.squarespace.com/blog/what-is-squarespace#:~:text=Squarespace%20is%20a%20user-friendly,functionality%20to%20match%20your%20needs.",
+      ],
       "Simple to use.",
-      "Strong support and community",
+      [
+        "https://www.networksolutions.com/blog/pros-cons-squarespace/#:~:text=This%20ease%20of%20use%20is%20evident%20in,convenient%20for%20users%20with%20no%20technical%20background.",
+      ],
+      "Extensive help center, 24/7 support and community forums.",
+      [
+        "https://www.networksolutions.com/blog/pros-cons-squarespace/#:~:text=Squarespace%20also%20offers%20available%2024/7%20support",
+      ],
       "Although there are less templates, they're good quality so they'll look professional on any screen size. So you'll save the time you would of spent on these annoying adjustments.",
+      [
+        "https://createawebsite.io/squarespace-review/",
+        '"While this is less than the 900 templates offered by rival Wix, it’s clear that Squarespace went for quality over quantity."',
+        [
+          "https://tech.yahoo.com/apps/articles/squarespace-review-great-building-beautiful-164600265.html",
+        ],
+      ],
     ],
     cons: [
-      "Slightly pricier but everything is in one place",
+      "Slightly pricier but everything is in one place.",
+      ["https://createawebsite.io/squarespace-review/"],
       "Can't customize the templates as much as you can with other builders like WordPress BUT the templates that do exist are good quality.",
-      "If you have multiple locations, you'd have to make a site for each once since their e-commerce capabilities are more limited due to their smaller app market.",
+      [
+        "https://www.networksolutions.com/blog/pros-cons-squarespace/#:~:text=customization%20and%20scalability%20can%20be%20limiting%20compared%20to%20other%20platforms",
+      ],
     ],
     moreInfo: [
       "6 minute pros and cons:",
       ["https://www.youtube.com/watch?v=FP1wTBM_8F8"],
+      '"Squarespace Review 2025: An Honest Assessment After Building 500+ Professional Sites":',
+      ["https://createawebsite.io/squarespace-review/"],
     ],
     examples: [
       "Official showcase:",
@@ -660,6 +741,15 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "You want heavy customization or pixel-perfect control.",
       "Need a private gallery. If you're a creative that needs gallery software then Pixpa would be better for you. You can see a deeper comparison here:",
       ["https://www.youtube.com/watch?v=JkGh0W8j9f0"],
+      "https://createawebsite.io/squarespace-review/",
+      [
+        '"Price-Sensitive Businesses (those monthly fees add up fast)"',
+        '"Complex E-commerce Operations (limited compared to dedicated platforms)"',
+        '"Tech Companies (developer-focused businesses need more flexibility)"',
+        '"Rapidly Scaling Businesses (outgrow the platform quickly)"',
+        '"Content-Heavy Sites (blogs, news sites, membership communities)"',
+        '"Businesses Needing Custom Functionality (limited third-party integrations)"',
+      ],
     ],
   },
   {
@@ -700,6 +790,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ["Just text, videos, pictures, contact form or appointment form."],
       "Useful to create very simple websites for cheap",
       "E- Commerce is technically there for extra $$ but it has very minimal customization currently.",
+      "https://bloggingjoy.com/hostinger-website-builder-review/",
+      [
+        "New bloggers who want a fast launch without technical hassles.",
+        "eCommerce starters who want to sell up to 500 products online.",
+      ],
     ],
     support: [
       "Live chat (24/7), email, no phone support",
@@ -733,21 +828,25 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     ecommerce: [
-      "You would need the business plan but its only suitable for small-medium businesses.",
+      "You would need the business plan but its only suitable for small-medium businesses. Since you can't sell subscriptions and product bundles, and lack of advanced sales and marketing features can quickly limit businesses with larger inventories.",
       "https://www.hostinger.com/ecommerce-website",
       [
-        '"Sell up to 1000 products and services, schedule appointments" ; so this is just for a small to medium businesses.',
+        '"Sell up to 1000 products and services, schedule appointments"; so this is just for a small to medium businesses.',
         '"Sell custom merch with built-in Printful integration."',
         '"Custom discount codes and gift cards."',
         '"Keep 100% of your profits with zero transaction fees" (but any payment providers you select might still have fees).',
       ],
-      "https://www.websitebuilderexpert.com/website-builders/hostinger-website-builder-review/",
+
+      "https://bloggingjoy.com/hostinger-website-builder-review/",
       [
-        '"Its e-commerce features work best for smaller sellers. (The) inability to sell subscriptions and product bundles, and lack of advanced sales and marketing features can quickly limit businesses with larger inventories."',
-        "Abandoned cart recovery.",
-        "100+ payment methods, such as Stripe and Apple Pay.",
-        "Customizable checkout options including checkout language and adding custom fields.",
-        "Tools for SEO, email, and marketing your business.",
+        "Accept payments via 20+ global payment gateways.",
+        "Add testimonials, reviews, and social proof section.",
+        "No abandoned cart recovery.",
+        "Offer discounts and promo codes at checkout.",
+        "No subscription or recurring payment options.",
+        "Limited third-party app integrations for marketing and shipping.",
+        "No multi-channel selling (e.g., no native Amazon, Etsy, or eBay sync).",
+        "The product cap raised from 500 to 1000 after this review was made.",
       ],
     ],
     appStore: ["No plugin store"],
@@ -797,13 +896,18 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ],
     ],
     pros: [
-      "Has templates that are created by the platform itself and are regularly updated",
-      "Easy to use and edit",
+      "“Hostinger’s product updates blog shows ongoing releases of new tools and features, including updates tied to templates, design options, and remixable templates that let users reuse and adapt designs",
+      ["https://www.hostinger.com/blog/product-updates-2025"],
+      "Easy to use and edit.",
     ],
     cons: [
-      "Limited customization options",
+      "Limited customization options. Deep design control, such as advanced layout adjustments or unique visual effects, is constrained by the builder’s structure and the preset template framework.",
+      [
+        "https://www.reddit.com/r/Hostinger/comments/1kofimh/disappointing_and_limited_website_builder/",
+        "https://www.choosewebsitebuilder.com/website-builder/43/hostinger",
+      ],
       "eCommerce options are currently limited",
-      "No marketing options, limited analytics",
+      ["https://bloggingjoy.com/hostinger-website-builder-review"],
     ],
     moreInfo: [] as string[],
     examples: [
@@ -1195,16 +1299,41 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     pros: [
       'Offers a free plan, though you\'ll have to deal with the "created by Wix" header.',
-      "More templates to choose from",
-      "Marketing templates, basic automation and integration with site behavior (sending emails based on users actions), app marketplace gives you access to chat bots and referral programs.",
-      "Robust analytics: emails, bookings, e-commerce all in one hub.",
+      "More templates to choose from.",
+      "Basic automation and integration with site behavior (sending emails based on users actions).",
+      [
+        "https://support.wix.com/en/article/wix-automations-creating-an-automation-with-the-new-builder",
+      ],
+      "App marketplace gives you access chat bots or referral programs.",
+      [
+        "https://www.wix.com/app-market/category/communication/chat?subCat=chat",
+        "https://www.wix.com/app-market/web-solution/wix-referrals-program",
+      ],
+      "Wix’s Analytics Highlights page gives you a central overview of your site’s activity, pulling together traffic, engagement, and business insights into one dashboard. This is designed to help you make decisions based on all the key metrics from one place.",
+      [
+        "https://support.wix.com/en/article/wix-analytics-about-the-highlights-page",
+      ],
+      "The Sales Overview within Wix’s dashboard lets you track e‑commerce performance (like total sales, orders, and trends over time), and it will show different metrics depending on the apps you have (e.g., bookings, subscriptions, etc.).",
+      [
+        "https://support.wix.com/en/article/wix-analytics-understanding-the-sales-overview",
+      ],
     ],
     cons: [
-      'Can be a bit finicky to get it to look just right, might look off on different size screens. Trial and error to get it to look how you want. The "strip" layout is a bit weird to figure out.',
-      "Can't customize as much as you can with WordPress, but more customization options than most other builder.",
-      "All the options can be overwhelming at first",
+      "Many Wix users note that working with strips/sections and free‑form layouts can be finicky, what looks good on a desktop canvas often requires trial‑and‑error adjustments to align properly across different device sizes and screens, and some elements may not behave responsively without manual tweaks.",
+      [
+        "https://www.reddit.com/r/WIX/comments/1ksuj1o/wix_website_smaller_and_bigger_screens",
+      ],
+      "You can't customize as much as you can with WordPress, but it has more customization options than most other builders.",
+      "All the options can be overwhelming at first.",
       "Template lock in: once you choose a template and start editing, you can't switch your progress to another template. You'd have to re-add everything from scratch to that new template.",
-      "Blogging is good, but not amazing. It's definitely usable, but serious content marketers may prefer WordPress for ultimate control.",
+      ["https://youtu.be/FSpGyiRX3ck?t=846"],
+      "https://marketingsolution.com.au/wix-vs-wordpress-which-one-is-better-pros-and-cons/",
+
+      [
+        "Blogging is good, but not amazing. It's definitely usable, but serious content marketers may prefer WordPress for ultimate control. Things like backdating posts, strong formatting tools, and advanced workflow are missing, making it less suitable for serious content marketers compared with WordPress",
+        '"The writing interface for blog posts is not the same as the Wix website builder. Instead, it uses a plain text editor which is very limited in terms of formatting options."',
+        '"Comments on Wix blogs are slow and not as easy to manage as WordPress. Many users end up installing third-party commenting systems like Facebook or Disqus both of them require users to create accounts."',
+      ],
     ],
     moreInfo: [
       "Wix Review 2025: The Brutal Truth After Building 30+ Sites:",
@@ -1360,11 +1489,24 @@ export const websiteBuilders: WebsiteBuilder[] = [
         '"You can cancel your subscription at any time. There are no contracts or hidden fees."',
         '"Version History and Backups"',
       ],
+      "https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/:",
+      [
+        '"Very fast setup — go live in hours, not weeks"',
+        '"Designed for small and service-based businesses"',
+        '"Built-in local SEO optimization"',
+        '"Accessible, mobile-friendly templates"',
+        '"Transparent, flat-rate pricing with all features included"',
+      ],
     ],
     cons: [
-      "No blogging features",
-      "No multi page support",
-      "Won't scale with your business if it grows past a one page site",
+      "https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/:",
+      [
+        "No blogging features",
+        "No multi page support",
+        "Won't scale with your business if it grows past a one page site",
+        "Not suitable for large-scale e-commerce",
+        "Not ideal for businesses needing complex site structures",
+      ],
     ],
     moreInfo: [] as string[],
     examples: ["View their templates here:", ["https://getsiimple.com/demos/"]],
@@ -1586,9 +1728,9 @@ export const websiteBuilders: WebsiteBuilder[] = [
       ["Google shopping", "TikTok", "Instagram / Facebook shopping"],
     ],
     cons: [
-      "Less creative freedom",
+      "Less creative freedom.",
 
-      "Learning curve for advanced features like SEO, analytics, automation flows",
+      "Learning curve for advanced features like SEO, analytics, automation flows.",
 
       "Shopify can ban your store if it suspects you're a bot, selling prohibited items, running multiple brands in the same store (they want a store for each brand), and various other reasons. You can speak to shopify support on the off chance it does happen to you.",
     ],
