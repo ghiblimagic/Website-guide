@@ -12,7 +12,7 @@ interface StyledButtonProps {
 }
 export default function GradientButton(props: StyledButtonProps) {
   const primaryButton =
-    "bg-blue-600 text-white disabled:bg-slate-600  border-b-2 mr-2  border-white  hover:bg-blue-700 shadow-md shadow-blue-950 hover:bg-blue-900 ";
+    "bg-blue-600 text-white disabled:bg-slate-600  border-b-2 mr-2  border-white  hover:bg-blue-700 shadow-md shadow-blue-950";
   const secondaryButton =
     "border-2 text-blue-900 font-semibold border-blue-700 bg-blue-100 hover:bg-blue-200";
   const tertiaryButton =

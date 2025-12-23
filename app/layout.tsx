@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { openSans, dancingScript } from "./fonts";
+import { openSans, JosefinSans } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${openSans.variable} ${dancingScript.variable} antialiased`}
+        className={`${openSans.variable} ${JosefinSans.variable} antialiased`}
       >
         <nav className="bg-blue-900 border-b-2 border-white py-2 px-6">
           {" "}
@@ -46,7 +46,7 @@ export default function RootLayout({
 
    */}
 
-              <span className="font-dancing text-2xl mr-2 text-white">
+              <span className="font-josefin-sans text-2xl mr-2 my-1 text-white">
                 {" "}
                 Spellman&apos;s Consulting{" "}
               </span>
@@ -69,6 +69,42 @@ export default function RootLayout({
           </a>
         </nav>
         {children}
+        <footer className="bg-blue-900 border-t-2 border-white  ">
+          <section className="py-2 px-6 flex  text-center justify-between mx-auto gap-20 max-w-5xl">
+            <div className="my-5">
+              <h3 className="text-2xl"> Need A Developer? </h3>{" "}
+              <p className="my-5"> Let&apos;s Work Together!</p>
+              <a
+                href="https://janetspellman.com/#contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border-b-2 bg-blue-600 px-4 py-2 text-white font-medium hover:bg-blue-700 shadow-md shadow-blue-950 hover:bg-blue-900transition"
+              >
+                Free consultation
+              </a>
+            </div>
+            <div className="my-5">
+              <h3 className="text-2xl"> Send Thanks </h3>
+              <p className="my-5">
+                {" "}
+                If you found this article helpful. It&apos;s much appreciated!
+              </p>
+              <a
+                href="https://ko-fi.com/ghiblimagic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 border-b-2 text-white font-medium  hover:bg-blue-700 shadow-md shadow-blue-950 transition"
+              >
+                ☕ Buy Me Coffee
+              </a>
+            </div>
+          </section>
+
+          <small className="text-center block mx-auto pt-8 pb-3">
+            {" "}
+            © 2025 Janet Spellman. All rights reserved.
+          </small>
+        </footer>
       </body>
     </html>
   );

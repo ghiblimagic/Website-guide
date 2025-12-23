@@ -1,4 +1,4 @@
-import { Open_Sans, Dancing_Script } from "next/font/google";
+import { Open_Sans, Josefin_Sans } from "next/font/google";
 
 export const openSans = Open_Sans({
   subsets: ["latin"],
@@ -7,9 +7,9 @@ export const openSans = Open_Sans({
   variable: "--font-open-sans",
 });
 
-export const dancingScript = Dancing_Script({
+export const JosefinSans = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
-  variable: "--font-dancing-script",
+  variable: "--font-josefin-sans",
 });

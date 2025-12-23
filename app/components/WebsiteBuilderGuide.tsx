@@ -175,7 +175,7 @@ export default function WebsiteBuilderGuide({
       />
 
       {/* Main Layout */}
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen ">
         <Sidebar
           sidebarOpen={sidebarOpen}
           setSidebarOpen={setSidebarOpen}
@@ -187,11 +187,11 @@ export default function WebsiteBuilderGuide({
         />
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 flex flex-col overflow-hidden pb-8">
           {/* Header Toolbar */}
           <div className="border-b border-blue-200 shadow-sm bg-blue-50">
             <div className="px-6 py-4 ">
-              <h1 className="text-4xl font-bold text-blue-950 mb-6 text-center">
+              <h1 className="text-4xl font-bold text-blue-950 my-6 text-center">
                 Website Builder Finder
               </h1>
               <div className="flex items-center gap-4 mb-10  ">
@@ -242,7 +242,7 @@ export default function WebsiteBuilderGuide({
                   itemCount={itemCount}
                 />
               )}
-              <p className=" text-center text-sm font-semibold text-blue-950 my-4">
+              <p className=" text-center text-sm font-semibold text-blue-950 mt-8 mb-6">
                 {" "}
                 Showing{" "}
                 {itemCount <= filteredBuilders.length

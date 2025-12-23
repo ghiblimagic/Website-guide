@@ -93,7 +93,6 @@ export default function GuidingQuestionsModal({
           ))}
         </div>
 
-        {/* Footer */}
         <div className="bg-gray-50 border-t border-blue-200 px-8 py-6 rounded-b-2xl">
           <label className="flex items-center text-center gap-2 text-gray-700 mb-4">
             <input
