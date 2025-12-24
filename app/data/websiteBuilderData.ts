@@ -1511,11 +1511,11 @@ export const websiteBuilders: WebsiteBuilder[] = [
     cons: [
       "https://getsiimple.com/blog/the-honest-truth-about-siimple-website-builder/:",
       [
-        "No blogging features",
-        "No multi page support",
-        "Won't scale with your business if it grows past a one page site",
-        "Not suitable for large-scale e-commerce",
-        "Not ideal for businesses needing complex site structures",
+        "No blogging features.",
+        "No multi page support.",
+        "Won't scale with your business if it grows past a one page site.",
+        "Not suitable for large-scale e-commerce.",
+        "Not ideal for businesses needing complex site structures.",
       ],
     ],
     moreInfo: [] as string[],
@@ -1735,7 +1735,16 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "It now has a drag and drop page builder: though you can use third party apps to add more advanced drag and drop features.",
       ["https://www.shopify.com/website/builder"],
       "Natively supports",
-      ["Google shopping", "TikTok", "Instagram / Facebook shopping"],
+      [
+        "Google shopping",
+        [
+          "https://www.shopify.com/google#:~:text=You%20can%20use%20Shopify%20to%20manage%20your,Google%20for%20free%20*%20Automate%20real%2Dtime%20inventory",
+        ],
+        "TikTok",
+        ["https://apps.shopify.com/tiktok"],
+        "Instagram / Facebook shopping",
+        ["https://www.shopify.com/facebook-instagram"],
+      ],
     ],
     cons: [
       "Less creative freedom.",
@@ -1743,6 +1752,12 @@ export const websiteBuilders: WebsiteBuilder[] = [
       "Learning curve for advanced features like SEO, analytics, automation flows.",
 
       "Shopify can ban your store if it suspects you're a bot, selling prohibited items, running multiple brands in the same store (they want a store for each brand), and various other reasons. You can speak to shopify support on the off chance it does happen to you.",
+      [
+        "\"(We) talked to a Shopify rep before acting on it. We were told that you can't run multiple brands from one store. So having Brand X and Brand Y on the same store was a violation of their terms and conditions even if it's the same parent company. They want you to have a store for each. We were in the same boat by trying to put two different brands on one Shopify instance to gain some synergy by selling them together. Both brands are wholly owned by the parent company.\"",
+      ],
+      [
+        "https://www.reddit.com/r/ecommerce/comments/12xogzr/comment/jhjng62/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+      ],
     ],
     moreInfo: [] as string[],
     examples: [
@@ -1950,12 +1965,24 @@ export const websiteBuilders: WebsiteBuilder[] = [
     ],
     cons: [
       "Some plugins have left ecwid so some businesses have had to move to shopify, if they needed those integrations.",
+      [
+        '"Our company was on Wix for web and ecwid plugin for e-commerce for many years. We averaged 3 million a year in sales. Unfortunately we had to switch this month to Shopify because all the plugins we needed kept leaving ecwid. So far Shopify is great, but very ugly and not as user friendly as Wix/ ecwid. "',
+        [
+          "https://www.reddit.com/r/ecommerce/comments/1ok3ajf/comment/nmb4tx5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+        ],
+      ],
 
       "Would need the venture plan or higher to use a custom domain, but each plan has a free .company.site domain",
 
       "For large shops, or shops that expect to get big it can be limiting.",
 
       "Limited customization options, but might be enough for a small shop that doesn't need heavy customization.",
+      [
+        '"With Ecwid, you can customize your storefront even without coding knowledge though no-code options are limited. However, JavaScript offers much more customization allowing you to write custom logic for the storefront or even change the existing one."',
+        [
+          "https://docs.ecwid.com/storefronts/get-started/storefront-customization-options",
+        ],
+      ],
 
       "Weaker marketing tools, though you can use plugins to get access to more marketing tools.",
 
