@@ -5,7 +5,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 1,
     name: "Google Business Profile",
     tags: {
-      pages: [],
+      "pages needed": [],
       shop: ["no shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -74,7 +74,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 2,
     name: "Google Sites",
     tags: {
-      pages: ["1 page"],
+      "pages needed": ["1 page only"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -229,7 +229,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 3,
     name: "Carrd",
     tags: {
-      pages: ["1 page"],
+      "pages needed": ["1 page only"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -363,7 +363,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 4,
     name: "Pixpa",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -526,7 +526,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 5,
     name: "Squarespace",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -766,7 +766,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 6,
     name: "Hostinger",
     tags: {
-      pages: ["1 page"],
+      "pages needed": ["1 page only"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -936,7 +936,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 7,
     name: "Square",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: ["built in POS"],
@@ -1149,7 +1149,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 8,
     name: "Wix",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["small shop"],
       "creative freedom": ["medium customization"],
       POS: ["built in POS"],
@@ -1366,7 +1366,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 9,
     name: "Siimple",
     tags: {
-      pages: ["1 page"],
+      "pages needed": ["1 page only"],
       shop: [],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -1535,7 +1535,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 10,
     name: "Shopify",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["big shop"],
       "creative freedom": ["medium customization"],
       POS: ["built in POS"],
@@ -1786,7 +1786,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 11,
     name: "Ecwid",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["small shop"],
       "creative freedom": ["low customization"],
       POS: ["built in POS"],
@@ -2030,7 +2030,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 12,
     name: "WordPress.org",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["no shop", "small shop", "big shop"],
       "creative freedom": ["heavy customization"],
       POS: [] as string[],
@@ -2278,7 +2278,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 13,
     name: "WordPress.com",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["no shop", "small shop"],
       "creative freedom": ["heavy customization"],
       POS: [] as string[],
@@ -2503,7 +2503,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 14,
     name: "Webflow",
     tags: {
-      pages: ["multi-page"],
+      "pages needed": ["1 page or multi-page"],
       shop: ["no shop"],
       "creative freedom": ["heavy customization"],
       POS: [] as string[],
@@ -2703,7 +2703,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
     id: 15,
     name: "GoDaddy",
     tags: {
-      pages: ["1 page"],
+      "pages needed": ["1 page only"],
       shop: ["no shop", "small shop"],
       "creative freedom": ["low customization"],
       POS: [] as string[],
@@ -2879,7 +2879,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
 ];
 
 export const tagCategories: Record<TagCategory, string[]> = {
-  pages: ["1 page", "multi-page"],
+  "pages needed": ["1 page only", "1 page or multi-page"],
   shop: ["small shop", "big shop"],
   "creative freedom": [
     "low customization",
@@ -2898,11 +2898,11 @@ export const guidingQuestions: GuidingQuestion[] = [
     options: [
       {
         label: "Yes",
-        action: { category: "pages", tag: "1 page" },
+        action: { category: "pages needed", tag: "1 page only" },
       },
       {
         label: "No",
-        action: { category: "pages", tag: "multi-page" },
+        action: { category: "pages needed", tag: "1 page or multi-page" },
       },
     ],
   },

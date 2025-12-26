@@ -8,7 +8,7 @@ interface BuilderCardProps {
   id: number;
   name: string;
   tags: {
-    pages: string[];
+    "pages needed": string[];
     shop: string[];
     "creative freedom": string[];
     POS: string[];

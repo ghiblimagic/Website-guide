@@ -39,7 +39,7 @@ export default function WebsiteBuilderGuide({
 }: Props) {
   const [showGuidingQuestions, setShowGuidingQuestions] = useState(false);
   const [selectedTags, setSelectedTags] = useState<SelectedTags>({
-    pages: [],
+    "pages needed": [],
     shop: [],
     "creative freedom": [],
     "learning curve": [],
@@ -133,7 +133,7 @@ export default function WebsiteBuilderGuide({
 
   const clearAllTags = () => {
     setSelectedTags({
-      pages: [],
+      "pages needed": [],
       shop: [],
       "creative freedom": [],
       "learning curve": [],

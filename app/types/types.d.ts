@@ -1,5 +1,5 @@
 export interface SelectedTags {
-  pages: string[];
+  "pages needed": string[];
   shop: string[];
   "creative freedom": string[];
   "learning curve": string[];
@@ -7,7 +7,7 @@ export interface SelectedTags {
 }
 
 export type TagCategory =
-  | "pages"
+  | "pages needed"
   | "shop"
   | "creative freedom"
   | "learning curve"
@@ -62,7 +62,7 @@ export interface WebsiteBuilder {
   id: number;
   name: string;
   tags: {
-    pages: string[];
+    "pages needed": string[];
     shop: string[];
     "creative freedom": string[];
     POS: string[];
