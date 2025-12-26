@@ -35,8 +35,11 @@ export default function RootLayout({
       >
         <nav className="bg-blue-900 border-b-2 border-white py-2 px-6">
           {" "}
-          <a href="https://janetspellman.com">
-            <div className="flex items-center  align-baseline">
+          <div className=" w-fit">
+            <a
+              href="https://janetspellman.com"
+              className="flex align-baseline items-center"
+            >
               {/* Bug Fix: img kept showing as the wrong aspect ratio
               
               Fix: items-cente
@@ -46,7 +49,7 @@ export default function RootLayout({
 
    */}
 
-              <span className="font-josefin-sans text-2xl mr-2 my-1 text-white">
+              <span className="font-josefin-sans text-2xl mr-2 my-1 text-white inline-block">
                 {" "}
                 Spellman&apos;s Consulting{" "}
               </span>
@@ -60,13 +63,13 @@ export default function RootLayout({
                 style={{
                   minWidth: "30px",
                   minHeight: "30px",
-                  display: "block",
+                  display: "inline-block",
                 }}
                 loading="eager"
                 fetchPriority="high"
               />
-            </div>
-          </a>
+            </a>
+          </div>
         </nav>
         {children}
         <footer className="bg-blue-900 border-t-2 border-white  ">
