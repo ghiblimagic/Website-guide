@@ -7,15 +7,15 @@ interface CollapsibleListProps {
   summaryClassName?: string;
   listItemClassName?: string;
   level?: number;
-  icon?: LucideIcon;
+  icon?: LucideIcon | null;
   iconStyling?: string;
 }
 
 const CollapsibleList = ({
   items,
-  singleItemClassName = "text-sm text-gray-700",
-  summaryClassName = "cursor-pointer text-sm text-gray-700",
-  listItemClassName = "text-sm my-2 text-gray-700  mb-2 break-words",
+  singleItemClassName = "text-sm text-blue-950",
+  summaryClassName = "cursor-pointer text-sm text-blue-950",
+  listItemClassName = "text-sm my-2 text-blue-950  mb-2 break-words",
   icon,
   iconStyling,
   level = 0,
@@ -36,14 +36,15 @@ const CollapsibleList = ({
           key={idx}
           className={`${listItemClassName} flex items-start  gap-2 mb-3`}
         >
-          {IconComponent ? (
+          {IconComponent === undefined ? (
+            <span className={`${iconStyling}`}>●</span>
+          ) : IconComponent ? (
             <IconComponent
               size={16}
-              className={`${iconStyling}`}
+              className={iconStyling}
             />
-          ) : (
-            <span className={`${iconStyling}`}>●</span>
-          )}
+          ) : null}
+
           <ConvertStringLinkToA item={item} />
         </li>
       );

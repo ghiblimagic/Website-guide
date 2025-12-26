@@ -50,6 +50,14 @@ interface VisibleFields {
   proCons: boolean;
 }
 
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: (string | string[] | (string | string[])[])[];
+  linkText?: string;
+  link?: string;
+}
+
 export interface WebsiteBuilder {
   id: number;
   name: string;

@@ -41,13 +41,13 @@ export default function GuidingQuestionsModal({
               <h2 className="text-3xl font-bold text-blue-950 mb-4">
                 Which Website Builder Fits You?
               </h2>
-              <p className="text-gray-700">
+              <p className="text-blue-950">
                 Answer a few quick questions to narrow down your options.
               </p>
             </div>
             <button
               onClick={() => setShow(false)}
-              className="text-gray-400 hover:text-gray-700 transition-colors p-1"
+              className="text-blue-950 hover:text-blue-950 transition-colors p-1"
               aria-label="exit quiz"
             >
               <X size={24} />
@@ -56,13 +56,13 @@ export default function GuidingQuestionsModal({
         </div>
 
         {/* Questions */}
-        <div className="p-8 space-y-8 text-gray-700">
+        <div className="p-8 space-y-8 text-blue-950">
           {guidingQuestions.map((q) => (
             <div
               key={q.id}
               className="pb-8 border-b border-blue-200 last:border-0"
             >
-              <p className="text-lg font-medium text-gray-700 pt-1 mb-2">
+              <p className="text-lg font-medium text-blue-950 pt-1 mb-4">
                 {q.question} (Optional)
               </p>
 
@@ -94,7 +94,7 @@ export default function GuidingQuestionsModal({
         </div>
 
         <div className="bg-gray-50 border-t border-blue-200 px-8 py-6 rounded-b-2xl">
-          <label className="flex items-center text-center gap-2 text-gray-700 mb-4">
+          <label className="flex items-center text-center gap-2 text-blue-950 mb-4">
             <input
               type="checkbox"
               onChange={onChange}

@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useState, useMemo, useEffect } from "react";
 import { Filter } from "lucide-react";
+import Link from "next/link";
 
 import type {
   WebsiteBuilder,
@@ -175,6 +176,21 @@ export default function WebsiteBuilderGuide({
       />
 
       {/* Main Layout */}
+      {/* <section className="flex text-blue-950 gap-4 justify-center py-2 text-white bg-blue-900">
+        {" "}
+        <p className="">
+          {" "}
+          Are you new to building websites or want extra information to help
+          make your choice? Check out the FAQ page!
+        </p>
+        <Link
+          href="/faq"
+          className="underline underline-offset-2 hover:no-underline"
+        >
+          FAQ
+        </Link>
+      </section> */}
+
       <div className="flex min-h-screen ">
         <Sidebar
           sidebarOpen={sidebarOpen}

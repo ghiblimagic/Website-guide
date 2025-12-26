@@ -109,7 +109,7 @@ export default function BuilderCard(props: BuilderCardProps) {
           }
         >
           <div className="flex items-center gap-2 mb-2">
-            <h3 className="text-xl font-semibold text-gray-700">Best For</h3>
+            <h3 className="text-xl font-semibold text-blue-950">Best For</h3>
           </div>
           <NestedList items={props.bestFor} />
         </div>
@@ -124,7 +124,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-blue-950">
                 Difficulty
               </h3>
             </div>
@@ -134,7 +134,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             >
               {props.difficulty}
             </p>
-            <span className="text-sm text-gray-700">
+            <span className="text-sm text-blue-950">
               ({props.difficulty.length}/5)
             </span>
             <span className="sr-only">
@@ -151,7 +151,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">Trial</h3>
+              <h3 className="text-xl font-semibold text-blue-950">Trial</h3>
             </div>
             <CollapsableList items={props.trial} />
           </div>
@@ -164,7 +164,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">Cost</h3>
+              <h3 className="text-xl font-semibold text-blue-950">Cost</h3>
             </div>
             <ul className="space-y-1 list-disc list-inside">
               <NestedList items={props.cost} />
@@ -179,7 +179,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">SEO</h3>
+              <h3 className="text-xl font-semibold text-blue-950">SEO</h3>
             </div>
             <CollapsableList items={props.seo} />
           </div>
@@ -192,7 +192,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-blue-950">
                 Customer Support
               </h3>
             </div>
@@ -207,7 +207,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-blue-950">
                 E-commerce
               </h3>
             </div>
@@ -222,8 +222,8 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">Migration</h3>
-              <p className="text-gray-700 text-sm">
+              <h3 className="text-xl font-semibold text-blue-950">Migration</h3>
+              <p className="text-blue-950 text-sm">
                 (Can you move your site somewhere else)
               </p>
             </div>
@@ -238,7 +238,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">Security</h3>
+              <h3 className="text-xl font-semibold text-blue-950">Security</h3>
             </div>
             <CollapsableList items={props.security} />
           </div>
@@ -251,7 +251,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-blue-950">
                 Accessibility
               </h3>
             </div>
@@ -266,10 +266,10 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-blue-950">
                 Collaboration
               </h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-blue-950 text-sm">
                 (How Easy is it to Collaborate or Hand-off to an Employee)
               </p>
             </div>
@@ -284,7 +284,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-blue-950">
                 App Store (To add extra features to your website.)
               </h3>
             </div>
@@ -299,7 +299,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-gray-700">Examples</h3>
+              <h3 className="text-xl font-semibold text-blue-950">Examples</h3>
             </div>
             <NestedList items={props.examples} />
           </div>
@@ -314,7 +314,7 @@ export default function BuilderCard(props: BuilderCardProps) {
               : "bg-gray-50 rounded-lg p-6 border border-blue-200 mb-8"
           }
         >
-          <h3 className="font-semibold text-gray-700 text-xl mb-3">
+          <h3 className="font-semibold text-blue-950 text-xl mb-3">
             More Informatiion
           </h3>
           <NestedList items={props.moreInfo} />
@@ -328,7 +328,7 @@ export default function BuilderCard(props: BuilderCardProps) {
           }
         >
           <div className="w-full max-w-full overflow-hidden bg-gray-50 rounded-lg p-4 border border-blue-200">
-            <h3 className="font-semibold text-gray-700 mb-3 text-xl">Pros</h3>
+            <h3 className="font-semibold text-blue-950 mb-3 text-xl">Pros</h3>
             <ul className="space-y-2 ">
               <NestedList
                 items={props.pros}
@@ -339,7 +339,7 @@ export default function BuilderCard(props: BuilderCardProps) {
           </div>
 
           <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
-            <h3 className="font-semibold text-gray-700 mb-3 text-xl">Cons</h3>
+            <h3 className="font-semibold text-blue-950 mb-3 text-xl">Cons</h3>
 
             <NestedList
               items={props.cons}

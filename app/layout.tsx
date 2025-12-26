@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { openSans, JosefinSans } from "./fonts";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Website Builder Finder",
@@ -31,11 +32,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${openSans.variable} ${JosefinSans.variable} antialiased`}
+        className={`${openSans.variable} ${JosefinSans.variable} antialiased min-h-screen flex flex-col`}
       >
-        <nav className="bg-blue-900 border-b-2 border-white py-2 px-6">
+        <nav className="bg-blue-900 border-b-2 border-white py-2 px-6 flex justify-between w-full gap-4 align-baseline">
           {" "}
-          <div className=" w-fit">
+          {/* ****************** LOGO ****************** */}
+          <div className="">
             <a
               href="https://janetspellman.com"
               className="flex align-baseline items-center"
@@ -49,7 +51,7 @@ export default function RootLayout({
 
    */}
 
-              <span className="font-josefin-sans text-2xl mr-2 my-1 text-white inline-block">
+              <span className="font-josefin-sans text-2xl sm:mr-2 my-1 text-white  text-wrap max-w-[10ch] sm:max-w-none hidden sm:inline-block">
                 {" "}
                 Spellman&apos;s Consulting{" "}
               </span>
@@ -70,10 +72,52 @@ export default function RootLayout({
               />
             </a>
           </div>
+          {/* ****************** PAGES ****************** */}
+          <section className="my-auto text-lg">
+            <Link
+              href="/"
+              className="pr-3 sm:px-6"
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/guide"
+              className="px-3 sm:px-6"
+            >
+              {" "}
+              Guide
+            </Link>
+
+            <Link
+              href="/faq"
+              className="px-3 sm:px-6"
+            >
+              {" "}
+              FAQ
+            </Link>
+          </section>
         </nav>
-        {children}
+        <main className="flex-1">{children}</main>
         <footer className="bg-blue-900 border-t-2 border-white  ">
-          <section className="py-2 px-6 flex  text-center justify-between mx-auto gap-20 max-w-5xl">
+          <section className="py-2 px-6 flex flex-col sm:flex-row text-center justify-between mx-auto gap-4 sm:gap-20 max-w-5xl">
+            <div className="my-5">
+              <h3 className="text-2xl"> Send Thanks </h3>
+              <p className="my-5 max-w-[400px]">
+                {" "}
+                If you found this webpage helpful you can send me a coffee.
+                It&apos;s much appreciated!
+              </p>
+              <a
+                href="https://ko-fi.com/ghiblimagic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 border-b-2 text-white font-medium  hover:bg-blue-700 shadow-md shadow-blue-950 transition"
+              >
+                ☕ Buy Me Coffee
+              </a>
+            </div>
+
             <div className="my-5">
               <h3 className="text-2xl"> Need A Developer? </h3>{" "}
               <p className="my-5"> Let&apos;s Work Together!</p>
@@ -84,21 +128,6 @@ export default function RootLayout({
                 className="inline-flex items-center gap-2 rounded-lg border-b-2 bg-blue-600 px-4 py-2 text-white font-medium hover:bg-blue-700 shadow-md shadow-blue-950 hover:bg-blue-900transition"
               >
                 Free consultation
-              </a>
-            </div>
-            <div className="my-5">
-              <h3 className="text-2xl"> Send Thanks </h3>
-              <p className="my-5">
-                {" "}
-                If you found this article helpful. It&apos;s much appreciated!
-              </p>
-              <a
-                href="https://ko-fi.com/ghiblimagic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 border-b-2 text-white font-medium  hover:bg-blue-700 shadow-md shadow-blue-950 transition"
-              >
-                ☕ Buy Me Coffee
               </a>
             </div>
           </section>
