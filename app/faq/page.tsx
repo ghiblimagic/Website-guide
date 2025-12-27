@@ -6,7 +6,7 @@ export default function FAQ() {
   return (
     <section
       aria-labelledby="faq-heading"
-      className="max-w-2xl mx-auto bg-blue-50 rounded-2xl shadow-sm border border-blue-200 overflow-hidden hover:shadow-md transition-shadow"
+      className="max-w-2xl mx-auto bg-blue-50 rounded-2xl shadow-sm border border-blue-200 overflow-hidden hover:shadow-md transition-shadow mb-8"
     >
       <h2
         id="faq-heading"
@@ -21,7 +21,7 @@ export default function FAQ() {
               key={item.id}
               className="bg-gray-50"
             >
-              <details className="group border border-blue-100 rounded-lg">
+              <details className="group border border-blue-100 rounded-lg text-lg">
                 <summary
                   className="
                     cursor-pointer

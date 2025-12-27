@@ -64,6 +64,15 @@ export const faqs: FAQ[] = [
     ],
   },
   {
+    id: "price",
+    question: "Why is there no filter for price?",
+    answer: [
+      "Although the base version of a web page builder can be cheaper than others, most of the cost of a website comes from plugins/apps that you use to extend the functionality. Or extra add-ons that you buy from the website builder itself.",
+      "At some point, sometimes the more expensive web page builder with more built in features can become cheaper than a chea web page builder that needs more adds ons.",
+      "So it would of been misleading to add a price filter.",
+    ],
+  },
+  {
     id: "what-is-plugin",
     question: "What is a plugin, extension or app?",
     answer: [

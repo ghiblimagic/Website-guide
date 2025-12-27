@@ -51,6 +51,14 @@ export default function Sidebar({
         </div>
 
         {/* Body */}
+
+        <a
+          href="#content"
+          className="fixed  -translate-y-full focus:translate-y-28 left-15 top-0 p-3 bg-blue-900 text-white z-50 focus:outline-none focus:ring-2 focus:ring-white transition-transform"
+        >
+          Skip to content
+        </a>
+
         <div className="flex-1 mx-5 pt-5 bg-blue-900 pb-4 border-x border-b rounded-b-2xl border-white pl-3">
           {activeTagCount > 0 && (
             <div className="text-center mb-2">
@@ -59,7 +67,10 @@ export default function Sidebar({
                 text={`Clear Filters (${activeTagCount})`}
                 primary
               >
-                <RotateCcw size={16} />
+                <RotateCcw
+                  size={16}
+                  className="mr-2"
+                />
               </StyledButton>
             </div>
           )}

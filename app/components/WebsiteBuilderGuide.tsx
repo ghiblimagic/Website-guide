@@ -247,7 +247,10 @@ export default function WebsiteBuilderGuide({
           </div>
 
           {/* Content Area */}
-          <div className="flex-1 ">
+          <div
+            className="flex-1 "
+            id="content"
+          >
             <div className="max-w-6xl mx-auto p-2 sm:p-6 ">
               {filteredBuilders.length === 0 ? (
                 <NoBuildersFound clearAllTags={clearAllTags} />

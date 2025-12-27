@@ -47,7 +47,7 @@ export default function GuidingQuestionsModal({
             </div>
             <button
               onClick={() => setShow(false)}
-              className="text-blue-950 hover:text-blue-950 transition-colors p-1"
+              className="text-blue-950 hover:text-blue-950 transition-colors p-1 self-start"
               aria-label="exit quiz"
             >
               <X size={24} />

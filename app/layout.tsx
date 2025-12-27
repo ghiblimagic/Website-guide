@@ -34,13 +34,19 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${JosefinSans.variable} antialiased min-h-screen flex flex-col`}
       >
-        <nav className="bg-blue-900 border-b-2 border-white py-2 px-6 flex justify-between w-full gap-4 align-baseline">
+        <nav
+          className="bg-blue-900 border-b-2 border-white py-2 px-6 flex justify-between w-full gap-4 align-baseline"
+          aria-label="Main navigation"
+        >
           {" "}
           {/* ****************** LOGO ****************** */}
           <div className="">
             <a
               href="https://janetspellman.com"
               className="flex align-baseline items-center"
+              aria-label="Spellman's Consulting homepage (opens in new window)"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {/* Bug Fix: img kept showing as the wrong aspect ratio
               
@@ -73,6 +79,12 @@ export default function RootLayout({
             </a>
           </div>
           {/* ****************** PAGES ****************** */}
+          <a
+            href="#main"
+            className="fixed left-1/2 -translate-x-1/2 -translate-y-full focus:translate-y-4 top-0 p-3 bg-mainColor text-white z-50 focus:outline-none focus:ring-2 focus:ring-white transition-transform bg-blue-900"
+          >
+            Skip to content
+          </a>
           <section className="my-auto text-lg">
             <Link
               href="/"
@@ -98,11 +110,16 @@ export default function RootLayout({
             </Link>
           </section>
         </nav>
-        <main className="flex-1">{children}</main>
+        <main
+          className="flex-1"
+          id="main"
+        >
+          {children}
+        </main>
         <footer className="bg-blue-900 border-t-2 border-white  ">
           <section className="py-2 px-6 flex flex-col sm:flex-row text-center justify-between mx-auto gap-4 sm:gap-20 max-w-5xl">
             <div className="my-5">
-              <h3 className="text-2xl"> Send Thanks </h3>
+              <h2 className="text-2xl"> Send Thanks </h2>
               <p className="my-5 max-w-[400px]">
                 {" "}
                 If you found this webpage helpful you can send me a coffee.
@@ -112,14 +129,21 @@ export default function RootLayout({
                 href="https://ko-fi.com/ghiblimagic"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Kofi donation page (opens in new window)"
                 className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 border-b-2 text-white font-medium  hover:bg-blue-700 shadow-md shadow-blue-950 transition"
               >
-                ☕ Buy Me Coffee
+                <img
+                  src="/images/kofi_symbol.png"
+                  width="22"
+                  height="22"
+                  alt="Ko-fi logo"
+                />{" "}
+                Buy Me Coffee
               </a>
             </div>
 
             <div className="my-5">
-              <h3 className="text-2xl"> Need A Developer? </h3>{" "}
+              <h2 className="text-2xl"> Need A Developer? </h2>{" "}
               <p className="my-5"> Let&apos;s Work Together!</p>
               <a
                 href="https://janetspellman.com/#contact"

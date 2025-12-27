@@ -180,6 +180,10 @@ export default function BuilderCard(props: BuilderCardProps) {
           >
             <div className="flex items-center gap-2 mb-2">
               <h3 className="text-xl font-semibold text-blue-950">SEO</h3>
+
+              <p className="text-blue-950 text-sm">
+                (Improve your ranking on search engines like Google.)
+              </p>
             </div>
             <CollapsableList items={props.seo} />
           </div>
@@ -284,9 +288,10 @@ export default function BuilderCard(props: BuilderCardProps) {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-blue-950">
-                App Store (To add extra features to your website.)
-              </h3>
+              <h3 className="text-xl font-semibold text-blue-950">App Store</h3>
+              <p className="text-blue-950 text-sm">
+                (Allows you to add extra features to your website.)
+              </p>
             </div>
             <CollapsableList items={props.appStore} />
           </div>

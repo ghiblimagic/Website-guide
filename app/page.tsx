@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import DownloadImage from "@/app/components/DownloadImage";
 export default function LandingPage() {
   return (
     <>
@@ -18,12 +18,21 @@ export default function LandingPage() {
               time on what matters.
             </p>
 
-            <Link
-              className="inline-block px-10 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg border-b-4 border-blue-400"
-              href="/guide"
-            >
-              Interactive Guide
-            </Link>
+            <div className="flex flex-row gap-4 justify-center  items-center">
+              <Link
+                className="inline-block px-6 sm:px-10 py-4 bg-blue-600 text-white rounded-2xl font-semibold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg border-b-4 border-blue-400"
+                href="/guide"
+              >
+                Guide
+              </Link>
+
+              <Link
+                className="inline-block px-6 sm:px-10 py-4 border-2 text-blue-900 font-semibold border-blue-700 bg-blue-100 hover:bg-blue-200 rounded-2xl"
+                href="#flowchart"
+              >
+                Flowchart
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">
@@ -45,71 +54,22 @@ export default function LandingPage() {
       {/* Features Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <svg
-                className="w-6 h-6 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
+          <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
+            <div className="w-45 h-45  rounded-lg flex items-center justify-center mb-4 mx-auto">
+              <img src="/images/comparison.png" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
               Quick Comparison
             </h3>
             <p className="text-gray-600">
-              Compare top website builders based on your specific requirements
-              in seconds.
+              Compare top website builders based on features that you care
+              about.
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <svg
-                className="w-6 h-6 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
-              Personalized Recommendations
-            </h3>
-            <p className="text-gray-600">
-              Answer a few questions and get matched with builder(s) for your
-              business. (Optional)
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <svg
-                className="w-6 h-6 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+          <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
+            <div className="w-45 h-45 bg-blue-100 rounded-lg  mb-4 mx-auto ">
+              <img src="/images/filters.png" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
               Save Time & Money
@@ -119,42 +79,72 @@ export default function LandingPage() {
               your needs! Narrow down your options to a few potential builders.
             </p>
           </div>
+
+          <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
+            <div className="w-45 h-45 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+              <img src="/images/quiz.png" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              Personalized Recommendations
+            </h3>
+            <p className="text-gray-600">
+              Answer a few optional questions to get quickly matched with
+              builder(s) for your business. No email or other personal
+              information needed.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className=" mx-auto px-4 pt-20 pb-32 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      <section className=" mx-auto px-4 pt-20 pb-32 bg-gradient-to-r from-blue-900 to-blue-700">
+        <div className="max-w-5xl mx-auto text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold  mb-6">
             Why is this free?
           </h2>
 
-          <p className="text-lg md:text-xl text-blue-950 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl 0 mb-6 max-w-2xl mx-auto">
             Whether you&apos;re a business looking to DIY your site or
             evaluating whether to hire a developer, you deserve clear, unbiased
             guidance.
           </p>
-          <p className="text-lg md:text-xl text-blue-950 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl  mb-6 max-w-2xl mx-auto">
             My goal is simple: help you make an informed decision about choosing
             a website builder with confidence. Whether that means building the
             website yourself, working with me, or choosing another developer
             entirely.
           </p>
-          <p className="text-lg md:text-xl text-blue-950 sm:mb-6 max-w-2xl mx-auto">
-            Also, I want to give fellow developers another tool to help decide
-            which webpage builders might be best for clients.
+          <p className="text-lg md:text-xl  sm:mb-6 max-w-2xl mx-auto">
+            Also, I want to give fellow developers a tool to help choose the
+            best website builders for clients.
           </p>
         </div>
       </section>
 
+      {/* ***** Flowchart Section *********** */}
+      <section className="mx-auto px-4 py-20 border-t-4 bg-blue-50">
+        <h2
+          className="text-3xl font-bold text-blue-950 mb-8 text-center"
+          id="flowchart"
+        >
+          Would you prefer a flowchart?
+        </h2>
+
+        <DownloadImage
+          src="/images/website-flowchart.png"
+          alt="Flowchart diagram"
+          label="Download flowchart"
+        />
+      </section>
+
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="mx-auto px-4 py-20 border-t-4">
         <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-900 to-blue-700 rounded-3xl p-12 text-center shadow-2xl">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to find your match?
           </h2>
 
           <Link
-            className="inline-block px-10 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg hover:bg-blue-100 border-b-4 border-blue-400 transition-all hover:scale-105 shadow-lg "
+            className="inline-block px-10 py-4 bg-white text-blue-800 rounded-lg font-semibold text-lg hover:bg-blue-100 border-b-4 border-blue-400 transition-all hover:scale-105 shadow-lg "
             href="/guide"
           >
             Start Your Search Now

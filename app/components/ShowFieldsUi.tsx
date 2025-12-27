@@ -32,6 +32,12 @@ export default function FieldToggles({
 
   return (
     <div className="flex items-center gap-2 flex-wrap mb-6">
+      <a
+        href="#content"
+        className="fixed left-1/2 -translate-x-1/2 -translate-y-full focus:translate-y-48 top-0 p-3 bg-mainColor text-white z-50 focus:outline-none focus:ring-2 focus:ring-white transition-transform bg-blue-900"
+      >
+        Skip fields
+      </a>
       <span className="text-sm font-semibold text-blue-950 mr-2">
         Show fields:
       </span>
