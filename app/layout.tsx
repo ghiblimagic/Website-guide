@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { openSans, JosefinSans } from "./fonts";
 import "./globals.css";
 import Link from "next/link";
+import GoToTopButton from "@/app/components/GoToTopButton";
 
 export const metadata: Metadata = {
   title: "Website Builder Finder",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${JosefinSans.variable} antialiased min-h-screen flex flex-col`}
       >
+        <GoToTopButton />
         <nav
           className="bg-blue-900 border-b-2 border-white py-2 px-6 flex justify-between w-full gap-4 align-baseline"
           aria-label="Main navigation"
@@ -149,6 +151,7 @@ export default function RootLayout({
                 href="https://janetspellman.com/#contact"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Spellman's Consulting contact page (opens in new window)"
                 className="inline-flex items-center gap-2 rounded-lg border-b-2 bg-blue-600 px-4 py-2 text-white font-medium hover:bg-blue-700 shadow-md shadow-blue-950 hover:bg-blue-900transition"
               >
                 Free consultation

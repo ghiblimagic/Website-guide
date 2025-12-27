@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import { useState, useMemo, useEffect } from "react";
 import { Filter } from "lucide-react";
-import Link from "next/link";
 
 import type {
   WebsiteBuilder,

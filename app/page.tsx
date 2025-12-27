@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DownloadImage from "@/app/components/DownloadImage";
+import FlowchartOverviewButton from "./components/FlowchartOverviewButton";
 export default function LandingPage() {
   return (
     <>
@@ -39,11 +40,16 @@ export default function LandingPage() {
             {" "}
             <img
               src="/images/stressed.jpg"
-              alt="Stressed illustration"
+              alt="Someone sitting in front of a laptop, looking stressed."
               className="w-40 sm:w-56 md:w-80 h-auto shrink-0"
             />
             <small className="text-blue-950 inline-block mt-2 w-full text-center ">
-              <a href="https://www.freepik.com/free-vector/hand-drawn-flat-design-overwhelmed-people-illustration_23669513.htm">
+              <a
+                href="https://www.freepik.com/free-vector/hand-drawn-flat-design-overwhelmed-people-illustration_23669513.htm"
+                aria-label="Link to the freepik image source"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Image by FreePik
               </a>
             </small>
@@ -134,6 +140,319 @@ export default function LandingPage() {
           alt="Flowchart diagram"
           label="Download flowchart"
         />
+
+        <details className="mt-6 p-4 bg-gray-50 text-blue-950 rounded text-center">
+          <summary className="cursor-pointer font-semibold text-lg">
+            View text version of flowchart
+          </summary>
+          <div
+            className="mt-4"
+            id="flowchart-description"
+          >
+            <h3 className="text-xl font-semibold mb-3">
+              Flowchart Description
+            </h3>
+            <p className="mb-4">
+              This flowchart helps you choose the right website builder based on
+              your needs. Follow the decision points.
+            </p>
+
+            {/* Table of contents for flowchart */}
+
+            <div className="my-8 p-4 bg-blue-50 rounded-lg">
+              <h3
+                className="text-xl font-semibold mb-3"
+                id="flowchart-heading"
+              >
+                Quick Navigation
+              </h3>
+              <nav aria-label="Flowchart questions navigation">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-2xl mx-auto text-center">
+                  <li>
+                    <a
+                      href="#start"
+                      className="text-blue-600 hover:underline"
+                    >
+                      1. Multi-page website?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#suffering"
+                      className="text-blue-600 hover:underline"
+                    >
+                      2. Enjoy suffering?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#sell-online"
+                      className="text-blue-600 hover:underline"
+                    >
+                      3. Sell things online?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#selling-few"
+                      className="text-blue-600 hover:underline"
+                    >
+                      4. Few products only?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#total-design"
+                      className="text-blue-600 hover:underline"
+                    >
+                      5. Total design control?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#customize"
+                      className="text-blue-600 hover:underline"
+                    >
+                      6. Customize templates heavily?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#many-templates"
+                      className="text-blue-600 hover:underline"
+                    >
+                      7. Many template options?
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#pos"
+                      className="text-blue-600 hover:underline"
+                    >
+                      8. POS integration priority?
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#wordpress"
+                      className="text-blue-600 hover:underline"
+                    >
+                      9. Wordpress.org or wordpress.com
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            {/* Flowchart paths */}
+            <ol
+              className="space-y-8 list-decimal list-inside ml-6"
+              role="list"
+              id="flowchart-path"
+            >
+              {/* question 1 */}
+              <li id="start">
+                <strong>Do you want a multi-page website?</strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>No:</strong> Consider Google Business Page (free),
+                    Carrd, Google Sites, or Siimple (cheap, fast, simple)
+                  </li>
+                  <li className="mt-4">
+                    <a
+                      href="#suffering"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded  "
+                    >
+                      <strong>Yes:</strong> Continue to question 2
+                    </a>
+                    <FlowchartOverviewButton />
+                  </li>
+                </ul>
+              </li>
+
+              {/* question 2 */}
+
+              <li id="suffering">
+                <strong>Do you enjoy suffering?</strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong> GoDaddy (not recommended due to
+                    aggressive upselling and poor service)
+                  </li>
+                  <li>
+                    <a
+                      href="#sell-online"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      <strong>No:</strong> Continue to question 3
+                    </a>
+                    <FlowchartOverviewButton />
+                  </li>
+                </ul>
+              </li>
+
+              {/* question 3 */}
+
+              <li id="sell-online">
+                <strong>Need to sell things online?</strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <a
+                      href="#total-design"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      <strong>No:</strong> Skip to question 5
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#selling-few"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      <strong>Yes:</strong> Continue to question 4
+                    </a>
+                    <FlowchartOverviewButton />
+                  </li>
+                </ul>
+              </li>
+
+              {/* question 4 */}
+              <li id="selling-few">
+                <strong>
+                  Selling only a few products or need delivery integration?
+                </strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong> Squarespace, WordPress, or Wix with
+                    e-commerce plugins; Carrd/Google Sites with Ecwid; or Pixpa
+                    for creatives.{" "}
+                    <a
+                      href="#pos"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      Continue to question 8.
+                    </a>
+                  </li>
+                  <li>
+                    <strong>No:</strong> Shopify (best for full stores) or
+                    WordPress with BigCommerce/WooCommerce
+                  </li>
+                  <FlowchartOverviewButton />
+                </ul>
+              </li>
+
+              {/* question 5 */}
+              <li id="total-design">
+                <strong>Want total design control?</strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong> Webflow
+                  </li>
+                  <li>
+                    <a
+                      href="#customize"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      <strong>No:</strong> Continue to question 6
+                    </a>
+                  </li>
+                  <FlowchartOverviewButton />
+                </ul>
+              </li>
+
+              {/* question 6 */}
+              <li id="customize">
+                <strong>Want to customize templates heavily?</strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong>
+                    {
+                      " WordPress (more customizable, grows    with business but takes time to learn). "
+                    }
+
+                    <a
+                      href="#wordpress"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      Continue to question 8.
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#many-templates"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      <strong>No:</strong> Continue to question 7
+                    </a>
+                  </li>
+                  <FlowchartOverviewButton />
+                </ul>
+              </li>
+
+              {/* question 7 */}
+
+              <li id="many-templates">
+                <strong>
+                  Would you prefer many template options even if adjustment
+                  takes more time?
+                </strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong> Wix (more extensions and themes than
+                    Squarespace)
+                  </li>
+                  <li>
+                    <strong>No:</strong> Squarespace, Hostinger, Pixpa or Google
+                    Sites.
+                  </li>
+                  <FlowchartOverviewButton />
+                </ul>
+              </li>
+
+              {/* question 8 */}
+              <li id="pos">
+                <strong>
+                  Is built-in POS integration the top priority? Read the FAQs if
+                  you&apos;re not sure if this applies to you.
+                </strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong> Square or Wix (for any type of
+                    business) Toast (specifically for restaurants)
+                  </li>
+                  <li>
+                    <a
+                      href="#total-design"
+                      className="text-blue-600 underline hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                    >
+                      <strong>No:</strong> Go to question 5
+                    </a>
+                  </li>
+                </ul>
+                <FlowchartOverviewButton />
+              </li>
+
+              {/* question 9 */}
+              <li id="wordpress">
+                <strong>
+                  Do you want a simplier experience in exchange for a: higher
+                  base price, less control, and being restricted from some
+                  themes and plugins?
+                </strong>
+                <ul className="ml-6 mt-2 list-disc list-inside">
+                  <li>
+                    <strong>Yes:</strong> Wordpress.com
+                  </li>
+                  <li>
+                    <strong>No:</strong> wordpress.org
+                  </li>
+                </ul>
+                <FlowchartOverviewButton />
+              </li>
+            </ol>
+          </div>
+        </details>
       </section>
 
       {/* CTA Section */}
