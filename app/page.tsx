@@ -127,7 +127,7 @@ export default function LandingPage() {
       </section>
 
       {/* ***** Flowchart Section *********** */}
-      <section className="mx-auto px-4 py-20 border-t-4 bg-blue-50">
+      <section className="mx-auto px-4 py-20 border-t-4 bg-white">
         <h2
           className="text-3xl font-bold text-blue-950 mb-8 text-center"
           id="flowchart"
@@ -141,7 +141,7 @@ export default function LandingPage() {
           label="Download flowchart"
         />
 
-        <details className="mt-6 p-4 bg-gray-50 text-blue-950 rounded text-center">
+        <details className="mt-6 p-4  text-blue-950 rounded text-center">
           <summary className="cursor-pointer font-semibold text-lg">
             View text version of flowchart
           </summary>
@@ -159,7 +159,7 @@ export default function LandingPage() {
 
             {/* Table of contents for flowchart */}
 
-            <div className="my-8 p-4 bg-blue-50 rounded-lg">
+            <div className="my-8 p-4 rounded-lg">
               <h3
                 className="text-xl font-semibold mb-3"
                 id="flowchart-heading"

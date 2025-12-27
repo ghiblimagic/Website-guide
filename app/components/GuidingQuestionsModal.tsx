@@ -1,5 +1,7 @@
 import { X } from "lucide-react";
 import type { SelectedTags, GuidingQuestion } from "../types/types";
+import { useEffect, useRef } from "react";
+import { createFocusTrap } from "focus-trap";
 
 interface GuidingQuestionsModalProps {
   show: boolean;
@@ -21,24 +23,70 @@ export default function GuidingQuestionsModal({
   handleGuidingAnswer,
   onChange,
 }: GuidingQuestionsModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const trapRef = useRef<ReturnType<typeof createFocusTrap> | null>(null);
+
+  useEffect(() => {
+    if (!show || !modalRef.current) return;
+
+    // setTimeout with a small 0ms delay - This defers the focus trap creation to the next tick, ensuring the DOM is fully read
+    //  this is a common issue with DOM manipulation libraries in React 19 - they need that tiny delay to work reliably with React's concurrent features.
+    const timeoutId = setTimeout(() => {
+      trapRef.current = createFocusTrap(modalRef.current!, {
+        escapeDeactivates: true,
+        returnFocusOnDeactivate: true,
+        initialFocus: false,
+        // initialFocus: false - Prevents the trap from auto-focusing, which can cause issues in React 19
+        onDeactivate: () => {
+          // Only close if still mounted/  if the modal ref still exists
+          if (modalRef.current) {
+            setShow(false);
+          }
+        },
+      });
+
+      trapRef.current.activate();
+    }, 0);
+
+    return () => {
+      //  Clears the timeout and nullifies the trap reference
+      clearTimeout(timeoutId);
+      if (trapRef.current) {
+        trapRef.current.deactivate();
+        trapRef.current = null;
+      }
+    };
+  }, [show, setShow]);
+
+  if (!show) return null;
+
   return (
     <div
       className={`
         fixed inset-0 z-50 p-4 flex items-center justify-center
-        transition-opacity duration-300 backdrop-blur-sm
-        ${
-          show
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }
+        duration-300 backdrop-blur-sm
+       
       `}
     >
-      <div className="rounded-2xl bg-white shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div
+        ref={modalRef}
+        className="rounded-2xl bg-white shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="guiding-questions-title"
+        // This makes SR users hear: “Dialog: Which Website Builder Fits You?”
+        // instead of “Dialog. Blank"
+      >
         {/* Header */}
         <div className="border-b border-blue-200 px-8 py-6 rounded-t-2xl">
           <div className="flex justify-between">
             <div className="w-full text-center">
-              <h2 className="text-3xl font-bold text-blue-950 mb-4">
+              <h2
+                className="text-3xl font-bold text-blue-950 mb-4"
+                id="guiding-questions-title"
+              >
                 Which Website Builder Fits You?
               </h2>
               <p className="text-blue-950">
@@ -105,7 +153,7 @@ export default function GuidingQuestionsModal({
 
           <button
             onClick={() => setShow(false)}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-xl font-semibold transition-all hover:shadow-lg"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-xl font-semibold transition-all hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 "
           >
             View Results
           </button>
