@@ -62,7 +62,10 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45  rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <img src="/images/comparison.png" />
+              <img
+                src="/images/comparison.png"
+                alt="showing the fields available for users to toggle off an on like summary, difficulty, cost, trial, best for, seo"
+              />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
               Quick Comparison
@@ -75,7 +78,10 @@ export default function LandingPage() {
 
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45 bg-blue-100 rounded-lg  mb-4 mx-auto ">
-              <img src="/images/filters.png" />
+              <img
+                src="/images/filters.png"
+                alt="showing how a user can filter by pages needed by clicking the checkbox 1 page only, to filter by that tag"
+              />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
               Save Time & Money
@@ -88,7 +94,10 @@ export default function LandingPage() {
 
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <img src="/images/quiz.png" />
+              <img
+                src="/images/quiz.png"
+                alt="which website builder fits you quiz, where you answer a few questions to quickly narrow down your options."
+              />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
               Personalized Recommendations
