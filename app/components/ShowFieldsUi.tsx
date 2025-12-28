@@ -46,9 +46,9 @@ export default function FieldToggles({
           key={field}
           onClick={() => toggleField(field as FieldType)}
           aria-pressed={visible}
-          className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-semibold transition-all text-sm ${
+          className={`inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-semibold transition-all text-sm   border-2 border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900${
             visible
-              ? "bg-blue-100 text-blue-900 hover:bg-blue-200 ring-2 ring-blue-500"
+              ? "bg-blue-100 text-blue-900 hover:bg-blue-200 "
               : "bg-slate-700 text-gray-200 hover:bg-gray-200 hover:text-gray-800"
           }`}
         >

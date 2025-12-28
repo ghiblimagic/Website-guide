@@ -165,30 +165,16 @@ export default function WebsiteBuilderGuide({
 
   return (
     <div className="min-h-screen ">
-      <GuidingQuestionsModal
-        show={showGuidingQuestions}
-        setShow={setShowGuidingQuestions}
-        guidingQuestions={questions}
-        selectedTags={selectedTags}
-        handleGuidingAnswer={handleGuidingAnswer}
-        onChange={handleCheckbox}
-      />
-
-      {/* Main Layout */}
-      {/* <section className="flex text-blue-950 gap-4 justify-center py-2 text-white bg-blue-900">
-        {" "}
-        <p className="">
-          {" "}
-          Are you new to building websites or want extra information to help
-          make your choice? Check out the FAQ page!
-        </p>
-        <Link
-          href="/faq"
-          className="underline underline-offset-2 hover:no-underline"
-        >
-          FAQ
-        </Link>
-      </section> */}
+      {showGuidingQuestions && (
+        <GuidingQuestionsModal
+          show={showGuidingQuestions}
+          setShow={setShowGuidingQuestions}
+          guidingQuestions={questions}
+          selectedTags={selectedTags}
+          handleGuidingAnswer={handleGuidingAnswer}
+          onChange={handleCheckbox}
+        />
+      )}
 
       <div className="flex min-h-screen ">
         <Sidebar
