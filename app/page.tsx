@@ -5,8 +5,8 @@ export default function LandingPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-white pt-6 sm:pt-20 pb-12 sm:pb-32">
-        <div className="max-w-5xl mx-auto px-4 flex flex-col-reverse sm:flex-row items-center sm:gap-8">
+      <section className="bg-white pt-6 md:pt-20 pb-12 sm:pb-32">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center sm:gap-8">
           <div className="max-w-3xl sm:mx-auto text-center  rounded-2xl">
             <h1 className="mt-8 sm:mt-0 text-4xl md:text-5xl lg:text-7xl font-bold text-gray-950 mb-6 animate-fade-in">
               Overwhelmed
@@ -39,9 +39,10 @@ export default function LandingPage() {
           <div className="text-center">
             {" "}
             <img
-              src="/images/stressed.jpg"
+              src="/images/stressed.webp"
               alt="Someone sitting in front of a laptop, looking stressed."
-              className="w-40 sm:w-56 md:w-80 h-auto shrink-0"
+              className="w-50 sm:w-56 md:w-80 h-auto shrink-0"
+              loading="eager"
             />
             <small className="text-blue-950 inline-block mt-2 w-full text-center ">
               <a
@@ -63,8 +64,9 @@ export default function LandingPage() {
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45  rounded-lg flex items-center justify-center mb-4 mx-auto">
               <img
-                src="/images/comparison.png"
+                src="/images/comparison.webp"
                 alt="showing the fields available for users to toggle off an on like summary, difficulty, cost, trial, best for, seo"
+                loading="eager"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -79,8 +81,9 @@ export default function LandingPage() {
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45 bg-blue-100 rounded-lg  mb-4 mx-auto ">
               <img
-                src="/images/filters.png"
+                src="/images/filters.webp"
                 alt="showing how a user can filter by pages needed by clicking the checkbox 1 page only, to filter by that tag"
+                loading="eager"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -95,8 +98,9 @@ export default function LandingPage() {
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
               <img
-                src="/images/quiz.png"
+                src="/images/quiz.webp"
                 alt="which website builder fits you quiz, where you answer a few questions to quickly narrow down your options."
+                loading="eager"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -145,8 +149,8 @@ export default function LandingPage() {
         </h2>
 
         <DownloadImage
-          src="/images/website-flowchart.png"
-          alt="Flowchart diagram"
+          src="/images/website-flowchart.webp"
+          alt="Flowchart diagram, there is a text version below"
           label="Download flowchart"
         />
 

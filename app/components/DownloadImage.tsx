@@ -19,6 +19,7 @@ export default function ImageDownload({
         src={src}
         alt={alt}
         className="rounded mb-3 mx-auto max-w-4xl"
+        loading="lazy"
       />
 
       <div className="text-center pt-6">

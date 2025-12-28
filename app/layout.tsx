@@ -135,7 +135,7 @@ export default function RootLayout({
                 className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 border-b-2 text-white font-medium  hover:bg-blue-700 shadow-md shadow-blue-950 transition"
               >
                 <img
-                  src="/images/kofi_symbol.png"
+                  src="/images/kofi_symbol.webp"
                   width="22"
                   height="22"
                   alt="Ko-fi logo"
