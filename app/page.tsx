@@ -79,7 +79,7 @@ export default function LandingPage() {
               <img
                 src="/images/comparison.webp"
                 alt="showing the fields available for users to toggle off an on like summary, difficulty, cost, trial, best for, seo"
-                loading="eager"
+                loading="lazy"
                 width="343"
                 height="343"
               />
@@ -98,7 +98,7 @@ export default function LandingPage() {
               <img
                 src="/images/filters.webp"
                 alt="showing how a user can filter by pages needed by clicking the checkbox 1 page only, to filter by that tag"
-                loading="eager"
+                loading="lazy"
                 width="312"
                 height="312"
               />
@@ -117,7 +117,7 @@ export default function LandingPage() {
               <img
                 src="/images/quiz.webp"
                 alt="which website builder fits you quiz, where you answer a few questions to quickly narrow down your options."
-                loading="eager"
+                loading="lazy"
                 width="376"
                 height="376"
               />

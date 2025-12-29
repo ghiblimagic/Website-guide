@@ -20,12 +20,12 @@ export default function ImageDownload({
       <img
         srcSet={srcSet}
         alt={alt}
-        sizes="(max-width: 640px) 200px, 320px"
-        className="w-full h-auto rounded mb-3 mx-auto max-w-4xl"
+        sizes="(max-width: 800px) 672px, 248px"
+        className="w-full h-auto rounded mb-3 mx-auto max-w-2xl"
         // h-auto  Maintains the image's aspect ratio as it scales
         loading="lazy"
-        width="1156"
-        height="3626"
+        width="672"
+        height="2108"
       />
 
       <div className="text-center pt-6">
