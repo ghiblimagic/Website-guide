@@ -19,9 +19,15 @@ const CollapsibleList = ({
 
   if (!itemsArray || itemsArray.length === 0) return null;
 
+  // Special case: single string item
   if (itemsArray.length === 1 && typeof itemsArray[0] === "string") {
-    return <p className={singleItemClassName}>{itemsArray[0]}</p>;
+    return (
+      <p className={singleItemClassName}>
+        ● <ConvertStringLinkToA item={itemsArray[0]} />
+      </p>
+    );
   }
+
   const renderItem = (
     item: string | string[] | (string | string[])[],
     idx: number,
@@ -95,9 +101,12 @@ const CollapsibleList = ({
       <summary className={summaryClassName}>
         {typeof items[0] === "string" ? items[0] : "Details"}
       </summary>
-      <ul className="space-y-1  mt-2 ml-4 mb-2">
-        {items.slice(1).map(renderItem)}
-      </ul>
+
+      {items.length > 1 && (
+        <ul className="space-y-1  mt-2 ml-4 mb-2">
+          {items.slice(1).map(renderItem)}
+        </ul>
+      )}
     </details>
   );
 };
