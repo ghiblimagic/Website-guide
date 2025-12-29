@@ -18,12 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <link
+        <link
           rel="preload"
           as="image"
-          href="/images/transparent-logo-bright-small.webp"
-          fetchPriority="high"
-        /> */}
+          href="/images/background.jpg"
+          media="(min-width: 768px)"
+        />
       </head>
       <body
         className={`${openSans.variable} ${JosefinSans.variable} antialiased min-h-screen flex flex-col`}

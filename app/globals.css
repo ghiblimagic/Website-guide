@@ -21,6 +21,7 @@
 
 body {
   background-image: url("/images/background.jpg");
+
   color: var(--foreground);
   font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
 }
