@@ -9,7 +9,7 @@ export default function LandingPage() {
         rel="preload"
         as="image"
         href="/images/stressed.webp"
-        imageSrcSet="/images/stressed-mobile.webp 300w, /images/stressed.webp 480w"
+        imageSrcSet="/images/stressed-mobile.webp 300w, /images/stressed.webp 480w, /images/stressed-large.webp 640w"
         imageSizes="(max-width: 640px) 200px, 320px"
         fetchPriority="high"
       />
@@ -49,8 +49,8 @@ export default function LandingPage() {
           <div className="text-center">
             {" "}
             <img
-              srcSet="/images/stressed-mobile.webp 300w, /images/stressed.webp 480w"
-              sizes="(max-width: 640px) 200px, 320px"
+              srcSet="/images/stressed-mobile.webp 300w, /images/stressed.webp 480w, /images/stressed-large.webp 640w"
+              sizes="(max-width: 640px) 200px, 310px"
               alt="Someone sitting in front of a laptop, looking stressed."
               className="w-50 sm:w-56 md:w-80 h-auto shrink-0"
               loading="eager"
@@ -80,8 +80,8 @@ export default function LandingPage() {
                 src="/images/comparison.webp"
                 alt="showing the fields available for users to toggle off an on like summary, difficulty, cost, trial, best for, seo"
                 loading="lazy"
-                width="343"
-                height="343"
+                width="360"
+                height="360"
               />
             </div>
             <h2 className="text-xl font-semibold mb-3 text-gray-900">
@@ -99,8 +99,8 @@ export default function LandingPage() {
                 src="/images/filters.webp"
                 alt="showing how a user can filter by pages needed by clicking the checkbox 1 page only, to filter by that tag"
                 loading="lazy"
-                width="312"
-                height="312"
+                width="360"
+                height="360"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -118,8 +118,8 @@ export default function LandingPage() {
                 src="/images/quiz.webp"
                 alt="which website builder fits you quiz, where you answer a few questions to quickly narrow down your options."
                 loading="lazy"
-                width="376"
-                height="376"
+                width="360"
+                height="360"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
