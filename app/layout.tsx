@@ -18,13 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/dotsBackground.png"
-          fetchPriority="high"
-        />
-
         {/* <link
           rel="preload"
           as="image"
@@ -75,8 +68,6 @@ export default function RootLayout({
                   minHeight: "30px",
                   display: "inline-block",
                 }}
-                loading="eager"
-                fetchPriority="high"
               />
             </a>
           </div>

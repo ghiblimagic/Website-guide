@@ -7,14 +7,22 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <main className="">
-        <WebsiteBuilderGuide
-          builders={websiteBuilders}
-          questions={guidingQuestions}
-          categories={tagCategories}
-        />
-      </main>
-    </div>
+    <>
+      <link
+        rel="preload"
+        as="image"
+        href="/images/dotsBackground.png"
+        fetchPriority="high"
+      />
+      <div className="min-h-screen">
+        <main className="">
+          <WebsiteBuilderGuide
+            builders={websiteBuilders}
+            questions={guidingQuestions}
+            categories={tagCategories}
+          />
+        </main>
+      </div>
+    </>
   );
 }
