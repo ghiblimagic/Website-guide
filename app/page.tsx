@@ -12,26 +12,6 @@ export default function LandingPage() {
         fetchPriority="high"
       />
 
-      <link
-        rel="preload"
-        as="image"
-        href="/images/comparison.webp"
-        fetchPriority="high"
-      />
-
-      <link
-        rel="preload"
-        as="image"
-        href="/images/filters.webp"
-        fetchPriority="high"
-      />
-
-      <link
-        rel="preload"
-        as="image"
-        href="/images/quiz.webp"
-        fetchPriority="high"
-      />
       {/* Hero Section */}
       <section className="bg-white pt-6 md:pt-20 pb-12 sm:pb-32">
         <div className="max-w-5xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center sm:gap-8">
