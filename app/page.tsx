@@ -1,9 +1,37 @@
 import Link from "next/link";
 import DownloadImage from "@/app/components/DownloadImage";
 import FlowchartOverviewButton from "./components/FlowchartOverviewButton";
+
 export default function LandingPage() {
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href="/images/stressed.webp"
+        fetchPriority="high"
+      />
+
+      <link
+        rel="preload"
+        as="image"
+        href="/images/comparison.webp"
+        fetchPriority="high"
+      />
+
+      <link
+        rel="preload"
+        as="image"
+        href="/images/filters.webp"
+        fetchPriority="high"
+      />
+
+      <link
+        rel="preload"
+        as="image"
+        href="/images/quiz.webp"
+        fetchPriority="high"
+      />
       {/* Hero Section */}
       <section className="bg-white pt-6 md:pt-20 pb-12 sm:pb-32">
         <div className="max-w-5xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center sm:gap-8">
@@ -43,6 +71,8 @@ export default function LandingPage() {
               alt="Someone sitting in front of a laptop, looking stressed."
               className="w-50 sm:w-56 md:w-80 h-auto shrink-0"
               loading="eager"
+              width="480"
+              height="403"
             />
             <small className="text-blue-950 inline-block mt-2 w-full text-center ">
               <a
@@ -67,6 +97,8 @@ export default function LandingPage() {
                 src="/images/comparison.webp"
                 alt="showing the fields available for users to toggle off an on like summary, difficulty, cost, trial, best for, seo"
                 loading="eager"
+                width="343"
+                height="343"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -84,6 +116,8 @@ export default function LandingPage() {
                 src="/images/filters.webp"
                 alt="showing how a user can filter by pages needed by clicking the checkbox 1 page only, to filter by that tag"
                 loading="eager"
+                width="312"
+                height="312"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -101,6 +135,8 @@ export default function LandingPage() {
                 src="/images/quiz.webp"
                 alt="which website builder fits you quiz, where you answer a few questions to quickly narrow down your options."
                 loading="eager"
+                width="376"
+                height="376"
               />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">

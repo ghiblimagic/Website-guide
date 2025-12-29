@@ -21,6 +21,8 @@ export default function ImageDownload({
         className="w-full h-auto rounded mb-3 mx-auto max-w-4xl"
         // h-auto  Maintains the image's aspect ratio as it scales
         loading="lazy"
+        width="1156"
+        height="3626"
       />
 
       <div className="text-center pt-6">

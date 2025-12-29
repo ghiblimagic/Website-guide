@@ -136,8 +136,9 @@ export default function RootLayout({
               >
                 <img
                   src="/images/kofi_symbol.webp"
-                  width="22"
-                  height="22"
+                  className="w-8"
+                  width="321"
+                  height="258"
                   alt="Ko-fi logo"
                 />{" "}
                 Buy Me Coffee
@@ -159,7 +160,7 @@ export default function RootLayout({
             </div>
           </section>
 
-          <small className="text-center block mx-auto pt-8 pb-3">
+          <small className="text-center block mx-auto pt-8 pb-3 text-white">
             {" "}
             © 2025 Janet Spellman. All rights reserved.
           </small>
