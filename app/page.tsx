@@ -9,7 +9,7 @@ export default function LandingPage() {
         rel="preload"
         as="image"
         href="/images/stressed.webp"
-        imageSrcSet="/images/stressed-small.webp 300w, /images/stressed.webp 480w"
+        imageSrcSet="/images/stressed-mobile.webp 300w, /images/stressed.webp 480w"
         imageSizes="(max-width: 640px) 200px, 320px"
         fetchPriority="high"
       />
