@@ -75,7 +75,12 @@ export default function LandingPage() {
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
-            <div className="w-45 h-45  rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <div className="w-45 h-45 bg-blue-100  rounded-lg flex items-center justify-center mb-4 mx-auto">
+              {/* not bothering with srcset since these images are small and lazy loaded for mobile
+              
+              on desktop, it sees these lazy loaded images are in the viewport and will start loading them immediately and they're small enough to not be a huge issue.
+              
+              a blur placholder is overkill for these small images, added bg-blue-100 instead that will show until the image loads in the declared width and height*/}
               <img
                 src="/images/comparison.webp"
                 alt="showing the fields available for users to toggle off an on like summary, difficulty, cost, trial, best for, seo"
@@ -94,7 +99,7 @@ export default function LandingPage() {
           </div>
 
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
-            <div className="w-45 h-45 bg-blue-100 rounded-lg  mb-4 mx-auto ">
+            <div className="w-45 h-45  bg-blue-100 rounded-lg  mb-4 mx-auto ">
               <img
                 src="/images/filters.webp"
                 alt="showing how a user can filter by pages needed by clicking the checkbox 1 page only, to filter by that tag"
