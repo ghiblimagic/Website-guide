@@ -128,8 +128,8 @@ export default function RootLayout({
                 <img
                   src="/images/kofi_symbol.webp"
                   className="w-8"
-                  width="321"
-                  height="258"
+                  width="32"
+                  height="26"
                   alt="Ko-fi logo"
                 />{" "}
                 Buy Me Coffee
