@@ -101,9 +101,9 @@ export default function LandingPage() {
                 height="343"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
+            <h2 className="text-xl font-semibold mb-3 text-gray-900">
               Quick Comparison
-            </h3>
+            </h2>
             <p className="text-gray-600">
               Compare top website builders based on features that you care
               about.
