@@ -113,8 +113,8 @@ export default function RootLayout({
               <h2 className="text-2xl"> Send Thanks </h2>
               <p className="my-5 max-w-[400px]">
                 {" "}
-                If you found this webpage helpful you can send me a coffee.
-                It&apos;s much appreciated!
+                If you found this helpful, you can send me a tea. It’s a
+                tea-riffic way to show thanks! 😉
               </p>
               <a
                 href="https://ko-fi.com/ghiblimagic"
@@ -130,7 +130,7 @@ export default function RootLayout({
                   height="26"
                   alt="Ko-fi logo"
                 />{" "}
-                Buy Me Coffee
+                Buy Me Tea
               </a>
             </div>
 
