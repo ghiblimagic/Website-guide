@@ -173,8 +173,8 @@ export default function LandingPage() {
         </h2>
 
         <DownloadImage
-          downloadSrc="/images/website-flowchart.webp"
-          srcSet="/images/website-flowchart.webp 609w, /images/website-flowchart-mobile.webp 1156w"
+          downloadSrc="/images/website-flowchart-large.webp"
+          srcSet="/images/website-flowchart.webp 672w, /images/website-flowchart-large.webp 1344w"
           alt="Flowchart diagram, there is a text version below"
           label="Download flowchart"
         />
