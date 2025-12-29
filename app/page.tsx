@@ -47,7 +47,8 @@ export default function LandingPage() {
           <div className="text-center">
             {" "}
             <img
-              src="/images/stressed.webp"
+              srcSet="/images/stressed-mobile.webp 300w, /images/stressed.webp 480w"
+              sizes="(max-width: 640px) 200px, 320px"
               alt="Someone sitting in front of a laptop, looking stressed."
               className="w-50 sm:w-56 md:w-80 h-auto shrink-0"
               loading="eager"
