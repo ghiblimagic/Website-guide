@@ -1,14 +1,16 @@
 import ButtonALink from "@/app/components/ButtonALink";
 
 interface ImageDownloadProps {
-  src: string;
+  srcSet: string;
+  downloadSrc: string;
   alt: string;
   label: string;
   styling?: string;
 }
 
 export default function ImageDownload({
-  src,
+  srcSet,
+  downloadSrc,
   alt,
   label,
   styling,
@@ -16,8 +18,9 @@ export default function ImageDownload({
   return (
     <div className="my-6 p-4">
       <img
-        src={src}
+        srcSet={srcSet}
         alt={alt}
+        sizes="(max-width: 640px) 200px, 320px"
         className="w-full h-auto rounded mb-3 mx-auto max-w-4xl"
         // h-auto  Maintains the image's aspect ratio as it scales
         loading="lazy"
@@ -27,7 +30,7 @@ export default function ImageDownload({
 
       <div className="text-center pt-6">
         <ButtonALink
-          href={src}
+          href={downloadSrc}
           label={label}
           styling={styling}
           download={true}
