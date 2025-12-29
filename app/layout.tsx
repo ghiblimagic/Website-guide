@@ -87,7 +87,7 @@ export default function RootLayout({
           >
             Skip to content
           </a>
-          <section className="my-auto text-lg">
+          <section className="my-auto text-lg text-white">
             <Link
               href="/"
               className="pr-3 sm:px-6"
@@ -119,7 +119,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="bg-blue-900 border-t-2 border-white  ">
-          <section className="py-2 px-6 flex flex-col sm:flex-row text-center justify-between mx-auto gap-4 sm:gap-20 max-w-5xl">
+          <section className="py-2 px-6 flex flex-col sm:flex-row text-center justify-between mx-auto gap-4 sm:gap-20 max-w-5xl text-white">
             <div className="my-5">
               <h2 className="text-2xl"> Send Thanks </h2>
               <p className="my-5 max-w-[400px]">
