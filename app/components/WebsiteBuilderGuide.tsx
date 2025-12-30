@@ -192,7 +192,10 @@ export default function WebsiteBuilderGuide({
           {/* Header Toolbar */}
           <div className="border-b border-blue-200 shadow-sm bg-blue-50">
             <div className="px-6 py-4 ">
-              <h1 className="text-4xl font-bold text-blue-950 my-6 text-center">
+              <h1
+                className="text-4xl font-bold text-blue-950 my-6 text-center"
+                id="website-builder-finder"
+              >
                 Website Builder Finder
               </h1>
               <div className="flex items-center gap-4 mb-10  ">

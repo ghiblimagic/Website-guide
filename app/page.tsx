@@ -502,7 +502,7 @@ export default function LandingPage() {
 
           <Link
             className="inline-block px-10 py-4 bg-white text-blue-800 rounded-lg font-semibold text-lg hover:bg-blue-100 border-b-4 border-blue-400 transition-all hover:scale-105 shadow-lg "
-            href="/guide"
+            href="/guide#website-builder-finder"
           >
             Start Your Search Now
           </Link>
