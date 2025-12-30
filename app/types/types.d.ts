@@ -92,7 +92,7 @@ export type GuidingOption = {
   label: string;
   action: {
     category: TagCategory;
-    tag: string;
+    tag?: string; //optional for if the "no" option is chose on the quiz for the need a shop question
   };
 };
 

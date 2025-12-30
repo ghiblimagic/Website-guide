@@ -96,11 +96,12 @@ export default function WebsiteBuilderGuide({
     tag,
   }: {
     category: keyof SelectedTags;
-    tag: string;
+    tag?: string;
   }) => {
     setSelectedTags((prev) => {
       const current = prev[category];
 
+      // If tag is empty string or undefined, clear the filters for this category
       if (!tag) {
         return {
           ...prev,
@@ -153,7 +154,7 @@ export default function WebsiteBuilderGuide({
 
     return builders.filter((builder) => {
       return Object.entries(selectedTags).every(([category, tags]) => {
-        if (tags.length === 0) return true;
+        if (tags.length === 0 || tags.includes("none")) return true;
         return tags.some((tag: string) =>
           builder.tags[category as TagCategory].includes(tag),
         );

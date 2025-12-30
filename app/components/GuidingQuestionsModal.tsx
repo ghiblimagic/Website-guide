@@ -10,7 +10,7 @@ interface GuidingQuestionsModalProps {
   selectedTags: SelectedTags;
   handleGuidingAnswer: (action: {
     category: keyof SelectedTags;
-    tag: string;
+    tag?: string;
   }) => void;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -117,8 +117,8 @@ export default function GuidingQuestionsModal({
               <div className="flex gap-2 flex-wrap">
                 {q.options.map((opt, idx) => {
                   const { category, tag } = opt.action;
-                  const isActive = tag && selectedTags[category]?.includes(tag);
-
+                  const isActive =
+                    tag !== undefined && selectedTags[category]?.includes(tag);
                   return (
                     <button
                       key={idx}
