@@ -2911,10 +2911,6 @@ export const guidingQuestions: GuidingQuestion[] = [
     question: "Need an online shop?",
     options: [
       {
-        label: "No",
-        action: { category: "shop", tag: "none" },
-      },
-      {
         label: "Yes, a small shop",
         action: { category: "shop", tag: "small shop" },
       },
