@@ -2894,7 +2894,7 @@ export const guidingQuestions: GuidingQuestion[] = [
   {
     id: 1,
     question:
-      "Do you just need to show basic information and have a contact form?",
+      "Do you just need a simple website that only shows basic information and has a contact form?",
     options: [
       {
         label: "Yes",
