@@ -49,7 +49,10 @@ export default function GoToTopButton() {
           onClick={scrollToTop}
           className="fixed bottom-16 right-6 py-3 px-5 rounded-full transition z-50 bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-950 border-b-2 border-white "
         >
-          <ArrowBigUp size={24} />
+          <ArrowBigUp
+            size={24}
+            color="white"
+          />
         </button>
       )}
     </>

@@ -111,7 +111,7 @@ export default function RootLayout({
           <section className="py-2 px-6 flex flex-col sm:flex-row text-center justify-between mx-auto gap-4 sm:gap-20 max-w-5xl text-white">
             <div className="my-5">
               <h2 className="text-2xl"> Send Thanks </h2>
-              <p className="my-5 max-w-[400px]">
+              <p className="my-5 max-w-[400px] mx-auto">
                 {" "}
                 If you found this helpful, you can send me a tea. It’s a
                 tea-riffic way to show thanks! 😉
@@ -143,7 +143,10 @@ export default function RootLayout({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <h2 className="font-josefin-sans text-2xl sm:mr-2 my-1 text-white  text-wrap max-w-[10ch] sm:max-w-none hidden sm:inline-block">
+                  <h2
+                    className="font-josefin-sans text-2xl mr-2 my-1 text-white  text-wrap max-w-[10ch] 
+                  md:max-w-none inline-block"
+                  >
                     {" "}
                     Spellman&apos;s Consulting{" "}
                   </h2>
