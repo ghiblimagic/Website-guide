@@ -20,8 +20,8 @@
 }
 
 body {
-  background-image: url("/images/background.jpg");
-
+  background-color: white;
+  /* rgb(239 246 255); */
   color: var(--foreground);
   font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
 }

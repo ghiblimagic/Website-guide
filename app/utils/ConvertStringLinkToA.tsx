@@ -35,7 +35,7 @@ export default function ConvertStringLinkToA({ item }: { item: string }) {
           href={part}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 underline break-all"
+          className="text-blue-950 underline break-all"
         >
           {part}
         </a>

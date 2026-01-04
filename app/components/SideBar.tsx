@@ -1,6 +1,6 @@
 import StyledButton from "./StyledButton";
 
-import { ChevronLeft, Filter, RotateCcw } from "lucide-react";
+import { ChevronLeft, RotateCcw } from "lucide-react";
 import type { SelectedTags, TagCategory, VisibleFields } from "../types/types";
 
 interface SidebarProps {
@@ -24,21 +24,16 @@ export default function Sidebar({
 }: SidebarProps) {
   return (
     <div
-      style={{ backgroundImage: `url('/images/dotsBackground.png')` }}
       className={`${
         sidebarOpen ? "w-80" : "w-0"
-      } transition-all duration-300 bg-blue-900 border-r border-blue-200 overflow-hidden`}
+      } transition-all duration-300 bg-blue-900  overflow-hidden`}
     >
       <div className="flex flex-col text-white">
         {/* Header */}
         <div className="px-5 pt-6">
-          <div className="flex justify-between items-center bg-blue-900 pb-4 border border-white rounded-t-2xl">
-            <div className="flex items-center gap-2 py-4 px-8 mx-auto rounded-2xl">
-              <Filter
-                size={20}
-                className="text-white"
-              />
-              <h3 className="text-2xl font-bold">Filters</h3>
+          <div className="flex justify-between items-center bg-blue-900 rounded-t-2xl border-b border-white pb-4">
+            <div className="flex items-center gap-2 py-4 px-8 mx-auto">
+              <h3 className="text-2xl font-bold ">Filters</h3>
             </div>
             <StyledButton
               onClick={() => setSidebarOpen(false)}
@@ -59,9 +54,9 @@ export default function Sidebar({
           Skip to content
         </a>
 
-        <div className="flex-1 mx-5 pt-5 bg-blue-900 pb-4 border-x border-b rounded-b-2xl border-white pl-3">
+        <div className="flex-1 mx-5 pt-8 bg-blue-900 pb-4   pl-3">
           {activeTagCount > 0 && (
-            <div className="text-center mb-2">
+            <div className="text-center mb-4">
               <StyledButton
                 onClick={clearAllTags}
                 text={`Clear Filters (${activeTagCount})`}
@@ -78,9 +73,9 @@ export default function Sidebar({
           {Object.entries(tagCategories).map(([category, tags]) => (
             <div
               key={category}
-              className="mb-8 last:mb-0"
+              className="mb-8 pb-8 last:mb-0 border-white border-b"
             >
-              <h3 className="font-semibold mb-3 capitalize text-xl tracking-wider">
+              <h3 className="font-semibold mb-3 capitalize text-xl tracking-wider ">
                 {category}
               </h3>
               <div className="space-y-2">

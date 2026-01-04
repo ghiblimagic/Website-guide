@@ -12,7 +12,7 @@ export default function ButtonALink({
   href,
   label,
   download = false,
-  color = "bg-secondaryColor",
+  color = "",
   styling = "",
 }: ButtonALinkProps) {
   let downloadName: string | undefined;
@@ -35,7 +35,7 @@ export default function ButtonALink({
 
   const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {
     href,
-    className: `inline-block px-4 py-2 m-1 rounded-2xl     border-2 text-blue-900 font-semibold border-blue-700 bg-blue-100 hover:bg-blue-200 ${color} ${styling}`,
+    className: `inline-block px-4 py-2 m-1 rounded-2xl     border-2 text-blue-900 font-semibold border-blue-300 hover:bg-blue-200 ${color} ${styling}`,
   };
 
   if (downloadName) {

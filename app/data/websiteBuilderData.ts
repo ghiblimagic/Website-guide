@@ -11,7 +11,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐",
+    difficulty: "★",
     cost: ["Free"],
     trial: ["N/A"],
     bestFor: [
@@ -80,7 +80,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐",
+    difficulty: "★",
     cost: [
       "Free website builder and hosting with a google account",
       [
@@ -235,7 +235,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐",
+    difficulty: "★",
     cost: [
       "VERY cheap",
       "https://carrd.co/pro",
@@ -369,7 +369,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐",
+    difficulty: "★",
     cost: [
       "https://www.pixpa.com/pricing",
       [
@@ -532,7 +532,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐⭐",
+    difficulty: "★★",
     cost: [
       "https://www.squarespace.com/pricing",
       [
@@ -772,7 +772,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐⭐",
+    difficulty: "★★",
     cost: [
       "https://www.hostinger.com/pricing/website-builder",
       [
@@ -942,7 +942,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: ["built in POS"],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐⭐",
+    difficulty: "★★",
     cost: [
       "https://squareup.com/us/en/pricing",
       [
@@ -1155,7 +1155,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: ["built in POS"],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐⭐",
+    difficulty: "★★★",
     cost: [
       "https://www.wix.com/plans",
       [
@@ -1372,7 +1372,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐",
+    difficulty: "★",
     cost: [
       "https://getsiimple.com/#pricing",
       [
@@ -1541,7 +1541,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: ["built in POS"],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐⭐",
+    difficulty: "★★★",
     cost: [
       "https://www.shopify.com/pricing",
       [
@@ -1792,7 +1792,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: ["built in POS"],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐⭐",
+    difficulty: "★★★",
     cost: [
       "https://www.ecwid.com/pricing",
       [
@@ -2036,7 +2036,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["high difficulty"],
     },
-    difficulty: "⭐⭐⭐⭐⭐",
+    difficulty: "★★★★★",
     cost: [
       "Depends on where you host it, WordPress itself is free. You'd choose your host and build your WordPress site there. Most hosts have 1-click install.",
       "Hostinger",
@@ -2284,7 +2284,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["medium difficulty"],
     },
-    difficulty: "⭐⭐⭐⭐",
+    difficulty: "★★★★",
     cost: [
       "https://wordpress.com/pricing/#lpc-pricing",
       [
@@ -2509,7 +2509,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["high difficulty"],
     },
-    difficulty: "⭐⭐⭐⭐⭐",
+    difficulty: "★★★★★",
     cost: [
       "https://webflow.com/pricing",
       [
@@ -2709,7 +2709,7 @@ export const websiteBuilders: WebsiteBuilder[] = [
       POS: [] as string[],
       "learning curve": ["low difficulty"],
     },
-    difficulty: "⭐",
+    difficulty: "★",
     cost: [
       "Free",
       [

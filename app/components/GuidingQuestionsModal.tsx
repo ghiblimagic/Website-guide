@@ -128,7 +128,7 @@ export default function GuidingQuestionsModal({
                         ${
                           isActive
                             ? "bg-blue-500 text-white shadow-lg"
-                            : "bg-white border-2 border-blue-500 text-blue-700 hover:bg-blue-50 hover:shadow-md"
+                            : "bg-white border-2 border-blue-300 text-blue-750 hover:bg-blue-50 hover:shadow-md"
                         }
                       `}
                     >

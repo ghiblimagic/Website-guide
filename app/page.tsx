@@ -38,7 +38,7 @@ export default function LandingPage() {
               </Link>
 
               <Link
-                className="inline-block px-6 sm:px-10 py-4 border-2 text-blue-900 font-semibold border-blue-700 bg-blue-100 hover:bg-blue-200 rounded-2xl"
+                className="inline-block px-6 sm:px-10 py-4 border-2 text-blue-900 font-semibold border-blue-300  hover:bg-blue-200 rounded-2xl"
                 href="#flowchart"
               >
                 Flowchart
@@ -72,7 +72,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className=" bg-blue-50 mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
             <div className="w-45 h-45 bg-blue-100  rounded-lg flex items-center justify-center mb-4 mx-auto">
@@ -494,7 +494,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="mx-auto px-4 py-20 border-t-4">
+      <section className="mx-auto px-4 py-20  bg-blue-50">
         <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-900 to-blue-700 rounded-3xl p-12 text-center shadow-2xl">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to find your match?

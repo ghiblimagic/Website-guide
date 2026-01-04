@@ -17,20 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/background.jpg"
-          media="(min-width: 768px)"
-        />
-      </head>
       <body
         className={`${openSans.variable} ${JosefinSans.variable} antialiased min-h-screen flex flex-col`}
       >
         <GoToTopButton />
         <nav
-          className="bg-blue-900 border-b-2 border-white py-2 px-6 flex justify-between w-full gap-4 align-baseline"
+          className="bg-blue-900  py-2 px-6 flex justify-between w-full gap-4 align-baseline"
           aria-label="Main navigation"
         >
           {" "}

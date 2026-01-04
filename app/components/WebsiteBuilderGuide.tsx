@@ -191,7 +191,7 @@ export default function WebsiteBuilderGuide({
         {/* Main Content */}
         <div className="flex-1 flex flex-col overflow-hidden pb-8">
           {/* Header Toolbar */}
-          <div className="border-b border-blue-200 shadow-sm bg-blue-50">
+          <div className="">
             <div className="px-6 py-4 ">
               <h1
                 className="text-4xl font-bold text-blue-950 my-6 text-center"
@@ -206,10 +206,11 @@ export default function WebsiteBuilderGuide({
                     // className="p-2.5 bg-blue-600 rounded-xl border-b-2 border-white  hover:bg-blue-700 shadow-md shadow-blue-950 transition-colors"
                     title="Show filters"
                     primary
+                    text="Filter"
                   >
                     <Filter
                       size={20}
-                      className="text-white"
+                      className="mr-2 text-white"
                     />
                   </StyledButton>
                 )}

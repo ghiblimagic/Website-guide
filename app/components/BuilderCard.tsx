@@ -58,8 +58,10 @@ export default function BuilderCard(props: BuilderCardProps) {
       key={props.id}
       className="bg-blue-50 rounded-xl shadow-sm border border-blue-200 overflow-hidden hover:shadow-md transition-shadow"
     >
-      <div className="bg-gradient-to-r from-blue-900 to-blue-700 px-8 py-6">
-        <h2 className="text-3xl font-bold text-white">{props.name}</h2>
+      <div className="bg-blue-900 px-8 py-6">
+        <h2 className="text-3xl font-bold text-white text-center">
+          {props.name}
+        </h2>
       </div>
 
       <div className="p-2 sm:p-8 ">
@@ -70,33 +72,33 @@ export default function BuilderCard(props: BuilderCardProps) {
             !props.summaryVisible ? "hidden" : "grid md:grid-cols-2 gap-6 mb-4"
           }
         >
-          <div className="bg-green-50 rounded-lg p-6 border border-green-200">
+          <div className="bg-white rounded-lg p-6 border border-blue-200 mb-4">
             <div className="flex items-center gap-2 mb-4">
               <CheckCircle2
                 size={20}
                 className="text-green-600"
               />
-              <h3 className="font-semibold text-green-900 text-lg">
+              <h3 className="font-semibold text-blue-950 text-lg">
                 Perfect if:
               </h3>
             </div>
             <NestedList
               items={props.perfectIf}
-              iconStyling="text-green-900 "
+              iconStyling="text-blue-950"
             />
           </div>
 
-          <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+          <div className="bg-white  rounded-lg p-6 border border-blue-200 mb-4">
             <div className="flex items-center gap-2 mb-4">
               <XCircle
                 size={20}
                 className="text-red-600"
               />
-              <h3 className="font-semibold text-red-900 text-lg">Skip if:</h3>
+              <h3 className="font-semibold text-blue-950 text-lg">Skip if:</h3>
             </div>
             <NestedList
               items={props.skipIf}
-              iconStyling="text-red-900 "
+              iconStyling="text-blue-950 "
             />
           </div>
         </div>
@@ -105,22 +107,22 @@ export default function BuilderCard(props: BuilderCardProps) {
           className={
             !props.bestForVisible
               ? "hidden"
-              : "bg-gray-50 rounded-lg p-4  border border-blue-200 col-span-1 md:col-span-2"
+              : "bg-white mb-8 rounded-lg p-6 border border-blue-200 col-span-1 md:col-span-2"
           }
         >
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 ">
             <h3 className="text-xl font-semibold text-blue-950">Best For</h3>
           </div>
           <NestedList items={props.bestFor} />
         </div>
 
         {/* Quick Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 mt-4 ">
           <div
             className={
               !props.difficultyVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -129,7 +131,7 @@ export default function BuilderCard(props: BuilderCardProps) {
               </h3>
             </div>
             <p
-              className="text-2xl font-bold"
+              className="text-2xl font-bold text-blue-950 mb-2"
               aria-hidden="true"
             >
               {props.difficulty}
@@ -147,7 +149,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.trialVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -160,7 +162,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.costVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -174,7 +176,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.seoVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -191,7 +193,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.supportVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -206,7 +208,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.ecommerceVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -221,7 +223,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.migrationVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -237,7 +239,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.securityVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -250,7 +252,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.accessibilityVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -265,7 +267,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.collaborationVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -283,7 +285,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.appStoreVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -299,7 +301,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             className={
               !props.examplesVisible
                 ? "hidden"
-                : "bg-gray-50 rounded-lg p-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
+                : "bg-white rounded-lg p-6 mb-4 border border-blue-200 col-span-1 md:col-span-2 lg:col-span-3"
             }
           >
             <div className="flex items-center gap-2 mb-2">
@@ -315,7 +317,7 @@ export default function BuilderCard(props: BuilderCardProps) {
           className={
             !props.moreInfoVisible
               ? "hidden"
-              : "bg-gray-50 rounded-lg p-6 border border-blue-200 mb-8"
+              : "bg-white rounded-lg p-6 border border-blue-200 mb-8"
           }
         >
           <h3 className="font-semibold text-blue-950 text-xl mb-3">
@@ -331,7 +333,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             !props.proConsVisible ? "hidden" : "grid md:grid-cols-2 gap-6"
           }
         >
-          <div className="w-full max-w-full overflow-hidden bg-gray-50 rounded-lg p-4 border border-blue-200">
+          <div className="w-full max-w-full overflow-hidden bg-white rounded-lg p-6 mb-4 border border-blue-200">
             <h3 className="font-semibold text-blue-950 mb-3 text-xl">Pros</h3>
 
             <NestedList
@@ -341,7 +343,7 @@ export default function BuilderCard(props: BuilderCardProps) {
             />
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-4 border border-blue-200">
+          <div className="bg-white rounded-lg p-6 mb-4 border border-blue-200">
             <h3 className="font-semibold text-blue-950 mb-3 text-xl">Cons</h3>
 
             <NestedList
