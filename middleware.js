@@ -1,15 +1,23 @@
 import { NextResponse } from "next/server";
 import { PostHog } from "posthog-node";
+import crypto from "crypto";
 
 // see readme's analytics section for notes regarding analytics
 export function middleware(request) {
   const response = NextResponse.next();
 
   // Anonymous/fallback identifier: truncate IP + partial UA
-  const anonymousId = request.ip
-    ? `${request.ip.split(".").slice(0, 3).join(".")}-` + // only first 3 octets
-      `${request.headers.get("user-agent")?.slice(0, 20) || "unknown"}`
+  const truncatedIp = request.ip
+    ? request.ip.split(".").slice(0, 3).join(".")
     : "unknown";
+  const partialUA =
+    request.headers.get("user-agent")?.slice(0, 20) || "unknown";
+
+  // Hash them together for privacy
+  const anonymousId = crypto
+    .createHash("sha256")
+    .update(`${truncatedIp}-${partialUA}`)
+    .digest("hex");
 
   const posthog = new PostHog(process.env.POSTHOG_KEY, {
     host: process.env.POSTHOG_HOST,
