@@ -9,6 +9,15 @@ interface NextRequestWithIP extends NextRequest {
   //optional because some environments may not provide it (ex: brave browser)
 }
 
+function simpleHash(str: string): string {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0; // Convert to 32-bit integer
+  }
+  return hash.toString(16);
+}
+
 export function middleware(request: NextRequestWithIP) {
   const response = NextResponse.next();
   const posthogKey = process.env.POSTHOG_KEY;
@@ -22,10 +31,7 @@ export function middleware(request: NextRequestWithIP) {
     request.headers.get("user-agent")?.slice(0, 20) || "unknown";
 
   // Hash together for privacy
-  const anonymousId = crypto
-    .createHash("sha256")
-    .update(`${truncatedIp}-${partialUA}`)
-    .digest("hex");
+  const anonymousId = simpleHash(`${truncatedIp}-${partialUA}`);
 
   const posthog = new PostHog(posthogKey, {
     host: process.env.POSTHOG_HOST,

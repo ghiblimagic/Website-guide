@@ -38,9 +38,11 @@ Fallback fingerprinting (IP + User-Agent) could still be considered personal dat
 
 - Truncated IP + partial UA could, in theory, be used to approximate a user on a shared network, but it’s still pseudonymous, not directly identifying.
 
-**Solution** hashed the Truncated IP + partial UA before sending it to posthog
+**Solution** hash the Truncated IP + partial UA before sending it to posthog
 
 - So even if someone intercepts the analytics they they cannot reconstruct the IP + UA, making it more privacy-friendly.
+
+- Unfortunately the crypto package isn't available in middleware/edge function. So a simple hash function was used. It's Deterministic → same input always produces same output so it wouldn't be secure for passwords, but in this case, its just to help make the truncated Ids more extra anonymous.
 
 **Cons**
 
