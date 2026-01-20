@@ -6,7 +6,7 @@ This project uses PostHog for analytics.
 
 **Problem**: Netlify no longer has a free analytics service and next.js no longer allows for external domains to use its vercel/analytics package on projects not hosted on vercel.
 
-**Solution**: I choose posthog due to its generous free tier.
+**Solution**: I choose posthog due to its generous free tier. I couldn't move the project to Next.js since guide.janetspellman is a subdomain of my astro portfolio's domain janetspellman.com.
 
 **Problem**: Post-hog's client js would be blocked by adblockers like ublock.
 
