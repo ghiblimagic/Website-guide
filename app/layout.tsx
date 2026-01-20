@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { openSans, JosefinSans } from "./fonts";
 import "./globals.css";
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/react";
 
 import GoToTopButton from "@/app/components/GoToTopButton";
 
@@ -184,8 +183,6 @@ export default function RootLayout({
             © 2025 Janet Spellman. All rights reserved.
           </small>
         </footer>
-
-        <Analytics />
       </body>
     </html>
   );
