@@ -1,26 +1,15 @@
 import { NextResponse } from "next/server";
 import { PostHog } from "posthog-node";
 
-// chose to do middleware.js because every page request will be tracked server-side, bypassing ad blockers
-
+// see readme's analytics section for notes regarding analytics
 export function middleware(request) {
   const response = NextResponse.next();
 
-  // Problem: all views from different devices but the same IP were being shown as the same vistor
-  // Solution: Use cookies
-  // that way even if users are on a public wifi, but using the same user agent (browser) they still get tracked as individual users
-
-  let visitorId = request.cookies.get("website_guide_visitor_id")?.value;
-
-  if (!visitorId) {
-    visitorId = `visitor-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
-
-    response.cookies.set("website_guide_visitor_id", visitorId, {
-      maxAge: 60 * 60 * 24 * 365, // 1 year expiry
-      httpOnly: true,
-      sameSite: "lax",
-    });
-  }
+  // Anonymous/fallback identifier: truncate IP + partial UA
+  const anonymousId = request.ip
+    ? `${request.ip.split(".").slice(0, 3).join(".")}-` + // only first 3 octets
+      `${request.headers.get("user-agent")?.slice(0, 20) || "unknown"}`
+    : "unknown";
 
   const posthog = new PostHog(process.env.POSTHOG_KEY, {
     host: process.env.POSTHOG_HOST,
@@ -28,7 +17,7 @@ export function middleware(request) {
 
   // Track pageview
   posthog.capture({
-    distinctId: visitorId,
+    distinctId: anonymousId,
     event: "$pageview",
     properties: {
       $current_url: request.url,
