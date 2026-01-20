@@ -1,10 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { PostHog } from "posthog-node";
 import crypto from "crypto";
 
 // see readme's analytics section for notes regarding analytics
-export function middleware(request) {
+
+interface NextRequestWithIP extends NextRequest {
+  ip?: string;
+  //optional because some environments may not provide it (ex: brave browser)
+}
+
+export function middleware(request: NextRequestWithIP) {
   const response = NextResponse.next();
+  const posthogKey = process.env.POSTHOG_KEY;
+  if (!posthogKey) throw new Error("POSTHOG_KEY is not set");
 
   // Anonymous/fallback identifier: truncate IP + partial UA
   const truncatedIp = request.ip
@@ -13,13 +21,13 @@ export function middleware(request) {
   const partialUA =
     request.headers.get("user-agent")?.slice(0, 20) || "unknown";
 
-  // Hash them together for privacy
+  // Hash together for privacy
   const anonymousId = crypto
     .createHash("sha256")
     .update(`${truncatedIp}-${partialUA}`)
     .digest("hex");
 
-  const posthog = new PostHog(process.env.POSTHOG_KEY, {
+  const posthog = new PostHog(posthogKey, {
     host: process.env.POSTHOG_HOST,
   });
 
